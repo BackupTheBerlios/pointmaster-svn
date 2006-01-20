@@ -1,0 +1,4 @@
+;
+; Private Pointlist
+; Edited with %version% at [%curtime%] [%curdate%]
+;

@@ -1,0 +1,15 @@
+v LNX vse puti proveryat na // i menyat \ na /
+sdelat DisplayHelp
+sdelat i proverit Exec i Dos_Exec (vtoroe v LNX na bash ili na Exec delat ?)
+proverit Scripti !! (proverit vse ukazateli i NewStr'')
+Sdelat Ctrl-C v FPC-versiyah
+sdelat NOCON dlya TV
+!!Sdelat CRC_32 ! vzyat pas lib
+pri upgrade-e FV delat tam changes: in validate.pas in objects.pas (newstr,disposestr,dispose);
+gluk v CreatedMessage vernee posle messagi v log
+takje d MoveFile v LNX menyat NUL na /dev/null
+v LOG_ANAL sdelat chtobi mog otkrit %LOG% (koviryat permissions)
+gde-to MEMRO LEAK, mojet iz-za etogo gluki v konce
+sfelat chtobi pri RTE visalo VideoBuf v pm.err
+pochemu-to ne mojet prochitat stat iz pm1.pbs ? {packetrecord ?} no vrode pishet
+pochemu-to takje ne mojet otkrit warn etc. v log_anal...cho delat ???

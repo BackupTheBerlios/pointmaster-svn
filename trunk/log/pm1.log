@@ -1,0 +1,78 @@
+Ú[BEGIN]Ä[10/05/2001]Ä[16:41:13]Ä[PointMaster v1.03a [DPMI].UNREG]
+Ã[#]Ä[16:41:13] Mode: MSG
+Ã[#]Ä[16:41:13] Start script:C:\PROJECTS\PNTMAST.DWO\SCRIPT\ERR_DET.PMS
+Ã[#]Ä[16:41:13] Done script
+Ã[#]Ä[16:41:13] Searching for message to PointMaster in C:\Projects\PntMast.dwo\msg\
+Ã[#]Ä[16:41:13] Start script:C:\PROJECTS\PNTMAST.DWO\SCRIPT\UPD_HDR.PMS
+Ã[#]Ä[16:41:14] Exit by command
+Ã[#]Ä[16:41:14] Done script
+Ã[#]Ä[16:41:14] Start script:C:\PROJECTS\PNTMAST.DWO\SCRIPT\HATCH.PMS
+Ã[#]Ä[16:41:14] Exit by command
+Ã[#]Ä[16:41:14] Done script
+Ã[#]Ä[16:41:14] Start script:C:\PROJECTS\PNTMAST.DWO\SCRIPT\NOTIFY.PMS
+Ã[#]Ä[16:41:14] Done script
+Ã[#]Ä[16:41:14] Start script:C:\PROJECTS\PNTMAST.DWO\SCRIPT\LOG_ANAL.PMS
+Ã[#]Ä[16:41:14] Today is day for log analizing: Thursday
+Ã[#]Ä[16:41:14] Done copy C:\PROJECTS\PNTMAST.DWO\LOG\PM1.LOG to C:\PROJECTS\PNTMAST.DWO\SCRIPT\TMPLOG.TMP
+Ã[#]Ä[16:41:14] Total processed strings: 0
+Ã[#]Ä[16:41:14] Done move C:\PROJECTS\PNTMAST.DWO\SCRIPT\TMPLOG.TMP to C:\PROJECTS\PNTMAST.DWO\NUL
+Ã[#]Ä[16:41:14] Done script
+À[END]Ä[10/05/2001]Ä[16:41:14]Ä[PointMaster v1.03a [DPMI].UNREG]
+
+Ú[BEGIN]Ä[14/02/2002]Ä[16:21:29]Ä[PointMaster v1.03a [W32].UNREG]
+Ã[#]Ä[16:21:29] Mode: MSG
+Ã[#]Ä[16:21:29] Start script:C:\Projects\PntMast.dwo\script\err_det.pms
+Ã[#]Ä[16:21:29] Done script
+Ã[#]Ä[16:21:29] Searching for message to PointMaster in C:\Projects\PntMast.dwo\msg\
+Ã[#]Ä[16:21:29] Start script:C:\Projects\PntMast.dwo\script\upd_hdr.pms
+Ã[#]Ä[16:21:29] Exit by command
+Ã[#]Ä[16:21:29] Done script
+Ã[#]Ä[16:21:29] Start script:C:\Projects\PntMast.dwo\script\hatch.pms
+Ã[#]Ä[16:21:29] Exit by command
+Ã[#]Ä[16:21:29] Done script
+Ã[#]Ä[16:21:29] Start script:C:\Projects\PntMast.dwo\script\notify.pms
+Ã[#]Ä[16:21:29] Done script
+Ã[#]Ä[16:21:29] Start script:C:\Projects\PntMast.dwo\script\log_anal.pms
+Ã[#]Ä[16:21:29] Today is day for log analizing: Thursday
+Ã[#]Ä[16:21:29] Done copy C:\Projects\PntMast.dwo\log\PM1.LOG to C:\Projects\PntMast.dwo\script\tmplog.tmp
+Ã[#]Ä[16:21:29] Total processed strings: 36
+Ã[#]Ä[16:21:29] Done move C:\Projects\PntMast.dwo\script\tmplog.tmp to C:\PROJECTS\PNTMAST.DWO\NUL
+Ã[#]Ä[16:21:29] Done script
+À[END]Ä[14/02/2002]Ä[16:21:29]Ä[PointMaster v1.03a [W32].UNREG]
+
+Ú[BEGIN]Ä[15/02/2002]Ä[14:21:51]Ä[PointMaster v1.03a [W32].UNREG]
+Ã[#]Ä[14:21:51] Mode: MSG
+Ã[#]Ä[14:21:51] Start script:C:\Projects\PntMast.dwo\script\err_det.pms
+Ã[#]Ä[14:21:51] Done script
+Ã[#]Ä[14:21:51] Searching for message to PointMaster in C:\Projects\PntMast.dwo\msg\
+Ã[#]Ä[14:21:51] Start script:C:\Projects\PntMast.dwo\script\upd_hdr.pms
+Ã[#]Ä[14:21:51] Today is day for header updating: Friday
+Ã[#]Ä[14:21:51] Updating C:\Projects\PntMast.dwo\pntlist\pnt1998.pvt
+Ã[#]Ä[14:21:51] Done move C:\Projects\PntMast.dwo\pntlist\PNT1998.PVT to C:\PROJECTS\PNTMAST.DWO\NUL
+Ã[#]Ä[14:21:51] Done move C:\PROJECTS\PNTMAST.DWO\$TMP$.TMP to C:\Projects\PntMast.dwo\pntlist\pnt1998.pvt
+Ã[#]Ä[14:21:51] Done updating
+Ã[#]Ä[14:21:51] Done script
+Ã[#]Ä[14:21:51] Start script:C:\Projects\PntMast.dwo\script\hatch.pms
+Ã[#]Ä[14:21:51] Today is day for hatching: Friday
+Ã[#]Ä[14:21:51] Hatching C:\Projects\PntMast.dwo\pntlist\pnt1998.pvt
+Ã[#]Ä[14:21:51] Executing:c:\System\Arc\pkzip.exe -a c:\fido\mail\inbound\prot\pnt1998.zip C:\Projects\PntMast.dwo\pntlist\pnt1998.pvt
+Ã[#]Ä[14:21:51] Exit code: 0
+Ã[#]Ä[14:21:51] Executing:c:\fido\allfix\allfix.exe file
+Ã[!]Ä[14:21:51] Dos error while executing:File not found
+Ã[#]Ä[14:21:51] Done hatching
+Ã[#]Ä[14:21:51] Done script
+Ã[#]Ä[14:21:52] Start script:C:\Projects\PntMast.dwo\script\notify.pms
+Ã[#]Ä[14:21:52] Notify about hatched pointlist
+Ã[#]Ä[14:21:52] Created message for Andrew Kornilov [777:1998/1] from PointMaster [777:1998/1.0@UltraNet]
+Ã[#]Ä[14:21:52] Created message for Andrew Kornilov [777:1998/1.999] from PointMaster [777:1998/1.0@UltraNet]
+Ã[#]Ä[14:21:52] Done script
+Ã[#]Ä[14:21:52] Start script:C:\Projects\PntMast.dwo\script\log_anal.pms
+Ã[#]Ä[14:21:52] Today is day for log analizing: Friday
+Ã[#]Ä[14:21:52] Done copy C:\Projects\PntMast.dwo\log\PM1.LOG to C:\Projects\PntMast.dwo\script\tmplog.tmp
+Ã[#]Ä[14:21:52] Created message for Andrew Kornilov [777:1998/1.0@UltraNet] from Log Analizer [777:1998/1.0@UltraNet]
+Ã[#]Ä[14:21:52] Done move C:\PROJECTS\PNTMAST.DWO\warn to C:\PROJECTS\PNTMAST.DWO\NUL
+Ã[#]Ä[14:21:52] Total processed strings: 34
+Ã[#]Ä[14:21:52] Done move C:\Projects\PntMast.dwo\script\tmplog.tmp to C:\PROJECTS\PNTMAST.DWO\NUL
+Ã[#]Ä[14:21:52] Done script
+À[END]Ä[15/02/2002]Ä[14:21:52]Ä[PointMaster v1.03a [W32].UNREG]
+

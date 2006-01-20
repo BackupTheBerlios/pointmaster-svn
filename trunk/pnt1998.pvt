@@ -1,0 +1,157 @@
+;A UltraNet Private Pointlist for Friday, June 4, 1999, day number: 155
+;S Updated by PointMaster on 777:1998/1.0@UltraNet at [07:42:28] [20/08/1999]
+;
+;ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[ Hidden World System ]ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+;³ Worktime: 15:00-7:30       Data/voice phone: 7-423-229-8188              ³
+;³ SysOp   : Andrew Kornilov  Modem           : USRobotics Sportster 33.6   ³
+;ÓÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ½
+Boss,777:1998/1
+Point,1,VillaiN_BBS,Vladivostok,Taras_Ukish,7-423-221-9523,9600,XX,CM,V34,U,Z19
+;
+Boss,777:1998/2
+Point,1,Queen_BBS,Vladivostok,Pavel_Parfentiev,-Unpublished-,9600,MO,V34,V32B,V42B
+Point,2,HomoS_Mail_Station,Vladivostok,Artem_Ziborov,-Unpublished-,9600,V42B,V90,V34,V42
+Point,4,Graff,Vladivostok,Vladimir_Iguminov,-Unpublished-,9600,MO,ZYX
+Point,5,Nett_Gretta_BBS,Vladivostok,Dmitry_Morgoun,-Unpublished-,9600,MO,V32B,V42B
+Point,7,White_Eagle_BBS,Vladivostok,Andrey_Kuznetsov,-Unpublished-,9600,XX,V34,V32B,V42B
+Point,8,Vova_Evlahov,Vladivostok,Vova_Evlahov,-Unpublished-,9600,MO,V32B,V42B
+Point,9,Alekcey_Ambrocov,Vladivostok,Alekcey_Ambrocov,-Unpublished-,9600,MO
+Point,10,Sergey_Meshkov,Vladivostok,Sergey_Meshkov,-Unpublished-,9600,XX,V34,V32B,V42B
+Point,11,Dmytry_Savenko,Vladivostok,Dmytry_Savenko,-Unpublished-,2400,MO
+Point,12,Queen_BBS,Vladivostok,Konstantin_Gumenyk,7-423-246-6122,9600,XX,V34,V32B,V42B
+Point,13,Danil_Zoubritskiy,Vladivostok,Danil_Zoubritskiy,-Unpublished-,9600,MO
+Point,15,Dmitriy_Sedlov,Vladivostok,Dmitriy_Sedlov,-Unpublished-,9600,MO,V34,V32B,V42B
+Point,16,Viper_BBS,Vladivostok,Konstantin_N._Kuznetsov,7-423-231-7666,9600,V34
+Point,26,Anton_Bedarev,Vladivostok,Anton_Bedarev,-Unpublished-,9600,MO
+;
+;                    ÚËËÍÍË¿
+;                    ³ºº  º³ÚÉÍÍÍË¿
+;                    ÀÊÊÍÍÊÙÃÎÍÍ
+;        ²şÜÜÜÜ° ÜÜÜ°  ÜÜ   ÀÊÍÍÍÊÙ            B ÜÜ   °ÜÜÜ
+;          ÜßßßÛÜÜ ßßßß ÜÜ²ÛÜÜÚËÍËÍË¿ÚÍÑËÑÍ¿ÚË B Ë¿ßßßßß   310231 Ü
+;                 ßßßßßß      ³º Ê º³  ³º³  ³º S º³ÚËÍÍÍË¿ÚËÍÍÍË¿
+;                             ÀÊ   ÊÙÀÍÏÊÏÍÙÀÊÍÍÍÊÙ³ÌÍÍËÊÙ³º  Í»¿
+;                                Danilo Master (c) ÀÊ  ÈÍÙÀÊÍÍÍÊÙ
+Boss,777:1998/7
+Point,2,***,Vladivostok,Arseniy_Saranin,7-423-231-9075,9600,V32B,V42B
+Point,4,Graphix_Awesome,Vladivostok,Anton_Kartushin,-Unpublished-,9600,MO,V32B,V42B
+Point,5,Enigma,Vladivostok,Yury_Pechenkin,-Unpublished-,9600,MO,V32B,V42B
+Point,7,Exen,Vladivostok,Alexey_Pechenkin,-Unpublished-,9600,MO,V32B,V42B
+Point,9,HeaVen`s_Gate,Vladivostok,Nikolay_Nechiporenko,-Unpublished-,9600,MO,XX,V32B,V42B
+Point,11,Dr`Soul,Vladivostok,Dmitry_Morgoun,7-423-241-8269,9600,MO,V32B,V42B
+Point,12,ULTRANET_Mail_Systems,Vladivostok,Volka_Pohozhalov,-Unpublished-,9600,XA,V32B,V42B
+Point,500,Mail_Only_Remote,Vladivostok,Nikita_Neupokoev,-Unpublished-,9600,MO,V32B,42B
+;
+Boss,777:1998/10
+Point,1,Harchi_Station,Vladivostok,Nikolay_Makarenko,7-423-241-4552,9600,V32B,V42B
+Point,2,Buzzzis_Land_II,Vladivostok,Oksana_Davidenko,-Unpublished,9600,V32B,V42B
+Point,3,Alec`s_Station,Vladivostok,Alec_Myasoedenkov,-Unpublished,9600,V32B,V42B
+Point,18,IAPU_II,Vladivostok,Konstantin_Ignatovich,7-423-243-2070,9600,XX,MO,V32B,V42B
+Point,30,Down_Town_BBS,Vladivostok,Ivan_Barinofff,-Unpublished,9600,V32B,V42B
+Point,666,Night_City_2,Vladivostok,Evgeney_Vasiliev,7-423-241-1511,9600,V32B,V42B
+;
+;                             -=Budweiser BBS=-
+;   ÛßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßÛ
+;   Û                      Sysop : Alexander Kiseljov                       Û
+;   Û DATA\VOICE: (423) 241-3090           Work Time BBS: á 22:00 ¤® 07:00. Û
+;   Û                      USRobotics 57600/VEverything                     Û
+;   ÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛ
+Boss,777:1998/13
+Point,15,Budweiser_II,Vladivotok,Pasha_Ashihmin,7-423-241-0470,9600,MO,V42B,V32B
+Point,50,Lands_of_Blood_BBS,Vladivostok,Sergey_Nisnevich,7-423-251-3314,9600,MO,V42B,V32B
+;
+;ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+;³                              AVICENNA BBS                                ³
+;³  2:5045/52@fidonet                        Phone:  7-423-231-6276         ³
+;³  911:1958/1@mednet                        Time:   23:00-07:30            ³
+;³  100:273/15@nikonet                       E-mail: amadeus@chat.ru        ³
+;³  777:1998/15@ultranet                     Web: www.farpost.com/5045/43.7 ³
+;³                   SysOp Dmitriy Nevozhai aka Amadeus                     ³
+;ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+Boss,777:1998/15
+Point,2,XzibiT_Station,Vladivostok,Sergey_Udin,7-423-226-6125,9600,MO,V32B,V42B
+Point,5,Dimon's_Station,Vladivostok,Dmitriy_Izvekov,7-423-246-1902,9600,MO,V32B,V42B
+Point,7,Den_Shark_BBS,Vladivostok,Denis_Sharko,-Unpublished-,9600,MO,V34,V42B
+Point,10,In_Trance,Vladivostok,Alexey_Fedorov,7-423-246-9529,9600,XX,V32B,V42B
+Point,15,BBS_KPSS,Vladivostok,Slava_Petrov,7-423-246-6466,9600,XA,V34,V42B,U,TIO
+Point,19,Fucking_Bill_BBS,Vladivostok,Vladimir_Sebelev,7-423-238-5156,9600,MO,V32B,V42B
+Point,108,Alien_Wanderer_World,Vladivostok,Denis_Pantukhin,7-423-251-5673,9600,XA,V42B,V32B,V34,VFC
+;
+;                                  ZEUS BBS
+;   ÛßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßÛ
+;   Û                      SysOp : Dan Kovalchuk                            Û
+;   Û                    DATA\VOICE:7-423-231-0764                          Û
+;   Û                    USRobotics 33600/V34/V42B                          Û
+;   ÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛ
+Boss,777:1998/17
+Point,13,Spawn_BBS,Vladivostok,Arkadiy_Krutov,7-423-232-5906,9600,MO,V34,V32B,V42B
+Point,555,Hot_Spaces_BBS,Vladivostok,Djohn_Ivanov,7-423-241-2544,9600,MO,V34,V32B,V42B
+Point,13,Unrealmen,Vladivostok,Kostya_Sakharov,7-423-222-0559,9600,MO,V34,V32B,V42B
+;
+Boss,777:1998/25
+Point,1,WW,Vladivostok,Egor_Kravchenko,-Unpublished-,9600,XX,MO,V32B,V34
+Point,2,None,Vladivostok,Volodya_Parshin,-Unpublished-,9600,XX,MO,V32B,V34
+Point,3,Beleg,Vladivostok,Konstantin_Doudka,-Unpublished-,9600,XX,MO,V32B,V34
+Point,4,None,Vladivostok,Olga_Preobragenskaya,-Unpublished-,9600,XX,MO,V32B,V34
+;
+Boss,777:1998/27
+Point,2,The_MRTS_II_BBS,Vladivostok,Maksim_Panov,7-423-223-0887,9600,XA,U,V32B,V42B,TOV
+Point,18,KiHO_BBS,Vladivostok,Max_Krasnikov,7-423-243-2574,9600,MO,XA,V32b,V42b
+;
+;                            /³__. . /
+;       20:00 - 7:00        ³\³³/³/³<³      (4232) 26-80-96
+;                           ³ |³BBS/ Ô
+;
+Boss,777:1998/55
+Point,2,Den_BBS,Vladivostok,Den_Chenerev,-Unpublished-,9600,XA,V32b,V42b
+Point,7,Kot_BBS,Vladivostok,Konstantin_Kuznetsov,-Unpublished-,9600,XA,V32b,V42b
+Point,12,Tolik_BBS,Vladivostok,Tolik_Kurtis,-Unpublished-,9600,MO,V32B,V42B,ZYX
+Point,18,Aga_BBS,Vladivostok,Vladimir_Dzhola,-Unpublished-,9600,MO,V32B,V42B,ZYX
+;
+;=============================================================================
+;= Babilon V Private Station BBS (777:1998/79)           SysOp Alexey Yashin =
+;= Data Phone: 7-423-243-1513                    Voice Phone: 7-423-243-1513 =
+;= Work Time: 12:00 - 24:00          Mail Time  13:00 - 16:00, 21:00 - 24:00 =
+;=============================================================================
+Boss,777:1998/79
+Point,3,Vitaliy_Vasilev,Vladivostok,Vitaly_Vasilev,-Unpublished-,9600,V32B,V42B
+Point,5,Vitaliy_Zik,Vladivostok,Vitaliy_Zik,-Unpublished-,9600,V32B,V42B
+Point,7,Evgeny_Gavrilov,Vladivostok,Evgeny_Gavrilov,-Unpublished-,9600,V32B,V42B
+Point,8,Sergey_Voronjko,Vladivostok,Sergey_Voronjko,-Unpublished-,9600,V32B,V42B
+Point,9,Dmitry_Bokov,Vladivostok,Dmitry_Bokov,-Unpublished-,9600,V32B,V42B
+Point,10,The_Empire_Station_BBS,Vladivostok,Vadim_Vinogradov,7-423-241-0354,9600,XA,V32B,V42B,LO,U,TNV
+Point,11,Painkiller_Station,Vladivostok,Vadim_Kim,-Unpublished-,9600,V32B,V42B
+Point,17,Babilon_V_Station,Vladivostok,Ekaterina_Yashina,-Unpublished-,9600,V42B,V32B
+Point,25,Andrey_Grossman,Vladivostok,Andrey_Grossman,-Unpublished-,9600,V42B,V32B
+Point,33,Babylon_BBS,Vladivostok,Aleksey_Owsiannikow,7-423-241-6056,9600,V32B,V42B,XX,U,TMV
+Point,60,Ruslan_Sidderman,Vladivostok,Ruslan_Sidderman,-Unpublished-,9600,V42B,V32B
+Point,111,Dmitriy_Dublin,Vladivostok,Dmitriy_Dublin,-Unpublished-,9600,V32b,V42b
+Point,123,Roma's_BBS,Vladivostok,Roma_Seleznev,-Unbublished-,9600,V32B,V42B
+Point,125,Maxim_Kolbunov,Vladivostok,Maxim_Kolbunov,-Unpublished-,9600,V32B,V42B
+Point,666,Media_BBS,Vladivostok,Alexander_Novikov,260519,9600,XX,MO,V32B,V42B
+;
+;    ÉËÍÍËÍÍË»             »       ÉÍÍÄ¿¸É»             »     »
+;    È¼  ³  È¼¿ ÖÄÂÄ¿ ÖÄÄ¿ º ÖÄ¿   º   ³ ºº     Ú¿ ÖÄÄ¿ ÇÄÄ¿ Ä×Ä
+;        ³  ÇÄÙ º ³ ³ º  ³ º ÇÄÙ   º   ³ ºº  É» É» º  ³ º  ³  º
+;        Ê  ÓÄ  Ê   À ºÄÄÙ Ê ÓÄ    ÈÍÍÍÙ ÈĞÄÄĞ½ È¼ ÈÄÄ´ ¼  À  ÈÄÄÙ
+;                     ¼                         ÄÄÄÄÄÄÙ
+;     . . ù ùúúÄ ÄÄÄÍÍÍ<< Head of The Temples >>ÍÍÍÄÄÄ Äúúù ù . .
+;      SysOp: Igor Krutyakov aka Lighter   Nikonet: 100:273/121
+;      E-Mail: gary.lighter@usa.net        VladNet: 101:4232/121
+;      jfyi: BBS is down temporarily :(    FidoNet: 2:5045/27.40
+;                        Ultranet: 777:1998/121
+Boss,777:1998/121
+Point,11,Home_O'Light,Vladivostok,Igor_Krutyakov,7-423-223-2837,9600,MO,V32B,V42B
+Point,22,Adventure_World,Vladivostok,Denis_Krutyakov,-Unpublished-,300,MO
+;
+Boss,777:1998/911
+Point,1,BioDanger,Vladivostok,Vasja_Avilov,7-423-233-3212,9600,MO,V32B,V42B
+Point,3,Dragon,Vladivostok,Ivan_Danilenko,7-423-246-7719,9600,MO,V32B,V42B,V34
+Point,7,DEN,Vladivostok,Denis_Fyodorov,7-423-233-0802,9600,MO,V32B,V42B
+Point,13,Crazy_Int,Vladivostok,Alexander_Rikmanis,7-423-226-6345,9600,MO,V32B,V42B
+Point,20,Manowar_BBS,Vladivostok,Victor_Petrov,7-423-246-9957,9600,MO,V32B,V42B
+Point,26,VGIK_Home_Station,Vladivostok,Rusya_Kapustin,7-423-226-3084,9600,MO,V32B,V42B
+Point,44,BrainStation,Vladivostok,Oleg_Alekseyev,7-423-242-3845,9600,MO,V32B,V42B
+Point,322,The_Torch_Mail_Station,Vladivostok,Alexey_Morozov,7-423-232-2185,9600,MO,XX,V34,V42B,V32B
+;
+;[END]

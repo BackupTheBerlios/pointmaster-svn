@@ -1,0 +1,17 @@
+; Name: SEMAPHOR.PMS
+; Description: Simple script for semaphoring ;) 
+; Author: Andrew Kornilov (2:5045/46.24, /52.11)
+; For use with PointMaster (c) Andrew Kornilov
+;
+; Просто создает флаг в заданном каталоге, чтобы мылер или паковщик мыла сделал
+; рескан нетмыла :) Можете тут что угодно сделать :)
+;
+;==============================================================================
+;
+#define Flag c:\Fido\Flags\repack.t-m
+; путь и имя флага, который создавать
+;
+;==============================================================================
+AssignFile(Flag,"%flag%");
+WriteToFile(Flag,"Repack, please ;)");
+CloseFile(Flag);

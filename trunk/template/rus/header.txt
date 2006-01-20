@@ -1,0 +1,3 @@
+;A %domain% Private Pointlist for %dow%, %month_name% %day%, %year% -- day number: %doy%
+;S Updated by %version% on %masteraddress% at [%curtime%] [%curdate%]
+;

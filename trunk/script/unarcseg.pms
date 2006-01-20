@@ -1,0 +1,188 @@
+; Name: UNARCSEG.PMS
+; Description: Example script for extract pointlist segments from archives
+; Author: Andrew Kornilov (2:5045/46.24, /52.11)
+; For use with PointMaster (c) Andrew Kornilov
+;
+; Еще один примерчик. Предназначен для тех, у кого в инбаунде периодически поя-
+; вляются запакованные сегменты поинтлистов от различных нод.
+; Если вам нужен более функциональный распаковщик, с паролями, проверками и про-
+; чим, то напишите мне, может быть сделаю. Хотя можете и сами, не так уж и сло-
+; жно :) Можно его прописать в OnStartScript и он все время будет их искать, если
+; найдет, то распакует, если не найдет, то ничего делать не будет :)
+;
+;==============================================================================
+#define UnProtInbound c:\fido\mail\inbound\unprot
+; Директория, где появляются запакованные сегменты, обычно непарольный inbound
+; Без завершающего слэша
+;
+#define DirToExtract  c:\fido\pntmast\pntlist
+; Директория, куда распаковывать, обычно туда же, откуда берутся ListSegment-ы
+; для компиляции поинтлиста по команде /BUILD
+; Без завершающего слэша
+;
+#define ArcMask ZIP?????.PNT
+; Маска запакованных сегментов, по ней будет проверяться наличие их в UnProtIn-
+; bound и она же будет подсовываться распаковщику
+;
+#define SegMask SEG?????.PNT
+; Маска сегментов, которые должны содержаться в архивах, она будет подсовываться
+; распаковщику и он, соответственно, только подходящие под нее файлы и будет рас-
+; паковывать. Обычно здесь должно быть одно из имен, заданных в ListSegment (см.
+; PM.CTL), иначе при команде /BUILD он будет просто игнорировать их, так как ничего
+; про них не знает :)
+;
+#define AfterUnPackAction Move
+; Что делать с запакованными сегментами, которые все еще лежат в UnProtInbound,
+; после их распаковки. Может быть Copy,Move,None. Если Copy или Move, то смотри
+; ActionDir. Если надо их удалить, то указывай Move, а в качестве ActionDir ука-
+; зывай NUL
+; Это действие будет производиться _только_ если код выхода, возвращенный распа-
+; ковщиком равен 0
+;
+#define ActionDir %dirtoextract%\archive\zip
+; Если AfterUnPackAtion равно Copy или Move, то тут надо указать директорию, куда
+; их копировать или перемещать.
+; Без завершающего слэша
+;
+#define UnArcPath C:\System\Arc\pkunzip.exe
+; Путь и имя распаковщика
+;
+#define UnArcCmd -d -o %unprotinbound%\%arcmask% %dirtoextract% %segmask%
+; Команда распаковщику, чтобы он распаковал из определенных файлов определенные
+; файлы :) Я указал тут еще опцию "-o", чтобы он записывал их поверх, если такие
+; уже существуют
+;
+;==============================================================================
+
+If Exist("%unprotinbound%")
+  {
+   If Exist("%dirtoextract%")
+     {
+      If Exist("%unarcpath%")
+        {
+         If ("%afterunpackaction%"<>"none")
+           {
+            If ("%actiondir%"<>"nul")
+              {
+               If Exist("%actiondir%")
+                 {
+                 }
+                Else
+                 {
+                  If ("%language%"="eng")
+                    {
+                     LogWriteLn("!Directory %actiondir% is not exist");
+                    }
+                   Else
+                    {
+                     LogWriteLn("!Директория %actiondir% не существует");
+                    }
+                  EndIf;
+                  Exit;
+                 }
+               EndIf;
+              }
+            EndIf;
+           }
+         EndIf;
+        }
+       Else
+        {
+         If ("%language%"="eng")
+           {
+            LogWriteLn("!File %unarcpath% is not exist");
+           }
+          Else
+           {
+            LogWriteLn("!Файл %unarcpath% не существует");
+           }
+         EndIf;
+         Exit;
+        }
+      EndIf;
+     }
+    Else
+     {
+      If ("%language%"="eng")
+        {
+         LogWriteLn("!Directory %dirtoextract% is not exist");
+        }
+       Else
+        {
+         LogWriteLn("!Директория %dirtoextract% не существует");
+        }
+      EndIf;
+      Exit;
+     }
+   EndIf;
+  }
+ Else
+  {
+   If ("%language%"="eng")
+     {
+      LogWriteLn("!Directory %unprotinbound% is not exist");
+     }
+    Else
+     {
+      LogWriteLn("!Директория %unprotinbound% не существует");
+     }
+   EndIf;
+   Exit;
+  }
+EndIf;
+
+If Exist("%unprotinbound%\%arcmask%")
+  {
+   If ("%language%"="eng")
+     {
+      LogWriteLn("#Found new packed segments %arcmask% in %unprotinbound%");
+      LogWriteLn("#Start unpacking");
+     }
+    Else
+     {
+      LogWriteLn("#Найдены новые запакованный сегменты %arcmask% в %unprotinbound%");
+      LogWriteLn("#Запуск распаковки");
+     }
+   EndIf;
+   Exec("%unarcpath%","%unarccmd%");
+   If ("%errorlevel%"<>"0")
+     {
+      If ("%language%"="eng")
+        {
+         LogWriteLn("!Errorlevel returned by %unarcpath% = %errorlevel%. Something wrong");
+        }
+       Else
+        {
+         LogWriteLn("!Код выхода, возвращенный %unarcpath% = %errorlevel%. Что-то не так");
+        }
+      EndIf;
+      Exit;
+     }
+    Else
+     {
+      If ("%afterunpackaction%"="move")
+        {
+         MoveFile("%unprotinbound%\%arcmask%","%actiondir%\")
+        }
+       Else
+        {
+         If ("%afterunpackaction%"="copy")
+           {
+            CopyFile("%unprotinbound%\%arcmask%","%actiondir%\")
+           }
+         EndIf;
+        }
+      EndIf;
+      If ("%language%"="eng")
+        {
+         LogWriteLn("#Done unpacking archived segments");
+        }
+       Else
+        {
+        LogWriteLn("#Распаковка заархивированных сегментов успешно завершена");
+        }
+      EndIf;
+     }
+   EndIf;
+  }
+EndIf;

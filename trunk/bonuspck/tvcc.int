@@ -1,0 +1,96 @@
+{*******************************************************}
+{                                                       }
+{       Turbo Pascal Version 7.0                        }
+{       Turbo Vision Unit                               }
+{       Alternate Custom Controls Version 1.1           }
+{                                                       }
+{       Copyright (c) 1992 Borland International        }
+{       Copyright (c) 1992 Castle Computer Services     }
+{                                                       }
+{       Admendments                                     }
+{       Version 1.1  - Fix to incorrect palette         }
+{                      setting in                       }
+{                      TTVCCApplication.Getpalette      }
+{                      function.                        }
+{                                                       }
+{*******************************************************}
+
+Unit TVCC;
+{$O+,F+,X+,I-,S-}
+Interface
+Uses
+  Objects, Views, Drivers, Dialogs, App;
+
+Const
+  cTVCCAppColor = cAppColor +
+    #$78#$7F#$70#$70#$0F#$70#$70#$7F#$7F#$78#$7F#$70#$70#$7F#$70#$70 +
+    #$07#$70#$70#$07#$70#$0F#$78#$70#$0F#$70#$7F#$07#$70#$70#$78#$00;
+
+ cTVCCAppBlackWhite = cAppBlackWhite +
+    #$78#$7F#$70#$70#$0F#$70#$70#$7F#$7F#$78#$7F#$70#$70#$7F#$70#$70 +
+    #$07#$70#$70#$07#$70#$0F#$78#$70#$0F#$70#$7F#$07#$70#$70#$78#$00;
+
+ cTVCCAppMonoChrome = cAppMonoChrome +
+    #$70#$70#$70#$07#$07#$70#$70#$70#$0F#$07#$07#$0F#$70#$0F#$70#$07 +
+    #$0F#$0F#$07#$70#$07#$07#$70#$07#$07#$07#$70#$0F#$07#$07#$70#$00;
+
+ cTVCCDialog =
+    #$80#$81#$82#$83#$84#$85#$86#$87#$88#$89#$8A#$8B#$8C#$8D#$8E#$8F +
+    #$90#$91#$92#$93#$94#$95#$96#$97#$98#$99#$9A#$9B#$9C#$9D#$9E#$9F;
+
+   cTVCCFrameLine =
+     #11#12;
+
+Type
+  PFrameLine = ^TFrameLine;
+  TFrameLine = object(TView)
+    Procedure Draw; virtual;
+    Function GetPalette : PPalette; virtual;
+  end;
+
+  PTVCCButton = ^TTVCCButton;
+  TTVCCButton = object(TButton)
+    Constructor Init(var R : TRect; ATitle : TTitleStr; ACommand : Word; AFlags : Byte);
+    Procedure DrawNewState(Down: Boolean);
+    Procedure HandleEvent(var Event : TEvent); virtual;
+    Procedure Draw; virtual;
+  end;
+
+  PTVCCDialog = ^TTVCCDialog;
+  TTVCCDialog = object(TDialog)
+    Constructor Load(var S : TStream);
+    Procedure Insert(P : PView); virtual;
+    Function GetPalette : PPalette; virtual;
+  end;
+
+  PTVCCApplication = ^TTVCCApplication;
+  TTVCCApplication = object(TApplication)
+    Constructor Init;
+    Function GetPalette : PPalette; virtual;
+  end;
+
+Const
+  RFrameLine : TStreamRec = (
+    ObjType : 2000;
+    VmtLink : Ofs(Typeof(TFrameLine)^);
+    Load : @TFrameLine.Load;
+    Store : @TFrameLine.Store
+  );
+
+  RTVCCButton : TStreamRec = (
+    ObjType : 2001;
+    VmtLink : Ofs(TypeOf(TTVCCButton)^);
+    Load : @TTVCCButton.Load;
+    Store : @TTVCCButton.Store
+  );
+
+  RTVCCDialog : TStreamRec = (
+    ObjType : 2002;
+    VmtLink : Ofs(TypeOf(TTVCCDialog)^);
+    Load : @TTVCCDialog.Load;
+    Store : @TTVCCDialog.Store
+  );
+
+Procedure RegisterTVCC;
+
+Implementation

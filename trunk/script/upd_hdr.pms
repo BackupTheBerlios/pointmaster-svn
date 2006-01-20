@@ -1,0 +1,193 @@
+; Name: UPD_HDR.PMS
+; Description: Example script for update pointlist header before hatching
+; Author:  Andrew  Kornilov (2:5045/46.24, /52.11)
+; For use with PointMaster (c) Andrew Kornilov
+;
+; Скриптик для апдейта заголовка поинтлиста перед, например, хатчингом его в
+; файлэху. Что он делает: лезет в ListHeader (который задан в PM.CTL), считает
+; количество строк в нем, потом создает временный файл, записывает туда строки
+; из ListHeader, потом пропускает то количество строк в DestPointList, которое
+; он насчитал в ListHeader и затем записывает все оставшееся в DestPointList
+; во временный файл, после этого удаляет DestPointList и записывает на его место
+; временный файл. Пригодиться для того, чтобы в DestPointList заголовок всегда
+; был обновленным, а то бывало, что писем к PointMaster-у нет неделю, в опреде-
+; ленное время хатчится поинтлист,а внутри него заголовок недельной давности :)
+; Короче, если надо, правьте как вам надо, хотя вроде и так работает :)
+; ! ВНИМАНИЕ !
+; Если вы изменили количество строк в ListHeader, то надо изменить заголовок
+; текущего DestPointList также, иначе может покоцать поинтлист (например, если
+; вы увеличили количество строк в ListHeader, а в DestPointList не изменили, то
+; он скипнет больше строк и, соответственно, часть информации потеряется, на-
+; пример, комментарии у первого босса в DestPointList).
+;
+; P.S. В принципе, этот скрипт можно было и не делать отдельно, а впихнуть его
+; в hatch.pms, но я это только что придумал, а тот уже давно. Так что если хо-
+; тите, можете поковыряться и засунуть его туда :)
+;=============================================================================
+;
+#define UpdateDay   Friday
+; день недели, когда апдейтить поинтлист. По идее, должен совпадать с hatchday в
+; hatch.pms (это если вы с ним его используете, конечно :)
+; Может быть одним из Sunday Monday Tuesday Wednesday Thursday Friday Saturday
+;
+#define UpdatedFlag %scrpath%\updated.flg
+; имя файла-флажка, наличие котоpое бyдет yказывать, что заголовок yже изменен
+;
+#define TmpFName $TMP$.TMP
+; имя временного файла
+;
+;=============================================================================
+If ("%dow%"<>"%updateday%")
+ {
+  If Exist("%updatedflag%")
+     {
+     MoveFile("%updatedflag%","nul");
+     }
+  EndIf
+  Exit;
+ }
+EndIf
+If ("%language%"="rus")
+   {
+    LogWriteLn("#Сегодня день для апдейта заголовка: %updateday%");
+   }
+  Else
+   {
+    LogWriteLn("#Today is day for header updating: %updateday%");
+   }
+EndIf
+If Exist("%updatedflag%")
+  {
+  If ("%language%"="rus")
+     {
+      LogWriteLn("#Заголовок yже изменен");
+     }
+    Else
+     {
+      LogWriteLn("#Header has already been updated");
+     }
+  EndIf
+  Exit;
+  }
+EndIf
+
+If ("%language%"="rus")
+  {
+   LogWriteLn("#Апдейтим %destpointlist%");
+  }
+ Else
+  {
+   LogWriteLn("#Updating %destpointlist%");
+  }
+EndIf
+
+If Exist("%destpointlist%")
+ {
+  If Exist("%listheader%")
+   {
+   }
+  Else
+   {
+    LogWriteLn("!%listheader% is not exist")
+    Exit;
+   }
+   EndIf
+ }
+Else
+ {
+  LogWriteLn("!%destpointlist% is not exist")
+  Exit;
+ }
+EndIf
+
+#define hdr_counter 0
+#define counter 0
+
+If Exist("%tmpfname%")
+  {
+   MoveFile("%tmpfname%","nul");
+  }
+EndIf;
+AssignFile(Header,"%listheader%");
+AssignFile(PointList,"%destpointlist%");
+AssignFile(Temp,"%tmpfname%");
+
+GetStrNumInHeader:
+If EndOfFile(Header)
+   {
+   }
+  Else
+   {
+    ReadFromFile(Header,"hdr_str_%hdr_counter%");
+    Inc("hdr_counter","");
+    Goto "GetStrNumInHeader";
+   }
+EndIf;
+
+WriteLoop1:
+If ("%counter%"="%hdr_counter%")
+   {
+   }
+  Else
+   {
+    "expand":="%%hdr_str_%counter%";
+    "expand":="%expand%@";
+    WriteToFile(Temp,"%expand%@")
+    Inc("counter","");
+    Goto "WriteLoop1";
+   }
+EndIf;
+
+#define counter 0
+
+SkipHeader:
+If ("%counter%"="%hdr_counter%")
+   {
+   }
+  Else
+   {
+    If EndOfFile(PointList)
+       {
+       }
+      Else
+       {
+        ReadFromFile(PointList,"garbage");
+        Inc("counter","");
+        Goto "SkipHeader";
+       }
+     EndIf
+   }
+EndIf;
+
+WriteLoop2:
+
+If EndOfFile(PointList)
+   {
+   }
+  Else
+   {
+    ReadFromFile(PointList,"readed_str");
+    WriteToFile(Temp,"%readed_str%");
+    Goto "WriteLoop2";
+   }
+EndIf;
+
+CloseFile(Temp);
+CloseFile(Header);
+CloseFile(PointList);
+
+MoveFile("%destpointlist%","nul");
+MoveFile("%tmpfname%","%destpointlist%");
+
+AssignFile(UFlag,"%updatedflag%");
+WriteToFile(UFlag,"UPDATED");
+CloseFile(UFlag);
+If ("%language%"="rus")
+  {
+   LogWriteLn("#Апдейт yспешно завеpшен");
+  }
+ Else
+  {
+   LogWriteLn("#Done updating");
+  }
+EndIf
