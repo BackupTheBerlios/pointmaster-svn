@@ -115,7 +115,7 @@ end;}
 
 
 
-{Procedure ForEachFile(Point:Pointer);Far;
+{Procedure ForEachFile(Point:Pointer);
 Var
 PStr:PString absolute Point;
 Begin
@@ -186,7 +186,7 @@ Begin
 {$ENDIF}
 End;
 
-Procedure ForEachFile(Point:Pointer);Far;
+Procedure ForEachFile(Point:Pointer);
 Var
 PStr:PString;
 Begin
@@ -203,7 +203,7 @@ Begin
     End;
 End;
 
-Procedure PreForEachPath(Point:Pointer);Far;
+Procedure PreForEachPath(Point:Pointer);
 Var
 PStr:PString;
 Begin
@@ -212,7 +212,7 @@ Begin
    AddBackSlash(PStr^);
 End;
 
-Procedure ForEachPath(Point:Pointer);Far;
+Procedure ForEachPath(Point:Pointer);
 Var
 PStr:PString;
 Dir:DirStr;

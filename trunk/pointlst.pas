@@ -349,7 +349,7 @@ Var
 IsValidPhone,
 IsValidSpeed:Boolean;
 
-Procedure ForEachPhoneMask(Pnt:Pointer;Data:Pointer);Far;
+Procedure ForEachPhoneMask(Pnt:Pointer;Data:Pointer);
 Var
 Pict,Phone:String;
 Begin
@@ -374,7 +374,7 @@ Begin
  IsValidPhone:=Validator^.IsValid(Phone)=True;
 End;
 
-Procedure ForEachSpeed(Pnt:Pointer;Data:Pointer);Far;
+Procedure ForEachSpeed(Pnt:Pointer;Data:Pointer);
 Var
 Pict,Speed:String;
 Begin
@@ -517,7 +517,7 @@ Var
 _IsValidSystemFlag,
 _IsValidUserFlag:Boolean;
 
-Procedure ForEachSystemFlags(Point:Pointer;Data:Pointer);Far;
+Procedure ForEachSystemFlags(Point:Pointer;Data:Pointer);
 Var
 Pict,Flag:String;
 Begin
@@ -541,7 +541,7 @@ Begin
  _IsValidSystemFlag:=Validator^.IsValid(Flag)=True;
 End;
 
-Procedure ForEachUserFlags(Point:Pointer;Data:Pointer);Far;
+Procedure ForEachUserFlags(Point:Pointer;Data:Pointer);
 Var
 Pict,Flag:String;
 Begin
@@ -1348,7 +1348,7 @@ Begin
  Dispose(PPointString,Done);
 End;
 
-Procedure ForEachExclude(Pnt:Pointer);far;
+Procedure ForEachExclude(Pnt:Pointer);
 Var
 {PStr:PString absolute Pnt;}
 PStr:String;
@@ -2106,7 +2106,7 @@ If BeginPos<>0 Then
    Begin
     StringsToSkipAtBegin:=0;
    End;
-FindFirstEx(PointListName,{AnyFile-Directory}(SysFile or Archive),DirInfo);
+FindFirstEx(PointListName,(SysFile or Archive),DirInfo);
 While DosError= 0 Do
 Begin
  If DosErrorEx=0 Then
@@ -2124,22 +2124,9 @@ Begin
     Begin
      InitPointList:=True;
      _flgPointListOpened:=True;
-     If (1=1) Then
-       Begin
-         LogWriteLn(GetExpandedString(_logLoadingListSegmentToMemory)+PointListName);
-         CurrentOperation:=GetOperationString(_logLoadingListSegmentToMemory)+PointListName;
-         ReadPointListToMemory(PointList)
-       End
-    Else
-       Begin
-         LogWriteLn(GetExpandedString(_logNotEnoughMemory+' load pointlist: '+PointListName));
-         {$IFDEF SPLE}
-           R.Assign(20,7,61,15);
-           MessageBoxREct(R,'Not enough memory to load '+
-                        'pointlist.'^M+
-                        #3'Need at least '+IntToStr(TextFileSize(PointList) div 1024)+'kb',Nil,mfError+mfOkButton);
-         {$ENDIF}
-       End;
+     LogWriteLn(GetExpandedString(_logLoadingListSegmentToMemory)+PointListName);
+     CurrentOperation:=GetOperationString(_logLoadingListSegmentToMemory)+PointListName;
+     ReadPointListToMemory(PointList);
      Close(PointList);
      PntListName:='';
      If StrUp(GetVar(DeleteListAfterProcessTag.Tag,_varNONE))=Yes Then

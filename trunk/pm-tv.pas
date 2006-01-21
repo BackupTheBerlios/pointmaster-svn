@@ -1,17 +1,4 @@
-{$IFDEF VIRTUALPASCAL}
-  {$B-,D+,H-,I+,J+,P-,Q-,R-,T-,V+,W-,X+,Z-}
-  {&AlignCode+,AlignData+,AlignRec-,Asm-,Cdecl-,Comments-,Delphi+,Frame+,G3+}
-  {&LocInfo+,Open32-,Optimise+,OrgName-,SmartLink+,Speed+,Use32-,ZD-}
-  {$M 64000}
-{$ELSE}
-  {$A+,B-,D+,E-,F+,G+,I+,L+,N+,O-,P-,Q-,R-,S+,T-,V+,X+,Y+}
-  {$M 64000,1024,655360}
-{$ENDIF}
-
 Program Point_Master;
-
-
-
 
 {$I VERSION.INC}
 
@@ -51,7 +38,7 @@ End;
  MsgRec:TFidoMsgHeader;}
 
 
-Procedure ForEachMasterName(Pnt,MsgRecord:Pointer);far;
+Procedure ForEachMasterName(Pnt,MsgRecord:Pointer);
 Var
  AsciizMasterName:Z36;
 Begin
@@ -133,7 +120,7 @@ Begin
           ConditionalAutoCreateSegmentsFromMask(Mask);
  End;
 
-Procedure ForEachAutoCreateSegment(Pnt:Pointer);Far;
+Procedure ForEachAutoCreateSegment(Pnt:Pointer);
 Var
    Mask:        String;
 Begin
@@ -144,7 +131,7 @@ Begin
         ConditionalAutoCreateSegmentsFromMask(Mask);
 End;
 
-Procedure ForEachForceAutoCreateSegment(Pnt:Pointer);Far;
+Procedure ForEachForceAutoCreateSegment(Pnt:Pointer);
 Var
    Mask:        String;
 Begin
@@ -155,7 +142,7 @@ Begin
         ForcedAutoCreateSegmentsFromMask(Mask);
 End;
 
-Procedure ForEachAutoUpdate(Pnt:Pointer);Far;
+Procedure ForEachAutoUpdate(Pnt:Pointer);
 Var
 {PStr:PString absolute Pnt;}
 PStr:String;
@@ -174,7 +161,7 @@ End;
 
 
 
-Procedure ForEachPassword(Pnt:Pointer);Far;
+Procedure ForEachPassword(Pnt:Pointer);
 Var
 {PStr:PString absolute Pnt;}
 PStr:String;
@@ -204,7 +191,7 @@ If BeginPos>0 Then
    End;
 End;
 
-Procedure ForEachIgnore(Pnt,MsgRecordPtr:Pointer);Far;
+Procedure ForEachIgnore(Pnt,MsgRecordPtr:Pointer);
 Var
 {PStr:PString absolutes Pnt;}
 PStr:String;
@@ -222,7 +209,7 @@ If CharsMaskMatch(StrUp(PStr),StrUp(TruncStr(PFidoMsgHeader(MsgRecordPtr)^._From
    End;
 End;
 
-Procedure ForEachReRoute(Pnt:Pointer);Far;
+Procedure ForEachReRoute(Pnt:Pointer);
 Var
 {PStr:PString absolute Pnt;}
 PStr:String;
@@ -252,7 +239,7 @@ If BeginPos>0 Then
 End;
 
 
-Procedure ForEachBounce(Pnt:Pointer);Far;
+Procedure ForEachBounce(Pnt:Pointer);
 Var
 {PStr:PString absolute Pnt;}
 PStr:String;
@@ -606,7 +593,7 @@ While Not Eof(Msg) Do
   End;
 End;
 
-Procedure ForEachOnListUpdateScript(Pnt:Pointer);Far;
+Procedure ForEachOnListUpdateScript(Pnt:Pointer);
 {Var
  ScriptName:PString Absolute Pnt;}
 Begin
@@ -618,7 +605,7 @@ If StrTrim(PString(Pnt)^)<>'' Then
      End;
 End;
 
-Procedure ForEachOnMessagesScript(Pnt:Pointer);Far;
+Procedure ForEachOnMessagesScript(Pnt:Pointer);
 {Var
  ScriptName:PString Absolute Pnt;}
 Begin
@@ -630,7 +617,7 @@ If StrTrim(PString(Pnt)^)<>'' Then
      End;
 End;
 
-Procedure ForEachPntList(Point:Pointer);Far;
+Procedure ForEachPntList(Point:Pointer);
 Begin
  InitPointList(PString(Point)^);
 End;
@@ -1052,12 +1039,12 @@ Begin
  StringsToSkipAtBegin:=0;
 End;
 
-{Procedure ForEachPntList(Point:Pointer);Far;
+{Procedure ForEachPntList(Point:Pointer);
 Begin
  InitPointList(PString(Point)^);
 End;}
 
-Procedure ForEachOnStartScript(Pnt:Pointer);Far;
+Procedure ForEachOnStartScript(Pnt:Pointer);
 Begin
 If Pnt=Nil Then
    Exit;
@@ -1069,7 +1056,7 @@ If StrTrim(PString(Pnt)^)<>'' Then
      End;
 End;
 
-Procedure ForEachOnExitScript(Pnt:Pointer);Far;
+Procedure ForEachOnExitScript(Pnt:Pointer);
 {Var
  ScriptName:PString Absolute Pnt;}
 Begin

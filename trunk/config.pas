@@ -11,7 +11,7 @@ Incl,Parser,Dos,Logger,StrUnit
      ;
 
 
-Function ReadConfig(CfgName:String):Boolean;far;
+Function ReadConfig(CfgName:String):Boolean;
 Function IsBusyFlagExist(Var BsyFlag:File):Boolean;
 Function SetBusyFlag(Var BsyFlag:File):Boolean;
 Function UnSetBusyFlag(Var BsyFlag:File):Boolean;

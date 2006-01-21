@@ -19,18 +19,18 @@ C:Char;
 Var
 StartHour,StartMinutes,StartSec,StartHnd:Word;
 
-Procedure WriteScreenSkeleton;Far;
-Procedure WritePerCent;Far;
+Procedure WriteScreenSkeleton;
+Procedure WritePerCent;
 Procedure RefreshScreen;
 Procedure DoneScreenForHelpRequest;
-Procedure RestoreScreenHandler;Far;
-Procedure SetScreenHandler;Far;
-Procedure PreUpdateScreen;Far;
-Procedure InitializeScreen;Far;
-Procedure DoneScreen;Far;
-Procedure SwitchToLogWindow;Far;
-Procedure SwitchToFullWindow;Far;
-Procedure DisplayHelpWindow;Far;
+Procedure RestoreScreenHandler;
+Procedure SetScreenHandler;
+Procedure PreUpdateScreen;
+Procedure InitializeScreen;
+Procedure DoneScreen;
+Procedure SwitchToLogWindow;
+Procedure SwitchToFullWindow;
+Procedure DisplayHelpWindow;
 Function  GetMinutesFromStart:Word;
 Procedure PrepareScreenToExec;
 
@@ -39,7 +39,7 @@ IMPLEMENTATION
 Uses Logger;
 
 
-Procedure WriteVersion;Far;
+Procedure WriteVersion;
 Begin
  If MODE_NOCONSOLE Then
     Exit;
@@ -264,7 +264,7 @@ Else
  {$ENDIF}
 End;
 
-Procedure WriteMemory;Far;
+Procedure WriteMemory;
 Var
 S:String;
 Begin
@@ -283,7 +283,7 @@ Begin
  SwitchToLogWindow;
 End;
 
-Procedure WriteOperation;Far;
+Procedure WriteOperation;
 Var
 Count:Word;
 Begin
@@ -315,7 +315,7 @@ SwitchToLogWindow;
 {.ENDIF}
 End;
 
-Procedure WriteRunTimeChars;Far;
+Procedure WriteRunTimeChars;
 Const
 Chars:Array[1..4] of Char=('-','\','|','/');
 Begin
