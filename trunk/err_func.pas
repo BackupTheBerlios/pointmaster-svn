@@ -7,7 +7,7 @@ Uses
 {$IFDEF VIRTUALPASCAL}
 Use32,SysUtils,
 {$ENDIF}
-CRT,DOS,StakDump,Logger,Face,Incl,StrUnit,Config,MCommon,Parser,FileIO;
+CRT,DOS,Logger,Face,Incl,StrUnit,Config,MCommon,Parser,FileIO;
 
 
 VAR

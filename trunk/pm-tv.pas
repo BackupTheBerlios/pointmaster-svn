@@ -24,16 +24,8 @@ Uses App,Objects,Views,Dialogs,Drivers,Menus,
 {skMHL, skMHLjam, skMHLmsg, skComnTV, skCommon,skOpen,}
 { ********* end skMHLB *********}
 
-{$IFNDEF VIRTUALPASCAL}
-  {$IFDEF DPMI}
-    PExtend,
-  {$ELSE}
-    Extend,
-  {$ENDIF}
-{$ELSE}
   Use32,
   SysUtils,
-{$ENDIF}
 
 {$IFDEF FPC}
   Commands,
