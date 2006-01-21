@@ -5,7 +5,7 @@ Uses
 {$IFDEF VIRTUALPASCAL}
 Use32,
 {$ENDIF}
-Incl,Crt,{Drivers,}StrUnit,Dos,Objects,Parser,Os_Type,Drivers,Register,
+Incl,Crt,{Drivers,}StrUnit,Dos,Objects,Parser,Os_Type,Drivers,
      MCommon,Crc_32,FileIO;
 {.F+,S-,W-}
 
@@ -58,54 +58,16 @@ Begin
 End;
 
 Procedure WriteScreenSkeleton;
-Const
-KeyFile='pm.key';
-RegPhrase='Registered to: ';
 Var
-Ri:RegisterInformation;
 OldDosError:System.Integer;
 Crc32S:String;
-RegName:String;
 Begin
- {.IFNDEF VIRTUALPASCAL}
  If MODE_NOCONSOLE Then
     Exit;
  OldDosError:=DosError;
- If IsFileExist(KeyFile) Then
-   Begin
-    ReadKeyFile(KeyFile,RI);
-    Ri.BackGround:=1 Xor Ri.Offset;
-    Ri.TextColor:=12 Xor Ri.Offset;
-    Ri.Offset:=Ri.Offset Xor Ri.Crc;
-    Crc32S:=ShowCrc(Ri.Crc);
-    PntMasterVersion:=BaseVersion+
-    {$IFDEF WIN32}
-    '[W32]'
-    {$ENDIF}
-    {$IFDEF OS2}
-    '[OS/2]'
-    {$ENDIF}
-    {$IFDEF LINUX}
-    '[LNX]'
-    {$ENDIF}+
-    '.'+Crc32S;
-    RegName:=GetUncryptedString(Ri.Name,Ri.CRC);
-    GotoXy(((ScreenWidth-2) div 2) - ((Length(RegPhrase)+Length(RegName)+2) div 2),9);
-    TextColor(LightGray);
-    TextBackground(1);
-    Write('[ ');
-    TextColor(LightGreen);
-    Write(RegPhrase);
-    TextColor(Yellow);
-    Write(RegName);
-    TExtColor(LightGray);
-    Write(' ]');
-    DosError:=OldDosError;
-   End
- Else
    Begin
     DosError:=OldDosError;
-    Crc32S:='UNREG';
+    Crc32S:='OPEN';
     PntMasterVersion:=BaseVersion+
     {$IFDEF WIN32}
     '[W32]'
@@ -159,16 +121,13 @@ Begin
  TextColor(LightGray);
  Write(']');
 
- If Crc32S='UNREG' Then
-   Begin
     GotoXy(((ScreenWidth-1) div 2)-10,9);
     TextColor(LightGray);
     Write('[');
     TextColor(LightRed);
-    Write('UNREGISTERED COPY');
+    Write('FREE OPEN VERSION');
     TextColor(LightGray);
     Write(']');
-  End;
  GotoXy(3,3);
  TextColor(White);
  Write(#254);
@@ -206,7 +165,6 @@ Begin
  Write(']');
 
  SwitchToLogWindow;
- {.ENDIF}
 End;
 
 

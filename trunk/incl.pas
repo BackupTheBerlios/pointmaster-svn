@@ -437,12 +437,6 @@ Type
    SubMinor:Byte;
    VersionType:VerType;
    Registered:Boolean;
-{   RegisteredInfo:Record
-                      Zone,
-                      Net,
-                      Node,
-                      Point:Word;
-                     End;}
  End;
 
 Var
@@ -450,7 +444,7 @@ BinaryMasterVersion:VersionRec;
 PntMasterVersion:String;
 
 Const
-BaseVersion='PointMaster v1.03a ';
+BaseVersion='PointMaster v1.04a ';
 SpleVersion='Simple PointList Editor v.0.02a '+
     {$IFDEF WIN32}
     '[W32]'
@@ -923,9 +917,9 @@ With BinaryMasterVersion Do
   Begin
    Major:=1;
    Minor:=0;
-   SubMinor:=3;
+   SubMinor:=4;
    VersionType:=_verAlpha;
-   Registered:=False;
+   Registered:=True;
   End;
 MODE_NOCONSOLE:=False;
 DoUpCase:=True;
