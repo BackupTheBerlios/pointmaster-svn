@@ -4,9 +4,7 @@ UNIT Incl;
 INTERFACE
 {$I VERSION.INC}
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Objects;
 
 {$IFNDEF SPLE}
@@ -182,12 +180,6 @@ Var
 
 {$IFNDEF SPLE}
 {$IFNDEF VIRTUALPASCAL}
-{$IFNDEF DPMI}
-ProgrammScreen : TxtScreen Absolute
- $B800:$0000;
-{$ELSE}
-ProgrammScreen : TxtScreen;
-{$ENDIF}
 {$ELSE}
 ProgrammScreen : TxtScreen;
 {$ENDIF}

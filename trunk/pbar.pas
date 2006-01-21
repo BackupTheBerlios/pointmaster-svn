@@ -1,6 +1,6 @@
 UNIT PBar;
 INTERFACE
-USES Go32,Views;
+USES Use32,Views;
 
 procedure ProgressBar (Title            : VIEWS.TTitleStr;
                        Current, Total   : LongInt;

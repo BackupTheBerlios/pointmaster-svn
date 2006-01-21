@@ -3,9 +3,7 @@ UNIT PointLst;
 INTERFACE
 {$I VERSION.INC}
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Objects,StrUnit,Dos,Incl,Address,Logger,Parser,Memory,{TpDos,}Validate,MCommon,
      Crc_32,Face,Os_Type,FileIO,PntL_Obj
      {$IFDEF SPLE}
@@ -2126,11 +2124,7 @@ Begin
     Begin
      InitPointList:=True;
      _flgPointListOpened:=True;
-{$IFDEF VIRTUALPASCAL}
      If (1=1) Then
-{$ELSE}
-     If (MemAvail>TextFileSize(PointList)) Then
-{$ENDIF}
        Begin
          LogWriteLn(GetExpandedString(_logLoadingListSegmentToMemory)+PointListName);
          CurrentOperation:=GetOperationString(_logLoadingListSegmentToMemory)+PointListName;

@@ -4,10 +4,7 @@ Unit FileIO;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
- Use32,
-{$ENDIF}
- Dos,Incl,Parser,StrUnit,Strings,Validate,Objects;
+ Use32, MCommon,Dos,Incl,Parser,StrUnit,Strings,Validate,Objects;
 
 Function TextFileSize(Var F:Text):LongInt;
 Function IsFileExist(S:String):Boolean;
@@ -125,8 +122,6 @@ Begin
 End;
 
 
-
-{$IFDEF VIRTUALPASCAL}
 Function TextFileSize(Var F:Text):LongInt;
 Var
 DirInfo:SearchRec;
@@ -141,92 +136,6 @@ Begin
  FileMode:=2;
 End;
 
-{$ELSE}
-
-Function TextFileSize(var F : Text) : LongInt;
-Type
-  TextBuffer = array[0..65520] of Byte;
-  FIB =
-    record
-      Handle : Word;
-      Mode : Word;
-      BufSize : Word;
-      Private : Word;
-      BufPos : Word;
-      BufEnd : Word;
-      BufPtr : ^TextBuffer;
-      OpenProc : Pointer;
-      InOutProc : Pointer;
-      FlushProc : Pointer;
-      CloseProc : Pointer;
-      UserData : array[1..16] of Byte;
-      Name : array[0..79] of Char;
-      Buffer : array[0..127] of Char;
-    end;
-
-Const
-  FMClosed = $D7B0;
-
-Var
- Regs : Registers;
- OldHi, OldLow : Integer;
-Begin
- With Regs, FIB(F) Do
-    Begin
-      {check for open file}
-      If Mode = FMClosed Then
-       Begin
-         TextFileSize := -1;
-         Exit;
-       End;
-      {get current position of the file pointer}
-      AX := $4201;           {move file pointer function}
-      BX := Handle;          {file handle}
-      CX := 0;               {if CX and DX are both 0, call returns the..}
-      DX := 0;               {current file pointer in DX:AX}
-      MsDos(Regs);
-
-      {check for I/O error}
-      if Odd(Flags) Then
-       Begin
-        TextFileSize := -1;
-        Exit;
-       End;
-
-      {save current position of the file pointer}
-      OldHi := DX;
-      OldLow := AX;
-
-      {have DOS move to end-of-file}
-      AX := $4202;           {move file pointer function}
-      BX := Handle;          {file handle}
-      CX := 0;               {if CX and DX are both 0, call returns the...}
-      DX := 0;               {current file pointer in DX:AX}
-      MsDos(Regs);           {call DOS}
-
-      {check for I/O error}
-      If Odd(Flags) Then
-       Begin
-        TextFileSize := -1;
-        Exit;
-       End;
-
-      {calculate the size}
-      TextFileSize := LongInt(DX) shl 16+AX;
-
-      {reset the old position of the file pointer}
-      AX := $4200;           {move file pointer function}
-      BX := Handle;          {file handle}
-      CX := OldHi;           {high word of old position}
-      DX := OldLow;          {low word of old position}
-      MsDos(Regs);           {call DOS}
-
-      {check for I/O error}
-      If Odd(Flags) Then
-        TextFileSize := -1;
-    End;
-End;
-{$ENDIF}
 
 Function IsFileExist(S:String):Boolean;
 Var
@@ -664,11 +573,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               ResetUnTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t reset untyped file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t reset untyped file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t reset untyped file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -684,11 +589,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               ResetTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t reset typed file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t reset typed file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t reset typed file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -704,11 +605,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               ResetTextFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                     LogWriteLn('!Can''t reset text file '+StrPas(TextRec(F).Name));
-              {$ELSE}
-                     LogWriteLn('!Can''t reset text file '+TextRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t reset text file '+StrPas(TextRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -726,11 +623,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               RewriteUnTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t rewrite untyped file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t rewrite untyped file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t rewrite untyped file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -746,11 +639,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               RewriteTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t rewrite typed file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t rewrite typed file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t rewrite typed file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -766,11 +655,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               RewriteTextFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t rewrite text file '+StrPas(TextRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t rewrite text file '+TextRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t rewrite text file '+StrPas(TextRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -788,11 +673,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               CloseUnTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t close untyped file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t close untyped file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t close untyped file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -809,11 +690,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               CloseTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t close typed file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t close typed file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t close typed file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -830,11 +707,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               CloseTextFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t close text file '+StrPas(TextRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t close text file '+TextRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t close text file '+StrPas(TextRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 End;
@@ -851,11 +724,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               WriteLnToTextFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t write line to text file '+StrPas(TextRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t write line to text file '+TextRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t write line to text file '+StrPas(TextRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 
@@ -873,11 +742,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               ReadLnFromTextFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t read line to text file '+StrPas(TextRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t read line to text file '+TextRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t read line to text file '+StrPas(TextRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 
@@ -896,11 +761,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               BlockWriteToUnTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t write block to untyped file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t write block to untyped file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t write block to untyped file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 
@@ -919,11 +780,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               BlockReadFromUnTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t read block from untyped file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t read block from untyped file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t read block from untyped file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 
@@ -942,11 +799,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               BlockWriteToUnTypedFileEx:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t write block to untyped file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t write block to untyped file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t write block to untyped file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 
@@ -964,11 +817,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               BlockReadFromUnTypedFileEx:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t read block from untyped file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t read block from untyped file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t read block from untyped file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 
@@ -987,11 +836,7 @@ Begin
      If InOutResult<>0 Then
         Begin
               SeekunTypedFile:=False;
-              {$IFDEF VIRTUALPASCAL}
-                      LogWriteLn('!Can''t seek to untyped file '+StrPas(FileRec(F).Name));
-              {$ELSE}
-                      LogWriteLn('!Can''t seek to untyped file '+FileRec(F).Name);
-              {$ENDIF}
+              LogWriteLn('!Can''t seek to untyped file '+StrPas(FileRec(F).Name));
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
         End;
 

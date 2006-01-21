@@ -3,9 +3,7 @@ Unit PntL_Obj;
 INTERFACE
 
 Uses
-{$IFDEF VIRTUALPASCAL}
   Use32,
-{$ENDIF}
 App,Objects,Views,Dialogs,Drivers,Menus,Memory,HistList,
      {** pm units **}
      Incl,MCommon,Address,StrUnit,Parser,Logger;

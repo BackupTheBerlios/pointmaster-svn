@@ -2,9 +2,7 @@ UNIT Statist;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Incl,Dos,Parser,Address,MCommon,Objects,StrUnit,Logger,Dates,PntL_Obj;
 
 Type

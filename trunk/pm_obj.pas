@@ -84,7 +84,10 @@ IMPLEMENTATION
 {*** Begin TMyProgram ***}
 procedure TMyProgram.InitScreen;
 begin
-  if Lo(ScreenMode) <> smMono then
+	{ FIXME}
+	{ Temp. disabled}
+  Exit;	
+(*  if Lo(ScreenMode) <> smMono then
   begin
     if ScreenMode and smFont8x8 <> 0 then
       ShadowSize.X := 1 else
@@ -100,7 +103,7 @@ begin
     ShadowSize.Y := 0;
     ShowMarkers := True;
     AppPalette := apMonochrome;
-  end;
+  end; *)
 end;
 
 Constructor TMyProgram.Init;

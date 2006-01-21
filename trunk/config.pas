@@ -3,9 +3,7 @@ UNIT Config;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Incl,Parser,Dos,Logger,StrUnit
      {$IFNDEF SPLE}
      ,Script

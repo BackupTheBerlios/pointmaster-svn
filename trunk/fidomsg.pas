@@ -4,9 +4,7 @@ INTERFACE
 {.I-}
 {$DEFINE MSGX}   { To use zone/point extensions in header (FTS 0001-15}
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Dos,Incl,StrUnit,Parser,Address,Objects,Dates,MCommon,PntL_Obj,FileIO,Logger;
 
 Var
@@ -204,21 +202,6 @@ Begin
   StrInt:=S;
 End;
 
-
-
-{$IFNDEF VIRTUALPASCAL}
-Procedure CStr(S: String; Var Ps; N: Word);
-  { Make a c type string, padded with nulls to lenght N }
-Var I: Word;
-Begin
-  FillChar(PS,N,0);
-  I:=0;
-  If S[0]>Chr(N-1) Then
-     S[0]:=Chr(N-1);
-  For I:=1 To Length(S) Do
-     Mem[Seg(Ps):Ofs(Ps)+Pred(I)]:=Ord(S[I]);
-End;
-{$ELSE}
 Procedure CStr(S: String; Var Ps; N: Word);
 Var I: Word;
 Begin
@@ -227,7 +210,6 @@ Begin
   If S[0]>Chr(N-1) Then S[0]:=Chr(N-1);
   For I:=1 To Length(S) Do String(Ps)[Pred(I)]:=(S[I]);
 End;
-{$ENDIF}
 
 Function StrFill(Num: Word; Len: Word; PadChar: Char): String;
   { Fill a string to "Len" with given character (used by date routines) }

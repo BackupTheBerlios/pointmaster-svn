@@ -2,7 +2,7 @@ UNIT Use32;
 
 INTERFACE
 {$IFDEF FPC}
-{Type Integer=LongInt;}
+Type Integer=LongInt;
 {$ENDIF}
 
 IMPLEMENTATION

@@ -4,9 +4,7 @@ UNIT StrUnit;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Incl,Dos,Drivers;
 {Type
   Z36=Array[1..36] of Char;}

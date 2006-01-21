@@ -3,9 +3,7 @@ UNIT Script;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,SysUtils,
-{$ENDIF}
 Dos,Logger,Parser,Incl,MCommon,StrUnit,Objects,Crt,Face,Validate,
      Address,FidoMsg,App,Drivers,Memory,FileIO,PntL_Obj;
 

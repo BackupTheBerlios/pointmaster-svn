@@ -3,10 +3,8 @@ UNIT Parser;
 INTERFACE
 
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
 SysUtils,
-{$ENDIF}
 Objects,StrUnit,Dos,Incl,MCommon,CRC_32,Dates;
 
 Type
@@ -22,11 +20,7 @@ Type
 Type
   PValueCollection=^TValueCollection;
   TValueCollection=Object(TStringCollection)
-{$IFDEF VIRTUALPASCAL}
    Function Compare(Key1, Key2: Pointer): LongInt; virtual;
-{$ELSE}
-   Function Compare(Key1, Key2: Pointer): Integer; virtual;
-{$ENDIF}
 End;
 
 Type
@@ -40,18 +34,11 @@ Type
   Procedure Store(Var S:TDosStream);Virtual;
 End;
  PVarRec=^TVarRec;
+ 
 Const
-(* NotAllowChars:Set of Char=['[',']','{','}','.',',','~','!','@','#','$','%','^','*','(',')','-',
-                             '+','\','=','|','/','<','>',' ',#9,#00..#31,#176..#223,#242..#255];*)
- RPVarRec:TStreamRec=(
-   ObjType:200;
-   VMTLink:Ofs(TypeOf(TVarRec)^);
-   Load:@TVarRec.Load;
-   Store:@TVarRec.Store);
-
+	NotAllowChars:Set Of Char=['[',']','{','}','.',',','~','!','@','#','$','%','^','*','(',')','-','+','\','=','|','/','<','>',' ',#00..#31,#176..#223,#242..#255];
 Var
 VarRecArray:PVarRecCollection;
-NotAllowChars:Set Of Char;
 {VarRec:PVarRec;}
 
 
@@ -59,11 +46,7 @@ Function  CreateVarArray:Boolean;
 Function  SetVar(Name:VarTagRec;Value:String):Integer;
 Function  SetVarFromString(Name:String;Value:String):Integer;
 Function  GetVar(Name:String;Var Flag:Word):String;
-{$IFDEF VIRTUALPASCAL}
 Function  GetVarByIndex(Name:String;Index:LongInt;Var Flag:Word):String;
-{$ELSE}
-Function  GetVarByIndex(Name:String;Index:Integer;Var Flag:Word):String;
-{$ENDIF}
 {Function  MakeString(Var StrToMake:String):Integer;}
 Function  ExpandString(Var StrToMake:String):Integer;
 Function  GetExpandedString(S:String):String;
@@ -90,11 +73,7 @@ Begin
   End;
 End;
 
-{$IFDEF VIRTUALPASCAL}
 Function TValueCollection.Compare(Key1, Key2: Pointer): LongInt;
-{$ELSE}
-Function TValueCollection.Compare(Key1, Key2: Pointer): Integer;
-{$ENDIF}
 Begin
 Compare:=-1;
 End;
@@ -138,17 +117,11 @@ End;
 Function CreateVarArray:Boolean;
 Begin
      VarRecArray:=New(PVarRecCollection,Init(50,10));
-     { RegisterType(RStringCollection);
-      RegisterType(RPVarRec);}
 End;
 
 Function SetVar(Name:VarTagRec;Value:String):Integer;
 Var
-{$IFDEF VIRTUALPASCAL}
         Counter:      LongInt;
-{$ELSE}
-        Counter:      Integer;
-{$ENDIF}
         PPVarRec:     PVarRec;
 Begin
 {TimeSlice;}
@@ -214,11 +187,7 @@ End;
 
 Function SetVarFromString(Name:String;Value:String):Integer;
 Var
-{$IFDEF VIRTUALPASCAL}
 Counter:LongInt;
-{$ELSE}
-Counter:Integer;
-{$ENDIF}
 TmpVarTagRec:VarTagRec;
 PPVarRec:PVarRec;
 Begin
@@ -283,11 +252,7 @@ End;
 
 Function GetVar(Name:String;Var Flag:Word):String;
 Var
-{$IFDEF VIRTUALPASCAL}
 Count:LongInt;
-{$ELSE}
-Count:Integer;
-{$ENDIF}
 IsVarFound:Boolean;
 Result_:String;
 PPVarRec:PVarRec;
@@ -389,17 +354,9 @@ If (Not IsVarFound) Then
   End;
 End;
 
-{$IFDEF VIRTUALPASCAL}
 Function  GetVarByIndex(Name:String;Index:LongInt;Var Flag:Word):String;
-{$ELSE}
-Function  GetVarByIndex(Name:String;Index:Integer;Var Flag:Word):String;
-{$ENDIF}
 Var
-{$IFDEF VIRTUALPASCAL}
 Count:LongInt;
-{$ELSE}
-Count:Integer;
-{$ENDIF}
 IsVarFound:Boolean;
 Result_:String;
 PPVarRec:PVarRec;
@@ -507,11 +464,7 @@ End;
 
 Procedure ForEachVar(Name:String;ProcPtr:ForEachProcedure);
 Var
-{$IFDEF VIRTUALPASCAL}
 Count,Count1:LongInt;
-{$ELSE}
-Count,Count1:Integer;
-{$ENDIF}
 Pnt:Pointer;
 VarRec:PVarRec;
 {PStr:PString Absolute Pnt;}
@@ -543,11 +496,7 @@ End;
 
 Procedure ForEachVarWithData(Name:String;Data:Pointer;ProcPtr:ForEachProcedureWithData);
 Var
-{$IFDEF VIRTUALPASCAL}
 Count,Count1:LongInt;
-{$ELSE}
-Count,Count1:Integer;
-{$ENDIF}
 Pnt:Pointer;
 VarRec:PVarRec;
 {PStr:PString Absolute Pnt;}
@@ -579,11 +528,7 @@ End;
 
 Function  GetValueCount(Name:VarTagRec):Word;
 Var
-{$IFDEF VIRTUALPASCAL}
 Count:LongInt;
-{$ELSE}
-Count:Integer;
-{$ENDIF}
 VarRec:PVarRec;
 Begin
 GetValueCount:=0;
@@ -600,11 +545,7 @@ End;
 
 Function  GetValueCollectionPointer(Name:VarTagRec):Pointer;
 Var
-{$IFDEF VIRTUALPASCAL}
 Count:LongInt;
-{$ELSE}
-Count:Integer;
-{$ENDIF}
 VarRec:PVarRec;
 Begin
 GetValueCollectionPointer:=Nil;
@@ -857,11 +798,7 @@ End;
 Procedure WriteAllDataToDisk(S:String);
 Var
 F:TDosStream;
-{$IFDEF VIRTUALPASCAL}
 Count:LongInt;
-{$ELSE}
-Count:Integer;
-{$ENDIF}
 VR:PVarRec;
 Begin
 F.Init(FExpand(S),stCreate);
@@ -885,11 +822,7 @@ End;
 Procedure RestoreAllDataFromDisk(S:String);
 Var
 F:TDosStream;
-{$IFDEF VIRTUALPASCAL}
 Count:LongInt;
-{$ELSE}
-Count:Integer;
-{$ENDIF}
 VR:PVarRec;
 Begin
 F.Init(FExpand(S),stOpenRead);
@@ -902,12 +835,4 @@ F.Done;
 End;
 
 Begin
-{.$IFDEF VIRTUALPASCAL}
-(* NotAllowChars:=['[',']','{','}','.',',','~','!','@','#','$','%','^','*','(',')','-','+','\','=','|','/','<','>',' ',
- #00..#31,#176..#223,#242..#255];*)
-
-{.$ELSE}
- NotAllowChars:=['[',']','{','}','.',',','~','!','@','#','$','%','^','*','(',')','-','+','\','=','|','/','<','>',' ',
-                 #9,#00..#31,#176..#223,#242..#255];
-{.$ENDIF}
 End.

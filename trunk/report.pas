@@ -2,9 +2,7 @@ UNIT Report;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 StrUnit,Incl,FidoMsg,Address,PointLst,Objects,Parser,Logger,
      Dos,MCommon,Statist,Script,PntL_Obj;
 

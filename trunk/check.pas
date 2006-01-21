@@ -2,9 +2,7 @@ UNIT Check;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Parser,Incl,Logger,Objects,Dos,StrUnit,MCommon,FileIO;
 
 Var

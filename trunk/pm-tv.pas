@@ -27,15 +27,9 @@ Uses App,Objects,Views,Dialogs,Drivers,Menus,
   Use32,
   SysUtils,
 
-{$IFDEF FPC}
-  Commands,
-{$ENDIF}
-
 PM_Obj,Dos,Face,StrUnit,FidoMsg,Incl,Address,PointLst,Report,Logger,Strings,
      Statist,Parser,Config,Crt,Memory,MCommon,Language,Check,Script,
-     Os_Type,FileIO,Dates,Segments,PntL_Obj,
-     {** must be latest for correct error detection **}
-     Err_Func;
+     Os_Type,FileIO,Dates,Segments,PntL_Obj;
 
 Type
   TPointMaster=Object(TMyApplication)

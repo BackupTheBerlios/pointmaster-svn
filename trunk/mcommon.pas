@@ -4,9 +4,7 @@ UNIT MCommon;
 INTERFACE
 Uses
 
-{$IFDEF VIRTUALPASCAL}
   Use32,
-{$ENDIF}
 Crt,Dos,StrUnit,Objects,Incl,Address,Strings{,App,Menus,Drivers,Views,Memory,HistList};
 
 
@@ -92,12 +90,6 @@ Begin
       End;
    Counter:=0;
    Begin                                              { Empty returns nil }
-     While (MaxAvail< (Length(S)+1)) And (Counter<20) Do
-        Begin
-             LogWriteLn('!Not enough memory to allocate string '''+S+'''. Pause for 2 seconds.');
-             Delay(2000);
-             Inc(Counter);
-        End;
      GetMem(P, Length(S) + 1);                        { Allocate memory }
      If (P <> Nil) Then
          P^ := S;                                     { Transfer string }

@@ -2,9 +2,7 @@ UNIT Logger;
 INTERFACE
 {$I VERSION.INC}
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 StrUnit,Incl,Parser,{TpDos,}Crt,Dos,MCommon,Face,Drivers,FileIO,Dates;
 
 Var

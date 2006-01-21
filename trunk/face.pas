@@ -2,9 +2,7 @@ UNIT Face;
 {$I VERSION.INC}
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Incl,Crt,{Drivers,}StrUnit,Dos,Objects,Parser,Os_Type,Drivers,
      MCommon,Crc_32,FileIO;
 {.F+,S-,W-}
@@ -271,8 +269,8 @@ Procedure WriteMemory;Far;
 Var
 S:String;
 Begin
- {.IFNDEF VIRTUALPASCAL}
- S:=IntToStr(MemAvail div 1024)+' kb';
+	{S:=IntToStr(MemAvail div 1024)+' kb';}
+ S:='FIXME kb';
  SwitchToFullWindow;
  TextColor(Red);
  GotoXy(3,5);
@@ -284,7 +282,6 @@ Begin
  GotoXy(3,5);
  Write(#254);
  SwitchToLogWindow;
- {.ENDIF}
 End;
 
 Procedure WriteOperation;Far;

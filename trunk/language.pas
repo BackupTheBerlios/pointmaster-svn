@@ -2,9 +2,7 @@ UNIT Language;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Parser,Logger,Incl,Dos,StrUnit;
 
 Function LoadLanguageFile:Boolean;

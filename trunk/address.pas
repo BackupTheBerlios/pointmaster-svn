@@ -2,9 +2,7 @@ UNIT Address;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 StrUnit,Incl;
 
 Procedure SetAddressFromString(S:String;Var Address:TAddress);

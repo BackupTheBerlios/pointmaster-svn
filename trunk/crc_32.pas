@@ -2,9 +2,7 @@
 UNIT CRC_32;
 
 INTERFACE
-{$IFDEF VIRTUALPASCAL}
 Uses Use32;
-{$ENDIF}
 
 Const
  crc32tab:array[0..255] of longint=(

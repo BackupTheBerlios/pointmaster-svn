@@ -3,9 +3,7 @@ Unit Dates;
 INTERFACE
 
 Uses
-{$IFDEF VIRTUALPASCAL}
  Use32,
-{$ENDIF}
  Dos,StrUnit;
 
 Function GetDateString:String;
