@@ -229,7 +229,6 @@ PerCents:LongInt;
 S,S2:String;
 Begin
  {$IFNDEF SPLE}
- {.IFNDEF VIRTUALPASCAL}
  If MODE_NOCONSOLE Then
     Exit;
  S:='þþþþþþþþþþþþþþþþþþþþ';
@@ -288,7 +287,6 @@ Procedure WriteOperation;Far;
 Var
 Count:Word;
 Begin
-{.IFNDEF VIRTUALPASCAL}
 If Length(CurrentOperation)>ScreenWidth-21 Then
   Begin
    CurrentOperation[0]:=Chr(ScreenWidth-21);
@@ -321,7 +319,6 @@ Procedure WriteRunTimeChars;Far;
 Const
 Chars:Array[1..4] of Char=('-','\','|','/');
 Begin
- {.IFNDEF VIRTUALPASCAL}
  If CharsCounter>4 Then CharsCounter:=1;
  SwitchToFullWindow;
  TextColor(Red);
@@ -365,7 +362,6 @@ OsStr:String;
 Addr:String;
 Begin
  {$IFNDEF SPLE}
- {.IFNDEF VIRTUALPASCAL}
  If MODE_NOCONSOLE Then
     Exit;
 { MoveStr(Mem[SegB800:(13*2)],PntMasterVersion+' by Andrew Kornilov',127);}

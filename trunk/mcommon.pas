@@ -8,7 +8,6 @@ Uses
 Crt,Dos,StrUnit,Objects,Incl,Address,Strings{,App,Menus,Drivers,Views,Memory,HistList};
 
 
-{.IFDEF VIRTUALPASCAL}
 Function NewStr (S: String): PString;
 {.ENDIF}
 Function GetAttributesFromString(S:String):Word;
@@ -77,7 +76,6 @@ Begin
     Delete(S,Length(S),1);
 End;
 
-{.IFDEF VIRTUALPASCAL}
 Function NewStr (S: String): PString;
 Var
  P:      PString;

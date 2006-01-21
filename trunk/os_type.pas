@@ -2,9 +2,7 @@ UNIT Os_Type;
 
 INTERFACE
 Uses
-{$IFDEF VIRTUALPASCAL}
 Use32,
-{$ENDIF}
 Incl,Parser;
 
 Const

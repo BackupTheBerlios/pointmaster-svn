@@ -3,9 +3,7 @@ Unit PM_Obj;
 INTERFACE
 
 Uses
-{$IFDEF VIRTUALPASCAL}
   Use32,
-{$ENDIF}
 App,Objects,Views,Dialogs,Drivers,Menus,Memory,HistList,
      {** pm units **}
      Incl,Parser,Dates;

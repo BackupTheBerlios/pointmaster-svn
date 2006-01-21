@@ -29,11 +29,7 @@ End;
 Type
   PFilesRecordCollection=^TFilesRecordCollection;
   TFilesRecordCollection=Object(TSortedCollection)
-{$IFDEF VIRTUALPASCAL}
     Function Compare(Key1,Key2:Pointer):LongInt;Virtual;
-{$ELSE}
-    Function Compare(Key1,Key2:Pointer):Integer;Virtual;
-{$ENDIF}
     Function KeyOf(Item:Pointer):Pointer;Virtual;
     Procedure Error(Code, Info: Integer);Virtual;
     Function GetFileObjectPointer(Assigned:String):PFileObject;
@@ -232,11 +228,7 @@ Const
 Var
 PCmdValidator:PPXPictureValidator;
 PFilesCollection:PFilesRecordCollection;
-{$IFDEF VIRTUALPASCAL}
 BodyCount:LongInt;
-{$ELSE}
-BodyCount:Integer;
-{$ENDIF}
 _MsgWasCreated:Boolean;
 _MsgWasClosed:Boolean;
 CompiledScript:PCompiledScript;
@@ -283,11 +275,7 @@ IMPLEMENTATION
 
 Procedure TCompiledScript.Insert(Item: Pointer);
 Var
-{$IFDEF VIRTUALPASCAL}
 Counter:LongInt;
-{$ELSE}
-Counter:Integer;
-{$ENDIF}
 Params:String;
 Begin
  If MODE_DEBUG Then
@@ -311,11 +299,7 @@ Begin
 End;
 
 Procedure TScriptCommand.Store(Var S:TStream);
-{$IFDEF VIRTUALPASCAL}
 Var Counter:LongInt;
-{$ELSE}
-Var Counter:Integer;
-{$ENDIF}
 Begin
  S.Write(TCommandType,SizeOf(TCommandType));
 { For Counter:=0 To Pred(PCommandParameters^.Count) Do
@@ -352,29 +336,17 @@ If Params<>Nil Then
                         Else
                            EndPos:=Pos(',',Cmd);
                         Delete(Cmd,EndPos,1);
-                        {$IFDEF VIRTUALPASCAL}
                         Params^.Insert(MCommon.NewStr(StrTrim(Copy(Cmd,BeginPos,EndPos-BeginPos))));
-                        {$ELSE}
-                        Params^.Insert(Objects.NewStr(StrTrim(Copy(Cmd,BeginPos,EndPos-BeginPos))));
-                        {$ENDIF}
                        End;
          _cmdLabel:
                        Begin
                         Cmd:=StrTrim(Cmd);
                   {      Delete(Cmd,Length(Cmd),1);}
-                        {$IFDEF VIRTUALPASCAL}
                         Params^.Insert(MCommon.NewStr(Cmd));
-                        {$ELSE}
-                        Params^.Insert(Objects.NewStr(Cmd));
-                        {$ENDIF}
                        End;
          _cmdNotProcess:
                        Begin
-                        {$IFDEF VIRTUALPASCAL}
                         Params^.Insert(MCommon.NewStr(StrTrim(Cmd)));
-                        {$ELSE}
-                        Params^.Insert(Objects.NewStr(StrTrim(Cmd)));
-                        {$ENDIF}
                        End;
     End;
     For Counter:=1 To ParamsCount Do
@@ -383,11 +355,7 @@ If Params<>Nil Then
           Delete(Cmd,BeginPos,1);
           EndPos:=Pos('"',Cmd);
           Delete(Cmd,EndPos,1);
-          {$IFDEF VIRTUALPASCAL}
           Params^.Insert(MCommon.NewStr(StrTrim(Copy(Cmd,BeginPos,EndPos-BeginPos))));
-          {$ELSE}
-          Params^.Insert(Objects.NewStr(StrTrim(Copy(Cmd,BeginPos,EndPos-BeginPos))));
-          {$ENDIF}
           Delete(Cmd,BeginPos,EndPos-BeginPos);
         End;
     If CmdType=_cmdIf_Then Then
@@ -650,11 +618,7 @@ End;
 
 Constructor TScriptCommand.Init(ACommandType:Word;ACommandParameters:PMessageBody);
 Var
-{$IFDEF VIRTUALPASCAL}
  Counter:LongInt;
-{$ELSE}
- Counter:Integer;
-{$ENDIF}
 Begin
  Inherited Init;
  TCommandType:=ACommandType;
@@ -681,10 +645,7 @@ Begin
  PAssignedName:=MCommon.NewStr(Assigned);
  PFileName:=MCommon.NewStr(Name);
  TStatus:=stClosed;
-{$IFDEF VIRTUALPASCAL}
  TFileRec(THandle).Handle:=0;
-{$ENDIF}
-{ TFilePos:=0;}
 End;
 
 Destructor TFileObject.Done;
@@ -697,11 +658,7 @@ Begin
  Inherited Done;
 End;
 
-{$IFDEF VIRTUALPASCAL}
 Function TFilesRecordCollection.Compare(Key1,Key2:Pointer):LongInt;
-{$ELSE}
-Function TFilesRecordCollection.Compare(Key1,Key2:Pointer):Integer;
-{$ENDIF}
 Var
 FStr: PString;{ absolute Key1;}
 SStr: PString; {absolute Key2;}
@@ -758,11 +715,7 @@ End;
 
 Function TFilesRecordCollection.GetFileObjectPointer(Assigned:String):PFileObject;
 Var
-{$IFDEF VIRTUALPASCAL}
 Counter:LongInt;
-{$ELSE}
-Counter:Integer;
-{$ENDIF}
 Begin
  GetFileObjectPointer:=Nil;
  For Counter:=0 To Pred(Count) Do

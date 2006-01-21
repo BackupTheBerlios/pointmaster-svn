@@ -113,56 +113,6 @@ Type
          End;
     TxtScreen = Array[1..25,1..80] of ScreenPoint;
 
-{$IFDEF VIRTUALPASCAL}
-{const
-  TextRecNameLength = 256;
-  TextRecBufSize    = 256;
-
-type
-  TextBuf = array[0..TextRecBufSize-1] of char;
-  TextRec = Packed Record
-    Handle,
-    Mode,
-    bufsize,
-    _private,
-    bufpos,
-    bufend    : longint;
-    bufptr    : ^textbuf;
-    openfunc,
-    inoutfunc,
-    flushfunc,
-    closefunc : pointer;
-    UserData  : array[1..16] of byte;
-    name      : array[0..textrecnamelength-1] of char;
-    buffer    : textbuf;
-  End;}
-
-{$ELSE}
-
-
-{********** Begin from WinDos.pas*************}
-Type
-  PTextBuf = ^TTextBuf;
-  TTextBuf = array[0..127] of Char;
-  TTextRec = record
-    Handle: Word;
-    Mode: Word;
-    BufSize: Word;
-    Private_: Word;
-    BufPos: Word;
-    BufEnd: Word;
-    BufPtr: PTextBuf;
-    OpenFunc: Pointer;
-    InOutFunc: Pointer;
-    FlushFunc: Pointer;
-    CloseFunc: Pointer;
-    UserData: array[1..16] of Byte;
-    Name: array[0..79] of Char;
-    Buffer: TTextBuf;
-  end;
-{********** End from WinDos.pas*************}
-{$ENDIF}
-
 Const
 { NotAllowedFileNames:Array[0..10] of  String=(
                                       'NUL','CON','LPT1',
@@ -179,10 +129,7 @@ CheckErrors:Boolean=False;
 Var
 
 {$IFNDEF SPLE}
-{$IFNDEF VIRTUALPASCAL}
-{$ELSE}
 ProgrammScreen : TxtScreen;
-{$ENDIF}
 ErrorReportFile:Text;
 
 BusyFlag:File;

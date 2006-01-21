@@ -70,11 +70,9 @@ Var
 IORes:Integer;
 Begin
  MsgRecord._Attr:=MsgRecord._Attr or _attrReceived;
- {$IFDEF VIRTUALPASCAL}
 {  Reset(Msg,1);}
    If (Not ResetUnTypedFile(Msg,1) ) Then
       Exit;
- {$ENDIF}
 { Seek(Msg,0);}
  If (Not SeekUnTypedFile(Msg,0)) Then
       Exit;
@@ -393,9 +391,7 @@ begin
       {$I-}
       Blockwrite(MsgFile,TearLine[1],length(TearLine));
       Blockwrite(MsgFile,Origin[1],length(Origin));
-{$IFDEF VIRTUALPASCAL}
       Reset(MsgFile,1);
-{$ENDIF}
       Seek(MsgFile,0);
       BlockRead(MsgFile,MsgHeader,SizeOf(MsgHeader));
       {$I+}
@@ -527,9 +523,7 @@ begin
   {$I-}
   blockwrite(MsgFile,EndB,1);
   Err := ioresult <> 0;
-{$IFDEF VIRTUALPASCAL}
       Reset(MsgFile,1);
-{$ENDIF}
   Seek(MsgFile,0);
   Err := ioresult <> 0;
   BlockRead(MsgFile,MSGHead,SizeOf(MSGHead));

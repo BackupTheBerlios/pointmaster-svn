@@ -9,9 +9,6 @@
 {$ENDIF}
 
 Program Point_Master;
-{$IFDEF VIRTUALPASCAL}
-  {$PMType VIO}
-{$ENDIF}
 
 
 
@@ -1354,9 +1351,7 @@ While (DosError=0) And ((DirInfo.Attr And ReadOnly)=0)
 ReadLoop:
   FindNext(DirInfo);
  End;
-{$IFDEF VIRTUALPASCAL}
 FindClose(DirInfo);
-{$ENDIF}
 If _IsPointListInMemory Then
   Begin
     CurrentOperation:=GetOperationString(_logBuildingPointList);
@@ -2072,12 +2067,12 @@ Var
 FileName:String;
 LineNo:LongInt;
 Begin
-{$IFDEF VIRTUALPASCAL}
+ (* FIXME
  If GetLocationInfo(ExceptAddr,FileName,LineNo)<> Nil Then
     GetExceptString:='!Get exception in '+FileName+' line: '+IntToStr(LineNo)
  Else
     GetExceptString:='!Get exception in ???? line: ????';
-{$ENDIF}
+ *)
 End;
 
 
@@ -2090,9 +2085,7 @@ Const
 Var
  PointMaster:TPointMaster;
 
-{$IFDEF VIRTUALPASCAL}
-  EC:ExceptClass;
-{$ENDIF}
+ {FIXME EC:ExceptClass; }
 
 (*{$IFDEF DEBUGVERSION}
   MemAvailBefore,
@@ -2101,9 +2094,7 @@ Var
 {$ENDIF}*)
 
 Begin
-{$IFDEF VIRTUALPASCAL}
-  Try
-{$ENDIF}
+	{FIXME Try}
 
 (*{$IFDEF DEBUGVERSION}
   MemAvailBefore:=MemAvail;
@@ -2125,8 +2116,7 @@ Begin
       Close(LeakF);
      End;
 {$END}*)
-
-{$IFDEF VIRTUALPASCAL} {*** Virtual Pascal Compiler ***}
+(* FIXME support of exceptions
   Except
     on EC:EAbort Do
        Begin
@@ -2286,5 +2276,5 @@ Begin
        End;
   {DoneAll;}
  End;
-{$ENDIF}  {*** Virtual Pascal Compiler ***}
+ *)
 End.
