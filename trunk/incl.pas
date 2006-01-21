@@ -450,21 +450,8 @@ BinaryMasterVersion:VersionRec;
 PntMasterVersion:String;
 
 Const
-(*
-PntMasterVersion='PointMaster v0.07b '+
-{$IFDEF DPMI}
-'[DPMI]'
-{$ELSE}
-'[DOS]'
-{$ENDIF};*)
 BaseVersion='PointMaster v1.03a ';
 SpleVersion='Simple PointList Editor v.0.02a '+
-    {$IFDEF DPMI}
-    '[DPMI]'
-    {$ENDIF}
-    {$IFDEF MSDOS}
-    '[DOS]'
-    {$ENDIF}
     {$IFDEF WIN32}
     '[W32]'
     {$ENDIF}
@@ -922,12 +909,6 @@ IMPLEMENTATION
 
 Begin
  PntMasterVersion:=BaseVersion+
- {$IFDEF DPMI}
-    '[DPMI]'
-    {$ENDIF}
-    {$IFDEF MSDOS}
-    '[DOS]'
-    {$ENDIF}
     {$IFDEF WIN32}
     '[W32]'
     {$ENDIF}
@@ -937,18 +918,6 @@ Begin
     {$IFDEF LINUX}
     '[LNX]'
     {$ENDIF};
-{  VersionRec=Record
-   Major,
-   Minor,
-   SubMinor:Byte;
-   VersionType:VerType;
-   Registered:Boolean;
-   RegisteredInfo:Record
-                      Zone,
-                      Net,
-                      Node,
-                      Point:Word;
-                     End;}
 
 With BinaryMasterVersion Do
   Begin
@@ -957,13 +926,6 @@ With BinaryMasterVersion Do
    SubMinor:=3;
    VersionType:=_verAlpha;
    Registered:=False;
-{   With RegisteredInfo Do
-     Begin
-      Zone:=0;
-      Net:=0;
-      Node:=0;
-      Point:=0;
-     End;}
   End;
 MODE_NOCONSOLE:=False;
 DoUpCase:=True;

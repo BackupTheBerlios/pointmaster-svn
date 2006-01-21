@@ -12,15 +12,9 @@ Incl,Crt,{Drivers,}StrUnit,Dos,Objects,Parser,Os_Type,Drivers,Register,
 
 Var
 CharsCounter:Byte;
-SavedInt1C,
-SavedInt29:Procedure;
-{SavedInt1C,
-SavedInt29:Pointer;}
 IntCounter:ShortInt;
 ScrCounter:Byte;
 
-{IsLogWindowActive,
-IsInfoWindowActive:Boolean;}
 OldX,OldY,
 OldXF,OldYF:Word;
 C:Char;
@@ -29,25 +23,15 @@ StartHour,StartMinutes,StartSec,StartHnd:Word;
 
 Procedure WriteScreenSkeleton;Far;
 Procedure WritePerCent;Far;
-{$IFNDEF VIRTUALPASCAL}
-Procedure ScreenHandler;Interrupt;
-{$ENDIF}
 Procedure RefreshScreen;
 Procedure DoneScreenForHelpRequest;
 Procedure RestoreScreenHandler;Far;
 Procedure SetScreenHandler;Far;
-{Procedure RedirectOutput;Far;
-Procedure RestoreOutput;Far;}
 Procedure PreUpdateScreen;Far;
 Procedure InitializeScreen;Far;
 Procedure DoneScreen;Far;
 Procedure SwitchToLogWindow;Far;
-{Procedure SwitchToInfoWindow;Far;}
 Procedure SwitchToFullWindow;Far;
-{$IFNDEF VIRTUALPASCAL}
-Procedure CursorOff;Far;
-Procedure CursorOn;Far;
-{$ENDIF}
 Procedure DisplayHelpWindow;Far;
 Function  GetMinutesFromStart:Word;
 Procedure PrepareScreenToExec;
@@ -55,25 +39,6 @@ Procedure PrepareScreenToExec;
 IMPLEMENTATION
 
 Uses Logger;
-
-{$IFNDEF VIRTUALPASCAL}
-
-{$IFNDEF SPLE}
-{$IFDEF STABLE}
-{$L PMAST03.OBJ}
-Procedure Scr_Skelet_Data;External;
-
-{$L HELP01.OBJ}
-Procedure Help1_Skeleton;External;
-
-{$L HELP02.OBJ}
-Procedure Help2_Skeleton;External;
-
-{$L HELP03.OBJ}
-Procedure Help3_Skeleton;External;
-{$ENDIF}
-{$ENDIF}
-{$ENDIF}
 
 
 Procedure WriteVersion;Far;
@@ -90,35 +55,6 @@ End;
 Procedure DisplayHelpWindow;
 Begin
  Exit;
-(* {$IFNDEF VIRTUALPASCAL}
- CursorOff;
-{$IFDEF DPMI}
- Move(Pointer(@Help1_Skeleton)^,Ptr(SegB800,0)^,4000);
-{$ELSE}
- Move(Pointer(@Help1_Skeleton)^,Ptr($B800,0)^,4000);
-{$ENDIF}
- WriteVersion;
- Repeat
-{ While (Not KeyPressed) Do}
-    TimeSlice;
- Until KeyPressed;
-{$IFDEF DPMI}
- Move(Pointer(@Help2_Skeleton)^,Ptr(SegB800,0)^,4000);
-{$ELSE}
- Move(Pointer(@Help2_Skeleton)^,Ptr($B800,0)^,4000);
-{$ENDIF}
- WriteVersion;
- While KeyPressed Do
-       ReadKey;
- While (Not KeyPressed) Do
-    TimeSlice;
-{$IFDEF DPMI}
- Move(Pointer(@Help3_Skeleton)^,Ptr(SegB800,0)^,4000);
-{$ELSE}
- Move(Pointer(@Help3_Skeleton)^,Ptr($B800,0)^,4000);
-{$ENDIF}
- WriteVersion;
- {$ENDIF}*)
 End;
 
 Procedure WriteScreenSkeleton;
@@ -143,12 +79,6 @@ Begin
     Ri.Offset:=Ri.Offset Xor Ri.Crc;
     Crc32S:=ShowCrc(Ri.Crc);
     PntMasterVersion:=BaseVersion+
-    {$IFDEF DPMI}
-    '[DPMI]'
-    {$ENDIF}
-    {$IFDEF MSDOS}
-    '[DOS]'
-    {$ENDIF}
     {$IFDEF WIN32}
     '[W32]'
     {$ENDIF}
@@ -177,12 +107,6 @@ Begin
     DosError:=OldDosError;
     Crc32S:='UNREG';
     PntMasterVersion:=BaseVersion+
-    {$IFDEF DPMI}
-    '[DPMI]'
-    {$ENDIF}
-    {$IFDEF MSDOS}
-    '[DOS]'
-    {$ENDIF}
     {$IFDEF WIN32}
     '[W32]'
     {$ENDIF}
@@ -196,12 +120,6 @@ Begin
    End;
  SwitchToFullWindow;
  GotoXy((ScreenWidth div 2)-(Length(BaseVersion+
-    {$IFDEF DPMI}
-    '[DPMI]'
-    {$ENDIF}
-    {$IFDEF MSDOS}
-    '[DOS]'
-    {$ENDIF}
     {$IFDEF WIN32}
     '[W32]'
     {$ENDIF}
@@ -215,12 +133,6 @@ Begin
  TextColor(Black);
  TextBackground(LightGray);
  WriteLn(BaseVersion+
-    {$IFDEF DPMI}
-    '[DPMI]'
-    {$ENDIF}
-    {$IFDEF MSDOS}
-    '[DOS]'
-    {$ENDIF}
     {$IFDEF WIN32}
     '[W32]'
     {$ENDIF}
@@ -297,23 +209,6 @@ Begin
  {.ENDIF}
 End;
 
-{$IFNDEF VIRTUALPASCAL}
-Procedure CursorOff;assembler;
-Asm
-   mov ah,01h
-   mov ch,$20
-   mov cl,$20
-   int 10h
-End;
-
-Procedure CursorOn;assembler;
-Asm
-   mov ah,01h
-   mov ch,$5
-   mov cl,$6
-   int 10h
-End;
-{$ENDIF}
 
 Function GetMinutesFromStart:Word;
 Var
@@ -508,47 +403,6 @@ Inc(ScrCounter);
 {$ENDIF}
 End;
 
-{$IFNDEF VIRTUALPASCAL}
-Procedure ScreenHandler;
-Begin
- If @SavedInt1C<>Nil Then
-   Begin
-    Asm
-      pushf;
-    End;
-    SavedInt1C;
-   End;
-If TimeSliceTimes In [1..18] Then
- Begin
-    If IntCounter>=(Round(18.2/TimeSliceTimes)) Then
-      Begin
-       TimeSlice;
-       IntCounter:=0;
-      End;
-  Inc(IntCounter);
- End;
- Port[$20]:=$20;
-End;
-{$ENDIF}
-
-{
-Procedure RedirectOutput;
-Begin
- OldX:=1;
- OldY:=1;
- TextColor(7);
- TextBackGround(0);
- GetIntVec($29,@SavedInt29);
- SetIntVec($29,@Int29Handler);
- Window(1,1,1,1);
-End;
-
-Procedure RestoreOutput;
-Begin
- If @SavedInt29<>Nil Then
-    SetIntVec($29,@SavedInt29);
-End;}
-
 Procedure PreUpdateScreen;
 Var
 TaskStr:String;
@@ -569,12 +423,6 @@ Begin
     SwitchToFullWindow;
  TextColor(LightRed);
  Write(OsStr+' '+
-    {$IFDEF DPMI}
-    '[DPMI]'
-    {$ENDIF}
-    {$IFDEF MSDOS}
-    '[DOS]'
-    {$ENDIF}
     {$IFDEF WIN32}
     '[W32]'
     {$ENDIF}
@@ -735,45 +583,25 @@ End;
 
 Procedure RestoreScreenHandler;
 Begin
- If MODE_NOCONSOLE Then
-    Exit;
- {$IFNDEF VIRTUALPASCAL}
- If @SavedInt1C<> Nil Then
-    SetIntVec($1C,@SavedInt1C);
- {$ENDIF}
- SavedInt1C:=Nil;
 End;
 
 Procedure SetScreenHandler;
 Begin
- If MODE_NOCONSOLE Then
-    Exit;
- {$IFNDEF VIRTUALPASCAL}
- If @SavedInt1C=Nil Then
-    Begin
-     GetIntVec($1C,@SavedInt1C);
-     SetIntVec($1C,@ScreenHandler);
-    End;
- {$ENDIF}
 End;
 
 Procedure InitializeScreen;
 Begin
-{ CursorOff;}
  WriteScreenSkeleton;
  CharsCounter:=1;
  SwitchToLogWindow;
  TextColor(15);
  TextBackGround(1);
-{ SetScreenHandler;}
 End;
 
 Procedure DoneScreen;
 Begin
  ScrCounter:=20;
  RefreshScreen;
-{ CursorOn;}
-{ RestoreScreenHandler;}
  SwitchToFullWindow;
  TextColor(7);
  TextBackGround(0);
@@ -781,8 +609,6 @@ End;
 
 Procedure DoneScreenForHelpRequest;
 Begin
-{ CursorOn;}
-{ RestoreScreenHandler;}
  SwitchToFullWindow;
  TextColor(7);
  TextBackGround(0);
@@ -796,10 +622,6 @@ Begin
  OldY:=1;
  OldXF:=1;
  OldYF:=1;
- {$IFNDEF VIRTUALPASCAL}
- @SavedInt1C:=Nil;
- @SavedInt29:=Nil;
- {$ENDIF}
  IntCounter:=0;
  ScrCounter:=0;
  TimeSliceTimes:=-1;

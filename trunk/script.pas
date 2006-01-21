@@ -7,10 +7,7 @@ Uses
 Use32,SysUtils,
 {$ENDIF}
 Dos,Logger,Parser,Incl,MCommon,StrUnit,Objects,Crt,Face,Validate,
-     Address,FidoMsg,App,Drivers,Memory,FileIO,PntL_Obj
-     {$IFNDEF VIRTUALPASCAL}
-     ,ExecSwap
-     {$ENDIF};
+     Address,FidoMsg,App,Drivers,Memory,FileIO,PntL_Obj;
 
 
 Type
