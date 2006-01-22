@@ -1502,7 +1502,7 @@ MODE_DEBUG:=False;
    End;
 If MODE_DEBUG Then
    Begin
-    InitDebugLog(Log,'DEBUG.LOG');
+    InitDebugLog(Log,'debug.log');
    End;
 End;
 

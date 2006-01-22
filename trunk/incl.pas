@@ -183,6 +183,7 @@ SavedInt23:Pointer;
 PersonalErrors:Pointer;
 
 Const
+{FIXME ^ should be removed? SPLE works with removed only}
 BossAddressMask='^[#][#][#][#]:^[#][#][#][#];/^[#][#][#][#]';
 
 _whoNone=0;

@@ -348,7 +348,7 @@ Begin
  ErrorPoints:=0;
  ListNameOverrided:=False;
  MODE_NOCONSOLE:=True;
- SetVar(ConfigNameTag,'SPLE.CTL');
+ SetVar(ConfigNameTag,'sple.ctl');
 { SetVar(CurDateStrTag,GetDateString);
  SetVar(CurTimeStrTag,GetTimeString);}
 
@@ -376,8 +376,8 @@ Begin
  SetVar(UserFlagsTag,'');
 
  SetVar(DeleteListAfterProcessTag,No);
- SetVar(_tplPntListHeader,'HEADER.TXT');
- SetVar(_tplPntListFooter,'FOOTER.TXT');
+ SetVar(_tplPntListHeader,'header.txt');
+ SetVar(_tplPntListFooter,'footer.txt');
 
  SetVar(MasterVerTag,SpleVersion);
 
