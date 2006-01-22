@@ -1,12 +1,12 @@
 {$DEFINE SPLE}
 {$I VERSION.INC}
-Uses {InitOvr,}TVCC,Crt,Objects,App,Views,Dialogs,StdDlg,Drivers,Menus,
-     PntL_Obj,Pm_Obj,PointLst,Dos,PLEUnit,Parser,Incl,MsgBoxA,StrUnit,
+Uses {InitOvr,}FvConsts,Crt,Objects,App,Views,Dialogs,StdDlg,Drivers,Menus,
+     PntL_Obj,Pm_Obj,PointLst,Dos,PLEUnit,Parser,Incl,MsgBox,StrUnit,
      PleUnit2,MCommon,Ple_Incl,Os_Type,Config,Logger,Dates;
 
 Type
   PSimplePointListEditor=^TSimplePointListEditor;
-  TSimplePointListEditor=Object(TTVCCApplication)
+  TSimplePointListEditor=Object(TApplication)
    Constructor Init;
    Procedure Idle;Virtual;
    Procedure InitStatusLine;Virtual;
@@ -30,9 +30,9 @@ With Dlg^ Do
    R.Assign(2,1,33,4);
    Insert(New(PStaticText,Init(R,^M'   Комментаpии в поинтлисте'^M'   пpописаны до стpоки босса ?')));
    R.Assign(7,5,17,8);
-   Insert(New(PTVCCButton,Init(R,'~Y~es',cmOk,bfDefault)));
+   Insert(New(PButton,Init(R,'~Y~es',cmOk,bfDefault)));
    R.Assign(18,5,28,8);
-   Insert(New(PTVCCButton,Init(R,'~N~o',cmCancel,bfNormal)));
+   Insert(New(PButton,Init(R,'~N~o',cmCancel,bfNormal)));
    SelectNext(False);
   End;
 IsCommentsBeforeBoss:=DeskTop^.ExecView(Dlg);
@@ -117,16 +117,14 @@ TextBackGround(7);
 GotoXy(66,1);
 WriteLn('Memory: ',(MemAvail div 1024):3, ' kb');}
 {Inline($b4/$01/$b5/$05/$b1/$06/$cd/$10);}
-S:='Memory: '+IntToStr(MemAvail div 1024)+' kb';
-{$IFDEF DPMI}
+{S:='Memory: '+IntToStr(MemAvail div 1024)+' kb';}
+{FIXME MemAvail}
+S:='Memory: FIXME kb';
 {MoveStr(Mem[SegB800:(80*0)+(65*2)],'Memory: '+IntToStr(MemAvail div 1024)+' kb',0);}
+{FIXME 
 For Count:=1 To Length(S) Do
     Mem[SegB800:(63*2)+(Count*2)]:=Ord(S[Count]);
-{$ELSE}
-{MoveStr(Mem[$B800:(80*0)+(65*2)],'Memory: '+IntToStr(MemAvail div 1024)+' kb',0);}
-For Count:=1 To Length(S) Do
-    Mem[$B800:(63*2)+(Count*2)]:=Ord(S[Count]);
-{$ENDIF}
+}
 TimeSlice;
 End;
 
@@ -168,7 +166,7 @@ If SpacePos>0 Then
 New(PFD,Init({'*.PVT'}FName,'Open pointlist:','File name',fdOpenButton,0));
 Control:=Desktop^.ExecView(PFD);
 Case Control Of
-  StdDlg.cmFileOpen,cmOk:
+  cmFileOpen,cmOk:
                         Begin
                          PFD^.GetFileName(Path);
                          {CurrentPointListName:=Path;}

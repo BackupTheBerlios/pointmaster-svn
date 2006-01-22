@@ -2,7 +2,7 @@ unit PLEUNIT2;
 
 interface
 
-uses Drivers, Objects, Views, Dialogs,PointLst,Incl,Validate,MsgBoxA,App,StrUnit,TVCC;
+uses Drivers, Objects, Views, Dialogs,PointLst,Incl,Validate,MsgBox,App,StrUnit;
 
 Const
 
@@ -41,7 +41,7 @@ End;
   { TPointListEditor }
 
   PMessageSender = ^TMessageSender;
-  TMessageSender = object(TTVCCDialog)
+  TMessageSender = object(TDialog)
     constructor Init;
     constructor Load(var S: TStream);
     procedure HandleEvent(var Event: TEvent); virtual;
@@ -65,7 +65,7 @@ implementation
 
 Procedure ReplaceTralingChars(Var S:String);
 Var
-Count:Integer;
+Count:LongInt;
 Begin
 S:=StrTrim(S);
 Count:=Pos(' ',S);
@@ -111,7 +111,7 @@ End;
 Constructor TPointList.Init(Var Bounds: TRect; ANumCols: Word; AScrollBar:
                    PScrollBar);
 Var
-Count:Integer;
+Count:LongInt;
 Begin
 Inherited Init(Bounds,ANumCols,AScrollBar);
 If PointsCollection=Nil Then
@@ -127,7 +127,7 @@ End;
 Constructor TCommentList.Init(Var Bounds: TRect; ANumCols: Word; AScrollBar:
                    PScrollBar);
 Var
-Count:Integer;
+Count:LongInt;
 Begin
 Inherited Init(Bounds,ANumCols,AScrollBar);
 If CommentsCollection=Nil Then
@@ -170,7 +170,7 @@ End;
 
 Procedure InsertPoint(IsEdit:Boolean);
 Var
-PointDialog:PTVCCDialog;
+PointDialog:PDialog;
 R:TRect;
 S:String;
 PointString,
@@ -197,7 +197,7 @@ Begin
 Else
     S:='Добавление';
 R.Assign(8,0,66,23);
-PointDialog:=New(PTVCCDialog,Init(R,S));
+PointDialog:=New(PDialog,Init(R,S));
 NumberValidator:=New(PPointValidator,Init('#[#][#][#][#]',True));
 SysNameValidator:=New(PPointValidator,Init('*|',True));
 LocationValidator:=New(PPointValidator,Init('*|',True));
@@ -315,9 +315,9 @@ With PointDialog^ Do
 
 
   R.Assign(46,6,56,9);
-  Insert(New(PTVCCButton,Init(R,'~O~k',cmOk,bfDefault)));
+  Insert(New(PButton,Init(R,'~O~k',cmOk,bfDefault)));
   R.Assign(46,10,56,13);
-  Insert(New(PTVCCButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
+  Insert(New(PButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
   SelectNext(False);
  End;
 {If (IsEdit) and (PointsCollection^.Count<>0) and (Focused<PointsCollection^.Count) Then
@@ -392,16 +392,16 @@ End;
 
 Procedure SearchPoint;
 Var
-SearchDialog:PTVCCDialog;
+SearchDialog:PDialog;
 R:TRect;
 S:String;
 SearchString:PInputLine;
-Count:Integer;
+Count:LongInt;
 Begin
 If (BossRecArray^.Count=0) or (PointsCollection^.Count=0) Then
    Exit;
 R.Assign(2,0,79,9);
-SearchDialog:=New(PTVCCDialog,Init(R,'Поиск поинта'));
+SearchDialog:=New(PDialog,Init(R,'Поиск поинта'));
 With SearchDialog^ Do
   Begin
    R.Assign(2,3,75,4);
@@ -411,9 +411,9 @@ With SearchDialog^ Do
    R.Assign(2,1,40,2);
    Insert(New(PLabel,Init(R,' Введите часть стpоки для поиска',SearchString)));
    R.Assign(24,5,34,8);
-   Insert(New(PTVCCButton,Init(R,' ~O~k',cmOk,bfDefault)));
+   Insert(New(PButton,Init(R,' ~O~k',cmOk,bfDefault)));
    R.Assign(37,5,47,8);
-   Insert(New(PTVCCButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
+   Insert(New(PButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
    SelectNext(False);
   End;
 If DeskTop^.ExecView(SearchDialog)=cmCancel Then
@@ -472,7 +472,7 @@ End;
 
 Procedure InsertComment(IsEdit:Boolean);
 Var
-CommentDialog:PTVCCDialog;
+CommentDialog:PDialog;
 R:TRect;
 S:String;
 CommentString:PInputLine;
@@ -485,7 +485,7 @@ Begin
 Else
     S:='Добавление';
 R.Assign(2,4,79,13);
-CommentDialog:=New(PTVCCDialog,Init(R,S));
+CommentDialog:=New(PDialog,Init(R,S));
 {Validator:=New(PPointValidator,Init(';;*|',True));}
 With CommentDialog^ Do
  Begin
@@ -497,9 +497,9 @@ With CommentDialog^ Do
   R.Assign(2,1,27,2);
   Insert(New(PLabel,Init(R,'  Введите комментаpий',CommentString)));
   R.Assign(21,5,31,8);
-  Insert(New(PTVCCButton,Init(R,'~O~k',cmOk,bfDefault)));
+  Insert(New(PButton,Init(R,'~O~k',cmOk,bfDefault)));
   R.Assign(34,5,44,8);
-  Insert(New(PTVCCButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
+  Insert(New(PButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
   SelectNext(False);
  End;
 CommTag:=';';
@@ -579,23 +579,23 @@ R.Assign(33, 8, 42, 9);
 Insert(New(PLabel, Init(R, 'Points', Control)));
 
 R.Assign(25, 19, 35, 22);
-Control := New(PTVCCButton, Init(R, '~I~nsert', cmInsert, bfNormal));
+Control := New(PButton, Init(R, '~I~nsert', cmInsert, bfNormal));
 Insert(Control);
 
 R.Assign(55, 19, 65, 22);
-Control := New(PTVCCButton, Init(R, '~S~earch', cmSearch, bfNormal));
+Control := New(PButton, Init(R, '~S~earch', cmSearch, bfNormal));
 Insert(Control);
 
 R.Assign(35, 19, 45, 22);
-Control := New(PTVCCButton, Init(R, '~D~elete', cmDelete, bfNormal));
+Control := New(PButton, Init(R, '~D~elete', cmDelete, bfNormal));
 Insert(Control);
 
 R.Assign(45, 19, 55, 22);
-Control := New(PTVCCButton, Init(R, '~E~dit', cmEdit, bfDefault));
+Control := New(PButton, Init(R, '~E~dit', cmEdit, bfDefault));
 Insert(Control);
 
 R.Assign(4, 19, 22, 22);
-Control := New(PTVCCButton, Init(R, ' ~V~iew Bosses', cmViewBosses, bfNormal));
+Control := New(PButton, Init(R, ' ~V~iew Bosses', cmViewBosses, bfNormal));
 Insert(Control);
 
 R.Assign(79, 3, 80, 7);

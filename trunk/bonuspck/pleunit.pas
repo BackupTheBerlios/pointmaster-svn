@@ -2,8 +2,8 @@ unit PLEUnit;
 
 interface
 
-uses Drivers, Objects, Views, Dialogs,PointLst,Incl,Validate,MsgBoxA,App,PLEUnit2,Parser,StrUnit,
-     MCommon,Ple_Incl,TVCC,PntL_Obj;
+uses Drivers, Objects, Views, Dialogs,PointLst,Incl,Validate,MsgBox,App,PLEUnit2,Parser,StrUnit,
+     MCommon,Ple_Incl,PntL_Obj;
 
 {Const
 cmInsert=202;
@@ -14,7 +14,7 @@ cmEdit=206;}
 
 Type
   PDlgWindow=^TDlgWindow;
-  TDlgWindow=Object(TTVCCDialog)
+  TDlgWindow=Object(TDialog)
    Procedure HandleEvent(Var Event:TEvent);Virtual;
 End;
 
@@ -30,7 +30,7 @@ End;
 Type
  PBossCollection=^TBossCollection;
  TBossCollection=Object(TStringCollection)
-   Function Compare(Key1,Key2:Pointer):Integer;Virtual;
+   Function Compare(Key1,Key2:Pointer):LongInt;Virtual;
 End;
 
 
@@ -61,7 +61,7 @@ End;
   { TPointListEditor }
 
   PPointListEditor = ^TPointListEditor;
-  TPointListEditor = object(TTVCCDialog)
+  TPointListEditor = object(TDialog)
     constructor Init;
     constructor Load(var S: TStream);
     procedure HandleEvent(var Event: TEvent); virtual;
@@ -102,9 +102,9 @@ With Dlg^ Do
    R.Assign(7,1,33,3);
    Insert(New(PStaticText,Init(R,'     Save changes ?    ')));
    R.Assign(7,3,17,6);
-   Insert(New(PTVCCButton,Init(R,'~Y~es',cmOk,bfDefault)));
+   Insert(New(PButton,Init(R,'~Y~es',cmOk,bfDefault)));
    R.Assign(18,3,28,6);
-   Insert(New(PTVCCButton,Init(R,'~N~o',cmCancel,bfNormal)));
+   Insert(New(PButton,Init(R,'~N~o',cmCancel,bfNormal)));
    SelectNext(False);
   End;
 IsSaveChanges:=DeskTop^.ExecView(Dlg);
@@ -114,7 +114,7 @@ End;
 
 
 
-Function TBossCollection.Compare(Key1,Key2:Pointer):Integer;
+Function TBossCollection.Compare(Key1,Key2:Pointer):LongInt;
 Var
 FStr: PString absolute Key1;
 SStr: PString absolute Key2;
@@ -146,7 +146,7 @@ End;
 Constructor TBossList.Init(var Bounds: TRect; ANumCols: Word; AScrollBar:
                          PScrollBar);
 Var
-Count:Integer;
+Count:LongInt;
 Begin
 Inherited Init(Bounds,ANumCols,AScrollBar);
 {If BossCollection=Nil Then
@@ -161,7 +161,7 @@ End;
 
 Procedure TBossList.NewList(AList: PCollection);
 Var
-Counter:Integer;
+Counter:LongInt;
 Begin
 {  if List <> nil then Dispose(List, Done);
   List := AList;
@@ -206,7 +206,7 @@ Procedure TBossList.HandleEvent(Var Event:TEvent);
 
 Procedure DeleteBoss;
 Var
-LastFocus:Integer;
+LastFocus:LongInt;
 Begin
 { If Focused<BossCollection^.Count Then}
  If Focused<BossRecArray^.Count Then
@@ -229,21 +229,21 @@ End;
 
 Procedure InsertBoss(IsEdit:Boolean);
 Var
-BossDialog:PTVCCDialog;
+BossDialog:PDialog;
 R:TRect;
 S:String;
 BossString:PInputLine;
 Control:Word;
 Validator:PBossValidator;
 BossTag:String;
-LastFocus:Integer;
+LastFocus:LongInt;
 Begin
  If IsEdit Then
     S:='Edit'
 Else
     S:='Insert';
 R.Assign(25,4,49,13);
-BossDialog:=New(PTVCCDialog,Init(R,S));
+BossDialog:=New(PDialog,Init(R,S));
 Validator:=New(PBossValidator,Init('Boss;,^[#][#][#][#]:^[#][#][#][#];/^[#][#][#][#]',True));
 With BossDialog^ Do
  Begin
@@ -255,9 +255,9 @@ With BossDialog^ Do
   R.Assign(2,1,22,2);
   Insert(New(PLabel,Init(R,'  Input address',BossString)));
   R.Assign(1,5,12,8);
-  Insert(New(PTVCCButton,Init(R,' ~O~k',cmOk,bfDefault)));
+  Insert(New(PButton,Init(R,' ~O~k',cmOk,bfDefault)));
   R.Assign(12,5,23,8);
-  Insert(New(PTVCCButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
+  Insert(New(PButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
   SelectNext(False);
  End;
 BossTag:='Boss,';
@@ -304,18 +304,18 @@ End;
 
 Procedure SearchBoss;
 Var
-SearchDialog:PTVCCDialog;
+SearchDialog:PDialog;
 R:TRect;
 S:String;
 SearchString:PInputLine;
-Count:Integer;
-BossPos:Integer;
+Count:LongInt;
+BossPos:LongInt;
 Begin
 If BossRecArray^.Count=0 Then
    Exit;
 BossPos:=0;
 R.Assign(25,4,50,13);
-SearchDialog:=New(PTVCCDialog,Init(R,'Search for boss'));
+SearchDialog:=New(PDialog,Init(R,'Search for boss'));
 With SearchDialog^ Do
   Begin
    R.Assign(2,3,23,4);
@@ -325,9 +325,9 @@ With SearchDialog^ Do
    R.Assign(1,1,23,2);
    Insert(New(PLabel,Init(R,'Input part of address',SearchString)));
    R.Assign(1,5,12,8);
-   Insert(New(PTVCCButton,Init(R,' ~O~k',cmOk,bfDefault)));
+   Insert(New(PButton,Init(R,' ~O~k',cmOk,bfDefault)));
    R.Assign(12,5,23,8);
-   Insert(New(PTVCCButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
+   Insert(New(PButton,Init(R,'~C~ancel',cmCancel,bfNormal)));
    SelectNext(False);
   End;
 If DeskTop^.ExecView(SearchDialog)=cmCancel Then
@@ -516,24 +516,24 @@ Insert(Control);
   Insert(New(PLabel, Init(R, 'Bosses List', Control)));
 
 R.Assign(36, 5, 46, 8);
-Control := New(PTVCCButton, Init(R, '~I~nsert', cmInsert, bfNormal));
+Control := New(PButton, Init(R, '~I~nsert', cmInsert, bfNormal));
 Insert(Control);
 
 R.Assign(48, 5, 58, 8);
-Control := New(PTVCCButton, Init(R, '~D~elete', cmDelete, bfNormal));
+Control := New(PButton, Init(R, '~D~elete', cmDelete, bfNormal));
 Insert(Control);
 
 R.Assign(36, 8, 46, 11);
-Control := New(PTVCCButton, Init(R, '~S~earch', cmSearch, bfNormal));
+Control := New(PButton, Init(R, '~S~earch', cmSearch, bfNormal));
 Insert(Control);
 
 
 R.Assign(48, 8, 58, 11);
-Control := New(PTVCCButton, Init(R, '~E~dit', cmEdit, bfNormal));
+Control := New(PButton, Init(R, '~E~dit', cmEdit, bfNormal));
 Insert(Control);
 
 R.Assign(38, 11, 56, 14);
-Control := New(PTVCCButton, Init(R, ' ~V~iew Points', cmViewPoints, bfDefault));
+Control := New(PButton, Init(R, ' ~V~iew Points', cmViewPoints, bfDefault));
 Insert(Control);
 
 R.Assign(32, 2, 63, 4);
