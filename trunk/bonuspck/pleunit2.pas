@@ -238,7 +238,6 @@ NumberValidator:=New(PPointValidator,Init('#[#][#][#][#]',True));
 SysNameValidator:=New(PPointValidator,Init('*\',True));
 LocationValidator:=New(PPointValidator,Init('*\',True));
 NameValidator:=New(PPointValidator,Init('*\',True));
-(* PhoneValidator:=New(PPointValidator,Init('{-Unpublished-,*#[-]*#[-]*#[-]*#}',True));*)
 PhoneValidator:=New(PPointValidator,Init(GetVarByIndex(PhoneMaskTag.Tag,1,_varNONE),True));
 SpeedValidator:=New(PPointValidator,Init(GetVarByIndex(SpeedFlagsTag.Tag,1,_varNONE),True));
 FlagsValidator:=New(PPointValidator,Init('*/',True));
