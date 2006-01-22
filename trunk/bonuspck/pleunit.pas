@@ -244,7 +244,7 @@ Else
     S:='Insert';
 R.Assign(25,4,49,13);
 BossDialog:=New(PDialog,Init(R,S));
-Validator:=New(PBossValidator,Init('Boss;,^[#][#][#][#]:^[#][#][#][#];/^[#][#][#][#]',True));
+Validator:=New(PBossValidator,Init('Boss;,[#][#][#][#]:[#][#][#][#];/[#][#][#][#]',True));
 With BossDialog^ Do
  Begin
   R.Assign(2,3,22,4);
