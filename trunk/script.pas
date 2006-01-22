@@ -1463,7 +1463,9 @@ End;
 
 Procedure LogWriteDosError(ErrorCode:Integer;LogString:String);
 Begin
+  {$IFNDEF SPLE}
   LogWriteLn(GetExpandedString(LogString)+GetErrorString(ErrorCode));
+  {$ENDIF}
 End;
 
 

@@ -9,7 +9,7 @@ Objects,StrUnit,Dos,Incl,Address,Logger,Parser,Memory,{TpDos,}Validate,MCommon,
      {$IFDEF SPLE}
      ,Ple_Incl,
       PBar,
-      MsgBoxA
+      MsgBox
      {$ELSE}
      ,Script
      {$ENDIF}

@@ -574,7 +574,9 @@ Begin
         Begin
               ResetUnTypedFile:=False;
               LogWriteLn('!Can''t reset untyped file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 Function ResetTypedFile(Var F;RecSize:Word):Boolean;
@@ -590,7 +592,9 @@ Begin
         Begin
               ResetTypedFile:=False;
               LogWriteLn('!Can''t reset typed file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 Function ResetTextFile(Var F:Text):Boolean;
@@ -606,7 +610,9 @@ Begin
         Begin
               ResetTextFile:=False;
               LogWriteLn('!Can''t reset text file '+StrPas(TextRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 
@@ -624,7 +630,9 @@ Begin
         Begin
               RewriteUnTypedFile:=False;
               LogWriteLn('!Can''t rewrite untyped file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 Function RewriteTypedFile(Var F;RecSize:Word):Boolean;
@@ -640,7 +648,9 @@ Begin
         Begin
               RewriteTypedFile:=False;
               LogWriteLn('!Can''t rewrite typed file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 Function RewriteTextFile(Var F:Text):Boolean;
@@ -656,7 +666,9 @@ Begin
         Begin
               RewriteTextFile:=False;
               LogWriteLn('!Can''t rewrite text file '+StrPas(TextRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 
@@ -674,7 +686,9 @@ Begin
         Begin
               CloseUnTypedFile:=False;
               LogWriteLn('!Can''t close untyped file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 
@@ -691,7 +705,9 @@ Begin
         Begin
               CloseTypedFile:=False;
               LogWriteLn('!Can''t close typed file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 
@@ -708,7 +724,9 @@ Begin
         Begin
               CloseTextFile:=False;
               LogWriteLn('!Can''t close text file '+StrPas(TextRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 End;
 
@@ -725,7 +743,9 @@ Begin
         Begin
               WriteLnToTextFile:=False;
               LogWriteLn('!Can''t write line to text file '+StrPas(TextRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 
 End;
@@ -743,7 +763,9 @@ Begin
         Begin
               ReadLnFromTextFile:=False;
               LogWriteLn('!Can''t read line to text file '+StrPas(TextRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 
 End;
@@ -762,7 +784,9 @@ Begin
         Begin
               BlockWriteToUnTypedFile:=False;
               LogWriteLn('!Can''t write block to untyped file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 
 End;
@@ -781,7 +805,9 @@ Begin
         Begin
               BlockReadFromUnTypedFile:=False;
               LogWriteLn('!Can''t read block from untyped file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 
 End;
@@ -800,7 +826,9 @@ Begin
         Begin
               BlockWriteToUnTypedFileEx:=False;
               LogWriteLn('!Can''t write block to untyped file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 
 End;
@@ -818,7 +846,9 @@ Begin
         Begin
               BlockReadFromUnTypedFileEx:=False;
               LogWriteLn('!Can''t read block from untyped file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 
 End;
@@ -837,7 +867,9 @@ Begin
         Begin
               SeekunTypedFile:=False;
               LogWriteLn('!Can''t seek to untyped file '+StrPas(FileRec(F).Name));
+              {$IFNDEF SPLE}
               LogWriteDosError(InOutResult,GetExpandedString(_logDosError));
+			  {$ENDIF}
         End;
 
 End;
