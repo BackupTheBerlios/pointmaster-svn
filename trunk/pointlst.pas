@@ -850,9 +850,9 @@ WhatDoOnError:Byte;
             If StrUp(GetVar(LogPntStringErrorsTag.Tag,_varNONE))=Yes Then
               Begin
                If StrUp(GetVar(LanguageTag.Tag,_varNONE))=EnglishTag Then
-                  LogWriteLn('!File: '++GetFNameAndExt(PntListName))
+                  LogWriteLn('!File: '+GetFNameAndExt(PntListName))
                Else
-                  LogWriteLn('!” ©«: '++GetFNameAndExt(PntListName));
+                  LogWriteLn('!” ©«: '+GetFNameAndExt(PntListName));
                If (PPointString<>Nil) And (PPointString^.PNumber<>Nil) Then
                  Begin
                   If StrUp(GetVar(LanguageTag.Tag,_varNONE))=EnglishTag Then
