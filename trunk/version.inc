@@ -1,2 +1,2 @@
-{$UNDEF SPLE}
 {$DEFINE PM}
+{$UNDEF SPLE}
