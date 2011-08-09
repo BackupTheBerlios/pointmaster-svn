@@ -1,0 +1,353 @@
+Uses Objects;
+
+
+Type
+ TAddr=Record
+  Zone,
+  Net,
+  Node,
+  Point: Integer;
+  Domain:String;
+ End;
+
+
+Type
+  PVarTagRec=^VarTagRec;
+  VarTagRec=Record
+    Tag:String[30];
+    Flag:Word;
+End;
+
+
+{Const
+ NotAllowedFileNames:Array[0..10] of  String=(
+                                      'NUL','CON','LPT1',
+                                      'LPT2','LPT3','CLOCK$','AUX',
+                                      'COM1','COM2','COM3','COM4');}
+
+{Var
+TotalBytes:LongInt;
+ReadedBytes:LongInt;
+CurrentOperation:String;
+MsgMaskToSet:Word;}
+
+Const
+CriticalMemorySize:LongInt=2000;
+_flgNone:Word=0;
+_flgDeletePoint=1;
+cmInsert=203;
+cmDelete=204;
+cmSearch=205;
+cmEdit=206;
+cmViewPoints=207;
+cmViewBosses=208;
+cmOpenPointList=202;
+
+{_repCantChangeAnotherBoss=3;
+_repAllDone=4;
+_repNotAllowForPoint=5;
+_repSegmentRequest=6;
+_repHelpRequest=7;
+_repErrorsInMessage=8;
+_repErrorsInPointList=9;
+_repStatisticRequest=10;}
+
+{Var
+_logSearchForMsg,
+_logFoundMsg,
+_logFoundRequest,
+_logCantOpenFile,
+_logBossAddress,
+_logAddedBosses,
+_logDeletedBosses,
+_logFalseDeletedBosses,
+_logAddedPoints,
+_logDeletedPoints,
+_logChangedPoints,
+_logFalseDeletedPoints,
+_logFalseChangedPoints,
+_logDuplicateBosses,
+_logTryChangeAnotherBoss,
+_logCantOpenTpl,
+_logCantCreateMessage,
+_logMasterIsBusyInAnotherTask,
+_logCantCreateBusyFlag,
+_logCantRemoveBusyFlag,
+_logNotEnoughMemory,
+_logCantDeleteFile,
+_logCircularInclude,
+{_logReadingAllMsg,}
+{_logBuildingPointList,
+_logCreatingAllDoneReport,
+_logCreatingFalseReport,
+{_oprCreatingSegmentReport,
+_oprCreatingStatisticReport,
+_oprCreatingHelpReport}
+{_logCreatingRequestReport:String;}
+
+Const
+NULL=0;
+NOT_PROCESS_STRING=32;
+INCLUDE_FILE=64;
+INCLUDE_SEGMENT=128;
+INCLUDE_LISTERRORS=256;
+INCLUDE_MESSAGEERRORS=512;
+INCLUDE_STATISTIC=1024;
+
+MODE_NOTHING=1;
+MODE_MSG=2;
+MODE_BUILD=4;
+MODE_MSG_BUILD=8;
+
+_flgBossNotFound=1;
+_flgDupeBosses=2;
+_flgSingle=1;
+_flgCollection=2;
+
+Var
+_flgDebug:Boolean;
+{_flgProcessMessages:Boolean;}
+{_flgBuildPointList:Boolean;}
+_flgWasEdited:Boolean;
+AddedPoints,
+DeletedPoints,
+ChangedPoints,
+FalseChangedPoints,
+FalseDeletedPoints,
+AddedBosses,
+DeletedBosses,
+FalseDeletedBosses,
+DuplicateBosses,
+WrongPoints:Integer;
+WorkMode:Word;
+CurrentPointListName:String;
+Const
+{ConfigNameTag='CONFIGNAME';
+LanguageNameTag='PM.LNG';}
+IncludeTag='#INCLUDE';
+DefineTag='#DEFINE';
+SegmentBodyTag='#SEGMENT';
+ListErrorsTag='#ERRORSINLIST';
+MessageErrorsTag='#ERRORSINMESSAGE';
+StatisticTag='#STATISTIC';
+{OriginTag='* Origin: ';
+TearLineTag='--- ';
+BossTag='BOSS';
+PointTag='POINT';
+_klgFMPT='FMPT';
+_klgTOPT='TOPT';
+_klgMSGID='MSGID';}
+Yes='YES';
+No='NO';
+{PntMasterVersion='PointMaster v.0.05a';
+PntMasterName='PointMaster';}
+
+{TaskNumberTag:VarTagRec=(
+                 Tag:'TASK';
+                 Flag:_flgSingle);
+MasterVerTag:VarTagRec=(
+                 Tag:'VERSION';
+                 Flag:_flgSingle);
+MasterNameTag:VarTagRec=(
+                 Tag:'MASTERNAME';
+                 Flag:_flgCollection);
+SysOpNameTag:VarTagRec=(
+                 Tag:'SYSOPNAME';
+                 Flag:_flgSingle);
+SysOpAddressTag:VarTagRec=(
+                 Tag:'SYSOPADDRESS';
+                 Flag:_flgSingle);
+FromFNameTag:VarTagRec=(
+                 Tag:'FROMFNAME';
+                 Flag:_flgSingle);
+FromLNameTag:VarTagRec=(
+                 Tag:'FROMLNAME';
+                 Flag:_flgSingle);
+FromFLNameTag:VarTagRec=(
+                 Tag:'FROMFULLNAME';
+                 Flag:_flgSingle);
+FromAddressTag:VarTagRec=(
+                 Tag:'FROMADDRESS';
+                 Flag:_flgSingle);
+MasterAddressTag:VarTagRec=(
+                 Tag:'MASTERADDRESS';
+                 Flag:_flgSingle);
+MasterLogNameTag:VarTagRec=(
+                 Tag:'LOG';
+                 Flag:_flgSingle);
+LogSizeTag:VarTagRec=(
+                 Tag:'LOGSIZE';
+                 Flag:_flgSingle);
+StatFileNameTag:VarTagRec=(
+                 Tag:'BINARYSTATFILE';
+                 Flag:_flgSingle);
+PointSegmentNameTag:VarTagRec=(
+                 Tag:'LISTSEGMENT';
+                 Flag:_flgCollection);}
+EditorNameTag:VarTagRec=(
+              Tag:'EDITORNAME';
+              Flag:_flgSingle);
+DeleteListAfterProcessTag:VarTagRec=(
+                 Tag:'DELETELISTAFTERPROCESS';
+                 Flag:_flgSingle);
+DestPointListNameTag:VarTagRec=(
+                 Tag:'DESTPOINTLIST';
+                 Flag:_flgSingle);
+{PointListNameTag:VarTagRec=(
+                 Tag:'POINTLIST';
+                 Flag:_flgCollection);
+NetMailPathTag:VarTagRec=(
+                 Tag:'NETMAILPATH';
+                 Flag:_flgSingle);
+CurrentMessageNameTag:VarTagRec=(
+                 Tag:'CURMSG';
+                 Flag:_flgSingle);
+KillSentTag:VarTagRec=(
+                 Tag:'KILLSENT';
+                 Flag:_flgSingle);
+SafeMsgModeTag:VarTagRec=(
+                 Tag:'SAFEMSGMODE';
+                 Flag:_flgSingle);
+SplitCharTag:VarTagRec=(
+                 Tag:'SPLITCHAR';
+                 Flag:_flgSingle);
+DeleteCharsTag:VarTagRec=(
+                 Tag:'DELETEPOINTCHARS';
+                 Flag:_flgSingle);}
+CommentsBeforeBossTag:VarTagRec=(
+                 Tag:'COMMENTSBEFOREBOSS';
+                 Flag:_flgSingle);
+StringsToSkipAtBeginOfListTag:VarTagRec=(
+                 Tag:'SKIPATBEGINOFLIST';
+                 Flag:_flgSingle);
+AddSemicolonAfterEachBossTag:VarTagRec=(
+                 Tag:'ADDSEMICOLONAFTEREACH';
+                 Flag:_flgSingle);
+{BusyFlagNameTag:VarTagRec=(
+                 Tag:'BUSYFLAG';
+                 Flag:_flgSingle);
+FileAttachPathTag:VarTagRec=(
+                 Tag:'FILEATTACHPATH';
+                 Flag:_flgSingle);
+ProcessFileAttachTag:VarTagRec=(
+                 Tag:'PROCESSFILEATTACH';
+                 Flag:_flgSingle);
+UseFileAttachPathTag:VarTagRec=(
+                 Tag:'USEFILEATTACHPATH';
+                 Flag:_flgSingle);}
+ValidateStringTag:VarTagRec=(
+                 Tag:'VALIDATESTRING';
+                 Flag:_flgSingle);
+UseValidateTag:VartagRec=(
+                 Tag:'USEVALIDATE';
+                 Flag:_flgSingle);
+CurDateStrTag:VarTagRec=(
+                 Tag:'CURDATE';
+                 Flag:_flgSingle);
+CurTimeStrTag:VarTagRec=(
+                 Tag:'CURTIME';
+                 Flag:_flgSingle);{
+SubjTag:VarTagRec=(
+                 Tag:'SUBJ';
+                 Flag:_flgSingle);
+FromTag:VarTagRec=(
+                 Tag:'FROM';
+                 Flag:_flgSingle);
+ToTag:VarTagRec=(
+                 Tag:'TO';
+                 Flag:_flgSingle);
+TearLineStrTag:VarTagRec=(
+                 Tag:'TEARLINE';
+                 Flag:_flgSingle);
+OriginStrTag:VarTagRec=(
+                 Tag:'ORIGIN';
+                 Flag:_flgSingle);
+RequestTag:VarTagRec=(
+                 Tag:'REQUEST';
+                 Flag:_flgSingle);
+DeletedBossesTag:VarTagRec=(
+                 Tag:'DELBOSSES';
+                 Flag:_flgSingle);
+AddedBossesTag:VartagRec=(
+                 Tag:'ADDBOSSES';
+                 Flag:_flgSingle);
+FalseDeletedBossesTag:VarTagRec=(
+                 Tag:'FDELBOSSES';
+                 Flag:_flgSingle);
+DeletedPointsTag:VarTagRec=(
+                 Tag:'DELPOINTS';
+                 Flag:_flgSingle);
+AddedPointsTag:VarTagRec=(
+                 Tag:'ADDPOINTS';
+                 Flag:_flgSingle);
+ChangedPointsTag:VarTagRec=(
+                 Tag:'CHGPOINTS';
+                 Flag:_flgSingle);
+FalseDeletedPointsTag:VarTagRec=(
+                 Tag:'FDELPOINTS';
+                 Flag:_flgSingle);
+FalseChangedPointsTag:VarTagRec=(
+                 Tag:'FCHGPOINTS';
+                 Flag:_flgSingle);
+DuplicateBossesTag:VarTagRec=(
+                 Tag:'DUPEBOSSES';
+                 Flag:_flgSingle);
+
+StatisticStringTag:VarTagRec=(
+                 Tag:'STATSTRING';
+                 Flag:_flgSingle);
+StatisticDateTag:VarTagRec=(
+                 Tag:'STATDATE';
+                 Flag:_flgSingle);}
+{Requests}
+{SegmentRequestTag:VarTagRec=(
+                   Tag:'%SEGMENT';
+                   Flag:_flgSingle);
+HelpRequestTag:VarTagRec=(
+                   Tag:'%HELP';
+                   Flag:_flgSingle);
+StatisticRequestTag:VarTagRec=(
+                   Tag:'%STATISTIC';
+                   Flag:_flgSingle);
+{Requests}
+
+{Templates}
+{_tplAllDone:String='ALLDONETPL';
+_tplNotAllowForPoint:String='NOTFORPOINTTPL';
+_tplNotSupportAddNewBoss:String='NOTNEWBOSSTPL';
+_tplCantChangeAnotherBoss:String='NOTANOTHERBOSSTPL';
+_tplDoneSegRequest:String='SEGMENTREQUESTTPL';
+_tplDoneHelpRequest:String='HELPREQUESTTPL';
+_tplPntListHeader:String='LISTHEADER';
+_tplPntListFooter:String='LISTFOOTER';}
+{_tplAllDone:VarTagRec=(
+                      Tag:'ALLDONETPL';
+                      Flag:_flgSingle);
+_tplNotAllowForPoint:VarTagRec=(
+                      Tag:'NOTFORPOINTTPL';
+                      Flag:_flgSingle);
+_tplCantChangeAnotherBoss:VarTagRec=(
+                      Tag:'NOTANOTHERBOSSTPL';
+                      Flag:_flgSingle);
+_tplDoneSegRequest:VarTagRec=(
+                      Tag:'SEGMENTREQUESTTPL';
+                      Flag:_flgSingle);
+_tplDoneHelpRequest:VarTagRec=(
+                      Tag:'HELPREQUESTTPL';
+                      Flag:_flgSingle);
+_tplStatisticRequest:VarTagRec=(
+                      Tag:'STATISTICREQUESTTPL';
+                      Flag:_flgSingle);
+_tplErrorsInMessage:VarTagRec=(
+                      Tag:'ERRORSINMESSAGETPL';
+                      Flag:_flgSingle);
+_tplErrorsInPointList:VarTagRec=(
+                      Tag:'ERRORSINPOINTLISTTPL';
+                      Flag:_flgSingle);}
+_tplPntListHeader:VarTagRec=(
+                      Tag:'LISTHEADER';
+                      Flag:_flgSingle);
+_tplPntListFooter:VarTagRec=(
+                      Tag:'LISTFOOTER';
+                      Flag:_flgSingle);
+{Templates}

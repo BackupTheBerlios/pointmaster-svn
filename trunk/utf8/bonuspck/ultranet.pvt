@@ -1,0 +1,20 @@
+;
+; Private Pointlist
+; Edited with Simple PointList Editor v.0.02a [DOS] at [16:44:40] [14/02/2002]
+;
+; UltraNet Private Pointlist for Wednesday, June 30, 1999, day number: 181
+; Updated by PointMaster on 777:1998/1.0@UltraNet at [18:43:58] [30/06/1999]
+;new comment2 from message
+;new comment2 from message
+Boss,777:1998/1
+Point,3,Test,Vladivostok,Andrew_Kornilov,7-423-229-8188,9600,MO,V42B
+Point,5,Test,Vladivostok,Andrew_Kornilov,7-423-229-8188,9600,MO,V42B
+;
+Boss,777:1998/911
+Point,1,BioDanger,Vladivostok,Vasja_Avilov,7-423-233-3212,9600,XA,V32B,V42B
+Point,3,Dragon,Vladivostok,Ivan_Danilenko,7-423-246-7719,9600,XA,V32B,V42B,V34
+Point,7,DEN,Vladivostok,Denis_Fyodorov,7-423-233-0802,9600,XA,V32B,V42B
+Point,13,Crazy_Int,Vladivostok,Alexander_Rikmanis,7-423-226-6345,9600,XA,V32B,V42B
+Point,24,Helga's_Club,Vladivostok,Anna_Filippova,-Unpublished-,9600,XA,V32B,V42B
+;
+;[eof]

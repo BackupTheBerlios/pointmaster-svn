@@ -1,0 +1,950 @@
+;
+; Net 5045 Private Pointlist, Build Tue Jul  6 09:36:38 EDT 1999
+;
+; ____________________________________________________________________________
+;
+; FarPost
+; ____________________________________________________________________________
+Boss,2:5045/1
+Point,1,---cat-here---,Vladivostok,Konstantin_Martynenko,7-423-228-3318,2400,MO,V42
+Point,20,Fire_Fly,Vladivostok,Oleg_Orlov,-Unpublished-,2400,XA,V42
+;______________________________________________________________________________
+;
+; Golden Dragon BBS
+;______________________________________________________________________________
+Boss,2:5045/3
+Point,1,Kris,Vladivostok,Alexander_Krisenko,-Unpublished-,9600,MO,V34,V42B
+Point,3,Golden_Dragon,Vladivostok,Yruy_Slepenko,-Unpublished-,9600,MO,V34,V42B
+Point,4,Leo,Vladivostok,Leonid_Stephanenko,-Unpublished-,9600,MO,V34,V42B
+Point,9,Glok(HP),Vladivostok,Boris_Zosim,-Unpublished-,9600,MO,V34,V42B
+;┌──────────────────────────────────────────────────────────────────────────┐
+;│            Art o'Vladik BBS    7-423-222-1541     33600, USR             │
+;│                Sysop: Arthur Stetsyk (FIDOnet 2:5045/4)                  │
+;│        Work time: 20:00-07:00 VVO (MSK+7) (Mon-Fri) 24h (Sat-Sun)        │
+;└──────────────────────────────────────────────────────────────────────────┘
+Boss,2:5045/4
+Point,1,Art_At_Home,Vladivostok,Arthur_Stetsyk,-Unpublished-,2400,XA,MO
+Point,5,Leon,Vladivostok,Leonid_Reznik,-Unpublished-,9600,XA,MO,V42B,MNP
+Point,6,Edward,Vladivostok,Edward_Garmash,-Unpublished-,9600,XA,MO,V32B,V42B
+Point,7,Igor,Vladivostok,Igor_Chukov,-Unpublished-,9600,XA,MO,MNP
+Point,8,Twin,Vladivostok,Alexey_Morozov,-Unpublished-,2400,XA,MO,V42B,MNP
+Point,11,Neutrality,Vladivostok,Igor_Gurjanov,-Unpublished-,9600,XA,MO,V42B
+Point,100,Dalso_Gateway,Vladivostok,Arthur_Stetsyk,-Unpublished-,2400,XA,MO,MNP
+; ____________________________________________________________________________
+;
+; BiB_System.
+; ____________________________________________________________________________
+Boss,2:5045/6
+Point,5,Dead_Morose,Vladivostok,Dimon_Krasnokutsky,7-423-226-8364,9600,MO,ZYX
+Point,7,Katerina,Vladivostok,Katerina_Koveh,7-423-222-1278,9600,MO,ZYX
+Point,11,DorMouse,Vladivostok,Denis_Bannikov,7-423-222-5115,9600,MO,ZYX
+Point,12,RapId,Vladivostok,Eugene_Pitel,7-423-222-8592,9600,MO,ZYX
+Point,13,BreakPoint,Vladivostok,Ivan_Alexandrov,7-423-226-9842,9600,MO,ZYX
+Point,14,Hh_Laboratory,Vladivostok,Victor_Gumenuk,7-423-226-8863,9600,MO,ZYX
+Point,15,Margo,Vladivostok,Anna_Saranchina,7-423-226-8863,9600,MO,ZYX
+Point,17,SY_Point,Vladivostok,Sergej_Shishkin,7-423-222-8592,9600,ZYX,MO
+Point,18,HellChild_BBS,Vladivostok,Alexey_Buturlin,7-423-221-9277,9600,XA,V32B,V42B
+Point,20,ADAM_BBS_at_home,Vladivostok,Dmitry_Lobeev,7-423-222-9232,9600,MO,V32B,V42B
+Point,28,Evgeni,Vladivostok,Evgeni_Dzhura,7-423-226-8607,9600,MO,ZYX
+Point,29,Toyvo,Vladivostok,Max_Abramov,-Unpublished-,9600,V42B,V32B,MO,U,TMU
+Point,31,Bug_Rider,Vladivostok,Vasily_Titovchenko,-Unpublished-,9600,MO,ZYX
+Point,32,Undersea,Vladivostok,Dmitry_Derjavin,7-423-246-6013,9600,V32B,V42B,V34,MO,XA
+Point,34,Lena-Olya,Vladivostok,Olga_Saitgareeva,-unpublished-,9600,MO,ZYX
+Point,66,Gate_Of_Sin,Vladivostok,Alexei_Zaiko,7-423-225-7270,9600,XA,MO,ZYX,V34
+;_____________________________________________________________________________
+;
+; Beatles Fan Club BBS
+;_____________________________________________________________________________
+Boss,2:5045/7
+Point,2,Dark_House,Vladivostok,Alexey_Korshunov,7-423-225-3396,2400,V42B,MO
+Point,3,Hunter,Vladivostok,Vitaly_Titov,7-423-222-8887,9600,ZYX,MO
+Point,4,CAD'n'CAM,Vladivostok_Russia,Vitaly_Gnybkin,7-423-231-8308,2400,MO,V42
+Point,7,Snow_Queen,Vladivostok_Russia,Svetlana_Shashkova,7-423-PRI-VATE,300,MO
+Point,8,Solar_Wing_Impire,Vladivostok_Russia,Sergey_Tchalov,7-423-222-0686,9600,MO,ZYX
+Point,10,SandStorm,Vladivostok_Russia,Vladimir_Mazhuga,7-423-251-4619,9600,MO,V32B
+Point,12,Sizar,Vladivostok,Alexei_Petelin,7-423-222-3675,9600,MO,V32b
+Point,13,Ocean,Vladivostok_Russia,Anton_Umnikov,7-423-222-1758,9600,CM,MO,ZYX
+Point,14,Starless,Vladivostok,Vladimir_Kirienko,7-423-222-8004,9600,ZYX,MO
+Point,16,Dalaudittrans,Vladivostok,Andrey_Pavlov,-Unpublished-,9600,MO,V42
+Point,18,Ltf_System,Vladivostok,Leonid_Konkov,7-423-231-3081,9600,MO,V32B
+Point,19,Pluto,Novosibirsk,Egor_Ziryanov,-Unpublished-,9600,MO,CM
+Point,46,Freedom,Vladivostok,Victor_Larichev,7-423-227-0962,9600,V32b,MO
+Point,66,BAPOHA,Vladivostok,Tatyana_Dragun,-Unpublished-,9600,V32B,MO
+Point,111,Deidree's_Underwater_Castle,Vladivostok_Russia,Olesya_Bublik,-Unpublished-,9600,XA,MO,V34
+Point,777,Night_Angel,Vladivostok,Alena_Podporinova,-Unpublished-,9600,MO,V32B
+Point,7777,Ren_&_Stimpy,Vladivostok,Sergey_Danilov,7-423-227-6310,9600,V34B,MO
+;
+; ____________________________________________________________________________
+;
+; Ghost Hall BBS
+; ____________________________________________________________________________
+Boss,2:5045/10
+Point,1,GHost_on_Duty,Somewhere,Alexey_Yashin,7-846-237-2094,2400,XA
+Point,2,MFU#74360,Petropavlovsk-Kamchatsky,Alex_Anansky,-Unpublished-,2400,XA,MNP
+Point,3,Benchman_Ghosts,Petropavlovsk-Kamchatsky,Sergey_Fyedorov,7-415-222-2576,2400,XA,MNP
+Point,5,Helios,Nakhodka,Ilya_Trubchanin,-Unpublished-,9600,MO,PEP
+Point,7,IntelService,Samara,Dima_Rybin,7-846-237-2094,2400,XA,MNP
+Point,14,GIANT,Vladivostok,Kirill_Fahrutdinov,7-423-226-8888,2400,XA,MO
+Point,16,Ivan_Station_(LAN),Vladivostok,Ivan_Antonov,-Unpublished-,300,MO
+Point,17,STAS_(LAN),Vladivostok,Stas_Sidorenko,-Unpublished-,300,MO
+Point,18,Air_Hole_(LAN),Vladivostok,Igor_Harzman,-Unpublished-,300,MO
+Point,19,Lan_station_(LAN),Vladivostok,Sergey_Tchalov,-Unpublished-,300,MO
+Point,20,Snark,Vladivostok,Valentin_Molochkov,-Unpublished-,2400,XA,MO,V42B
+Point,21,Splash,Vladivostok,Dima_Rudometov,7-423-222-1004,9600,ZYX,MO
+Point,22,Cellar_Hound,Vladivostok,Alexander_Levitskiy,7-423-225-8536,9600,V32B,V42B,MO
+Point,23,Devil's_Knight_BBS,Khanty-Mansijsk,Alex_Kabanov,7-346-713-6113,2400,XA,MNP
+Point,24,Women,Vladivostok,Natalya,-Unpublished-,300,MO
+Point,25,Companion,Vladivostok,Oleg_Kirsanoff,-Unpublished-,9600,ZYX,MO
+Point,26,Cray,Vladivostok,Mikhail_Davidovich,7-423-222-4627,2400,XA,MO,V42B
+Point,27,Virtual_Eugene,Vladivostok,Eugene_Ivanov,-Unpublished-,9600,MO,V32B,V42B
+Point,28,Arcadia_Station,Nakhodka,Igor_Logvinov,7-266-21974,9600,MO,V32B,V42B
+Point,29,Demon,Vladivostok,Dmitry_Nagorsky,7-423-2328744,9600,MO,V42B,VFC
+Point,35,Criminal_Station2,Vladivostok,Dima_Greben,7-423-222-3983,9600,V42B
+Point,77,Ustas,Vladivostok,Roman_Lineitsev,7-423-222-9779,9600,MO,ZYX
+Point,78,Sparky_System_BBS,Vladivostok,Konstantin_V.Kulkoff,7-423-231-0404,19200,XA,ZYX
+Point,99,music_drain,Vladivostok,Egor_Nicolaev,7-423-226-7366,9600,XA,ZYX,CM
+;
+;█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+;█ Larry Laffer BBS       (2:5045/13)      Line 1: 7-423-226-9273 33600,HST █
+;█ Sysop: Oleg Tereguloff (2:5045/31)      Line 2: 7-423-228-6237 16800,ZYX █
+;█                        (2:5045/13.1313) Line 3: 7-423-228-6210 19200,ZYX █
+;█ Work time: Line 1   19:30-08:00 VLD(MSK+7)  (Mon-Fri) 24h (Sat-Sun)      █
+;█            Line 2   24h                                                  █
+;█            Line 3   24h                                                  █
+;█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+Boss,2:5045/13
+Point,1,Far_Post_War_Dream_Machine,Vladivostok,Konstantin_Martynenko,-Unpublished-,9600,V32B,V42B,MO
+Point,2,Wild_Cat,Vladivostok,Oleg_Muraview,7-423-246-1405,9600,XA,ZYX
+Point,3,MPGroup,Vladivostok,Eugene_Uraevsky,7-423-226-7396,9600,XA,MO,ZYX
+Point,4,PLAI,Vladivostok,Vadim_Spichak,7-423-226-8882,9600,XA,MO,ZYX
+Point,5,IVC_PKS,Vladivostok,Oleg_Suhetskiy,7-423-226-4694,2400,XA,MO
+Point,6,CMTech,Vladivostok,Miroslav_Kruglick,7-423-222-8394,9600,ZYX,MO
+Point,7,PEF,Vladivostok,Eugene_Prosmushkin,7-423-246-1997,9600,ZYX,MO
+Point,8,Kot_(LAN),Vladivostok,Konstantin_Prosekin,-Unpublished-,300,MO
+Point,10,Starless,Vladivostok,Vladimir_Kirienko,7-423-222-8004,9600,XA,ZYX,MO
+Point,11,Sea_Cat,Vladivostok,Konstantin_Eldemel,7-423-222-9728,9600,XA,ZYX,MO
+Point,12,SoftLab,Vladivostok,Valerii_Kowalskii,7-423-226-9173,9600,ZYX,XA
+Point,13,Larry_Laffer_at_Home,Vladivostok,Oleg_Tereguloff,-Unpublished-,2400,XA,MO,V42
+Point,14,Stuff,Vladivostok,Denis_Kudja,7-423-221-6082,9600,MO,V42B,V32B
+Point,16,Banana_Bending_Machine,Vladivostok,Serge_Menshikov,-Unpublished-,9600,XA,V32B,V42B,PEP
+Point,17,Sparky_System_BBS,Vladivostok,Konstantin_V.Kulkoff,7-423-231-0404,9600,XA,ZYX,U,TNX
+Point,18,Shura_(LAN),Vladivostok,Alexander_Romanuk,-Unpublished-,300,MO
+Point,20,Energy_Point,Partizansk,Vladimir_Sidorenko,7-423-630-1299,2400,XA,MO,V42B
+Point,22,Wom_H_Station,Ussuriysk,Womchick_alexeyeff,7-423-413-1337,9600,MO,ZYX,U,Tku
+Point,23,Serj,Vladivostok,Sergey_Dementyev,7-423-226-7987,9600,V32B,V42B,MO
+Point,24,Hunter,Vladivostok,Vitaly_Titov,7-423-225-2798,9600,V32B,V42B,MO,ZYX
+Point,25,Alien,Vladivostok,Konstantin_Meleshenko,7-423-225-4992,9600,V32B,V42B,MO,ZYX
+Point,26,Music_Classic,Vladivostok,Ann_Rozkova,-Unpublished-,9600,V32B,V42B,MO
+Point,27,Phridrih,Artem,Dmitry_Slesarenko,7-423-370-2634,9600,V32B,V42B,XA,MO
+Point,28,Stasha,Vladivostok,Alexey_Stadnik,7-423-226-0190,9600,V32B,V42B,XA,MO
+Point,29,Mihail,Vladivostok,Mihail_Nikolaev,7-423-221-7376,9600,V32B,V42B,XA,MO
+Point,31,FarHighLandMan,Dalnegorsk,Vladimir_Gladkov,7-423-739-1512,9600,ZYX,MO
+Point,32,Vlad,Vladivostok,Vladislav_Ilchenko,7-423-225-6507,9600,ZYX,MO
+Point,33,Oleg,Vladivostok,Oleg_Zhikharev,7-423-226-7155,2400,V42,MO
+Point,34,EasyRider,Vladivostok,Sergei_Berdnikov,7-423-222-1268,9600,V32B,V42,MO
+Point,38,Johnny_(LAN),Vladivostok,Evgeny_Kruchinin,-Unpublished-,300,MO
+Point,57,LSV_(LAN),Vladivostok,Sergey_Laposhin,-Unpublished-,300,MO
+Point,77,Ran_&_Stimpy,Vladivostok,Sergey_Danilov,7-423-227-6310,9600,V42B,V32B,MO
+Point,333,Woland_BBS,Vladivostok,Alex_Philonenko,7-423-232-0700,9600,XA,ZYX
+Point,666,$OV,Vladivostok,Oleg_Sokolov,7-423-226-8882,9600,ZYX,MO
+;
+; ____________________________________________________________________________
+;
+; Abra Cadabra
+; ____________________________________________________________________________
+Boss,2:5045/14
+Point,2,Air_Wolf_BBS,Blagoveschensk,Andrey_Hudoleew,7-416-242-8622,9600,XA,V42
+Point,3,Night_Ghost_BBS,Blagoveschensk,Alexey_Petin,7-416-242-8728,9600,MO,V42
+Point,4,Amur_BBS,Blagoveschensk,Yaroslav_Docenko,7-416-247-7248,9600,XA,MNP
+Point,5,ProSvet_BBS,Tynda,Alexandr_Svetlov,7-416-56-20932,9600,ZYX,XA,LO
+Point,9,NO_NAME_BBS,Balgoveschensk,Alexandr_Sitnikov,-Unpublished-,9600,MO,V42
+Point,10,NO_NAME_BBS,Balgoveschensk,Viktor_Volchinski,-Unpublished-,2400,MO,LO
+Point,11,Alex,Blagoveschensk,Alexandr_Tulupov,-Unpublished-,9600,MO,LO
+;┌──────────────────────────────────────────────────────────────────────────┐
+;│ Raven Nest BBS                          Line 1: 7-423-414-4187 19200,ZyX │
+;│ Sysop: Dmitry Voron (FIDOnet 2:5045/17) Line 2: 7-423-414-4445 19200,ZyX │
+;│ Work time: 24h everyday                 Voice : 7-423-414-0023           │
+;└──────────────────────────────────────────────────────────────────────────┘
+;                       Last update: 28 March 1999
+Boss,2:5045/17
+Point,1,Wom_H_Station,Ussuriysk,Womchick_alexeyeff,-Unpublished-,300,MO
+Point,2,Star_System,Ussuriysk,Vitaly_Komashinsky,-Unpublished-,300,MO
+Point,3,Rapid_Flow,Ussuriysk,Alexander_Chub,-Unpublished-,300,MO
+Point,4,Kotish4e,Ussuriisk,Kot_Pazychev,-Unpublished-,300,MO
+Point,5,WireTap,Ussuriysk,Alexander_Utkin,-Unpublished-,300,MO
+Point,7,Mistery,Ussuriysk,Nikolay_Savintsev,-Unpublished-,300,MO
+Point,8,VEGA,Ussuriysk,Alexander_Ivanov,-Unpublished-,300,MO
+Point,9,Waterhouse,Ussuriysk,Anatoly_Shoomkov,-Unpublished-,300,MO
+Point,10,Unknown,Ussuriysk,Andery_Eroshenko,-Unpublished-,300,MO
+Point,11,kommunar,Ussuriysk,Sergej_Zavorotniy,-Unpublished-,300,MO
+Point,12,high_energy,Ussuriysk,Maksim_Martynoff,-Unpublished-,300,MO
+Point,13,VEGA-LAZER,Ussuriysk,Vladimir_Trotsenko,-Unpublished-,300,MO
+Point,14,Andy_Station,Ussuriysk,Andrey_Mikhalchenko,-Unpublished-,300,MO
+Point,15,Zerkalo,Ussuriysk,Andrey_Schegolihin,-Unpublished-,300,MO
+Point,16,Crazy_Joker,Ussuriysk,Timur_Bahmatoff,-Unpublished-,300,MO
+Point,17,at_home,Ussuriysk,Victory_Voron,-Unpublished-,300,MO
+Point,18,Jonik,Ussurijsk,John_Bezuk,-Unpublished-,300,MO
+Point,19,BitMaster_Station,Ussuriysk,Alex_Kozhemiakin,-Unpublished-,300,MO
+Point,20,Dol_Guldur,Ussuriysk,Roman_Homenko,-Unpublished-,300,MO
+Point,21,Stalker,Ussurijsk,Alex_P._Soukhov,-Unpublished-,300,MO
+Point,22,Last_Lost_Station,Ussurijsk,Brothers_Kostenko,-Unpublished-,300,MO
+Point,23,Megasoft,Ussurijsk,Semeshenko_Gennady,-Unpublished-,300,MO
+Point,24,Angelo,Ussurijsk,Evgeny_Bondar,-Unpublished-,300,MO
+Point,25,Saratoga_Station,Ussurijsk,Alexsey_Merkuloff,-Unpublished-,300,MO
+Point,26,Badger_Hole_Station,Ussuriysk,Kot_Barsuk,-Unpublished-,300,MO
+Point,29,MayDay,Ussuriysk,Serge_Nikolaenko,-Unpublished-,300,MO
+Point,31,WarMan,Ussuriysk,Sergey_Goncharov,-Unpublished-,300,MO
+Point,32,Tantra,Ussuriysk,Andrey_Khvostikov,-Unpublished-,300,MO
+Point,33,Tiger_Sign,Ussuriysk,Serega_Oksesenko,-Unpublished-,300,MO
+Point,34,CyberWolf_Station,Ussuriysk,Max_Volkov,-Unpublished-,300,MO
+Point,35,Power_Station,Ussuriisk,Vadim_Ubarchuk,-Unpublished-,300,MO
+Point,36,Killer,Ussuriysk,Slava_Karnauch,-Unpublished-,300,MO
+Point,37,Raper,Ussuriysk,Artem_Dobrodomenko,-Unpublished-,300,MO
+Point,38,Sam,Ussurijsk,Sergey_Gribennikov,-Unpublished-,300,MO
+Point,39,Spirit,Ussurijsk,Sergey_Lazarev,-Unpublished-,300,MO
+Point,40,Axl,Ussuriisk,Alexey_Pavlenko,-Unpublished-,300,MO
+Point,41,Stalker,Ussurijsk,Andrey_Hegay,-Unpublished-,300,MO
+Point,42,Eagle,Ussuriisk,Igor_Zhitsky,-Unpublished-,300,MO
+Point,44,DJ_Hackerd,Vladivostok,Andrey_Kubishev,-Unpublished-,300,MO
+Point,51,Abrek,Ussuriisk,Oleg_Voitiouk,-Unpublished-,300,MO
+Point,52,fifth,Ussuriysk,Andrey_Novikov,-Unpublished-,300,MO
+Point,53,Crusader,Ussuriisk,Alex_Vishnevsky,-Unpublished-,300,MO
+Point,55,vtc,Vladivostok,Sergey_Gorbatyuk,-Unpublished-,300,MO
+Point,56,Dimsh,Ussuriysk,Shevelev_Dmitriy,-Unpublished-,300,MO
+Point,57,Bear,Ussuriisk,Mike_Radigin,-Unpublished-,300,MO
+Point,58,Jocker,Ussuriysk,Alex_Pershin,-Unpublished-,300,MO
+Point,59,Luck,Ussuriisk,Alex_Prokopchuk,-Unpublished-,300,MO
+Point,60,Hospital,Ussuriysk,Daniil_Palachev,-Unpublished-,300,MO
+Point,61,Dist,Ussuriysk,Roman_Kraitor,-Unpublished-,300,MO
+Point,62,Diablo,Ussuriisk,Sergey_Naumov,-Unpublished-,300,MO
+Point,63,My_home,Ussuriysk,Dudin_Dmitry,-Unpublished-,300,MO
+Point,64,VTC3,Vladivostok,Tolik_Michailyn,-Unpublished-,300,MO
+Point,65,Doom,Ussuriisk,Alexey_Palachev,-Unpublished-,300,MO
+Point,66,UA0LOF,Ussuriisk,Valeri_Kardelis,-Unpublished-,300,MO
+Point,68,HomeWork,Ussuriysk,Alexander_Chub,-Unpublished-,300,MO
+Point,69,VTC4,Vladivostok,Oleg_Kabankov,-Unpublished-,300,MO
+Point,100,Raven_Nest_II,Ussuriysk,Dmitry_Voron,-Unpublished-,300,MO
+Point,131,Temple_O'Shadow,Ussuriisk,Aleksey_Savchenko,-Unpublished-,300,MO
+; ____________________________________________________________________________
+;
+; Security
+; ____________________________________________________________________________
+Boss,2:5045/18
+Point,1,Security_I,Vladivostok,Olya_Zhukova,-Unpublished-,9600,V34,MO
+Point,2,Security_II,Vladivostok,Olya_Zhukova,-Unpublished-,9600,V34,MO
+Point,99,Music_Drain,Vladivostok,Egor_Nicolaev,7-423-226-7366,9600,ZYX,MO
+;
+; Sea Tramp
+; ____________________________________________________________________________
+Boss,2:5045/19
+Point,1,Horns_&_Hoofs_BBS,Vladivostok,Mikhail_Timchuk,7-423-246-5610,9600,MO,V32B,V42B
+Point,3,Vladivostok,Vladivostok,Dmitry_Burov,7-423-231-3999,9600,MO,ZYX,U,TMU
+Point,4,Garfield,Vladivostok,Oleg_Kupnevich,-Unpublished-,9600,MO,V32B,V42B
+Point,5,Silvio,Vladivostok,Andrey_Povolotsky,7-423-225-6804,9600,MO,V32B,VFC,U,TMU
+Point,6,Sirius_System,Vladivostok,Igor_Kozhukhov,-Unpublished-,2400,MO,MNP,U,TMU
+Point,7,Virus_System,Vladivostok,Toha_Tydykov,7-423-225-8316,2400,MO,MNP,U,TMU
+Point,8,Necros,Vladivostok,Denis_Samorodov,-Unpublished-,9600,MO,V32B,U,TMU
+Point,9,JSC_Nets_War-BBS,Vladivostok,Slava_Gavrik,-Unpublished-,9600,V42B,V32B,MO,U,TMU
+Point,10,John_Station,Vladivostok,John_Radionov,-Unpublished-,2400,V42B,MNP,MO,U,TMU
+Point,11,Death_Master,Vladivostok,Tikhomirov_V._Eugene,-Unpublished-,9600,V42B,V32B,MO,U,TMU
+Point,12,Toyvo,Vladivostok,Max_Abramov,-Unpublished-,9600,V42B,V32B,MO,U,TMU
+Point,13,Uncle_Bo,Vladivostok,Saphronov_Boris,-Unpublished-,9600,V32B,MO,U,TMU
+Point,14,Descent,Vladivostok,Kostya_Furman,7-423-232-4649,9600,V32B,MO,U,TMU
+Point,15,JV_Dalvemo,Vladivostok,Sergey_Krivoruchko,-Unpublished-,9600,MO,ZYX
+Point,16,Power_Point,Vladivostok,Alexey_Bokov,-Unpublished-,9600,V42B,MNP,MO,U,TMU
+Point,19,Endless_Flight,Vladivostok,Andrey_Lutsenko,-Unpublished-,9600,V32B,CM,XA,U,TMU
+Point,20,Mors_Point,Dalnegorsk,Dmitry_Rudakov,-Unpublished-,2400,V42B,MNP,MO,U,TMU
+Point,21,KirSoft,Vladivostok,Kirill_Zkharov,-Unpublished-,9600,V32B,MO,U,TMU
+Point,22,Land_Of_Shadows,Vladivostok,Vladimir_Pyatin,7-423-242-2183,9600,V32b,MO,U,TMU
+Point,23,TigerFox,Vladivostok,Miroslav_Kruglik,7-423-222-3383,9600,MO,ZYX,U,TMU
+Point,24,Aries_Group,Vladivostok,Andrew_Nakhvalnov,-Unpublished-,9600,MO
+Point,26,Speed-555,Vladivostok,Andrey_Bakhteev,-Unpublished-,9600,MO,V32B
+Point,33,Stas_Station,Vladivostok,Stas_Kascheev,-Unpublished-,9600,MO,ZYX,U,TMU
+Point,35,Shield_and_Sword,Vladivostok,Vladimir_Volchkov,-Unpublished-,9600,MO,U,TMU
+Point,41,Lena_Smirnova,Vladivostok,Lena_Smirnova,-Unpublished-,9600,MO,V32B,U,TMU
+Point,42,NightIce,Vladivostok,Sergey_Ivanov,-Unpublished-,9600,MO,V32B,U,TMU
+Point,43,Sentril,Vladivostok,Dmitry_Bouriak,-Unpublished-,9600,MO,V32B,U,TMU
+Point,44,DJ_Hackerd,Vladivostok,Andrey_Kubishev,-Unpublished-,9600,MO,ZYX
+Point,50,Bug_Rider,Vladivostok,Vasily_Titovchenko,-Unpublished-,9600,MO,ZYX
+Point,52,White_and_Fluffy,Vladivostok,Natalia_Khudik,-Unpublished-,9600,CM,MO,ZYX
+Point,55,Hapsys_Station,Vladivostok,Alexey_Zayats,7-423-226-8574,9600,CM,ZYX,MO
+Point,333,Woland,Vladivostok,Alex_Philonenko,7-423-232-0700,9600,MO,XA,ZYX,U,TMU
+;
+;
+Boss,2:5045/20
+Point,1,Nakhodka_police,Nakhodka,Dmitry_Shirinkin,-Unpublished-,9600,MO,XA,ZYX
+Point,2,Criminal_Station,Vladivostok,Waksman_Maksim,7-423-222-3983,9600,XA,ZYX
+Point,3,Alexey,S-Peterbyrg,Alexey_Korotkov,-Unpublished-,9600,MO,XA,V32B
+Point,4,Solta,Vladivostok,Alexander_Starun,7-423-226-6335,9600,MO,ZYX
+Point,5,Selena,Vladivostok,Stanislav_Yakushev,7-423-222-3567,9600,MO,ZYX
+Point,7,Merry_Fire,Vladivostok,Artem_Vasiliev,-Unpublished-,9600,MO,ZYX
+; ----------------------------------------------------------------------------
+; McSim station 2:5045/21 - Private personnel only
+; Work time 21:00-22:00, 23:00-00:00, 0:40-7:00
+; MailTime 22:00-23:00 , 0:00-0:40
+; ----------------------------------------------------------------------------
+Boss,2:5045/21
+Point,2,RadioHam,Vladivostok,Konstantin_Pronin,7-423-231-8547,9600,MO,V32B,V42B
+Point,3,Descent_Station,Vladivostok,Konstantin_A.Furman,-unpublished-,9600,MO,V32B,V34B,VFC
+Point,5,WATER_WORLD,Vladivostok,Andrey_Povolotskiy,-Unpublished-,9600,MO,V32B
+Point,6,Fromm,Vladivostok,Goroshko_Dmitry,-Unpublished-,9600,MO,V32b
+Point,7,Mafr's_station,Vladivostok,Dmitriy_Kalaidin,7-423-231-1253,9600,MO,V32B
+Point,8,Cameraden,Vladivostok,Ruslan_Kirichenko,7-423-231-8206,9600,MO,V32B
+Point,9,Arakis_Station,Vladivostok,Khrolenko_Pavel,7-423-231-6253,9600,MO,V32B,V42B
+Point,10,Heavy_Trooper,Vladivostok,Dmitry_Fedotov,-Unpublished-,9600,MO,V32B
+Point,11,DemoN_Of_Station,Vladivostok,Dmitry_Nagorsky,7-423-232-8744,9600,MO,V42B,VFC
+Point,12,Dragon's_Lair_BBS,Vladivostok,Sergey_Olkhovsky,7-423-231-8693,9600,V32B,V42B
+Point,14,NULL_station,Vladivostok,Yan_Bokalder,-Unpublished-,9600,MO,V32B
+Point,16,Brown_Wolf,Vladivostok,Sergey_Poltorak,7-423-232-8347,2400,XA,MO,V42B
+Point,17,THE_NEED_FOR_SPEED_BBS,Vladivostok,Roman_Katynkin,7-423-231-1450,9600,V32B,V42B
+Point,18,Amadeus,Vladivostok,Dmitriy_Nevojai,7-423-231-6276,9600,V32B,V42B,MO
+Point,19,NEW_TECHNOLOGY,Vladivostok,John_Ryzhov,7-423-225-8716,28800,MO,V32B,V34,V42B
+Point,20,RED,Vladivostok,Igor_Kichiy,7-423-231-1429,9600,MO,V32B,V42B
+Point,22,Stealth_Entry_BBS,Vladivostok,Sergey_Ivanov,7-423-226-5161,9600,V32B,V42B,U,TNU
+Point,44,DJ_Hackerd,Vladivostok,Andrey_Kubishev,-Unpublished-,9600,MO,ZYX
+Point,45,StartPoint,Vladivostok,Tolik_Michailyn,8-4232-422196,9600,MO,V42B
+Point,100,McSim_Point,Vladivostok,Maksim_Mikhylin,-Unpublished-,2400,MO,V42B
+Point,110,SandStorm,Vladivostok_Russia,Vladimir_Mazhuga,7-423-251-4619,9600,MO,V32B
+Point,243,St_Andrew,Vladivostok,Andrew_Nakhvalnov,7-423-222-3042,9600,MO,ZYX
+; ____________________________________________________________________________
+;
+; The Halfdome
+; ____________________________________________________________________________
+Boss,2:5045/24
+Point,1,Commerce_Point,Vladivostok_Russia,Vlad_Buyakov,-Unpublished-,9600,MO,ZYX
+Point,2,InfoAgency_BBS,Vladivostok_Russia,Denis_Trinyov,-Unpublished-,9600,MO,XA,ZYX
+Point,3,InfoAgency_BBS,Vladivostok_Russia,Alexander_Tkachenko,7-423-225-3782,9600,MO,XA,ZYX
+Point,4,DECISION_BBS,Vladivostok,Alexey_Zhidkov,-Unpublished-,2400,XA,MO
+Point,5,Ran_&_Stimpy,Vladivostok,Sergey_Danilov,-Unpublished-,9600,V42b,v32b,MO
+; ____________________________________________________________________________
+;
+; ALEX SYSTEM
+; ____________________________________________________________________________
+Boss,2:5045/25
+Point,1,ALEX_SYSTEM_][,Vladivostok,Alexey_Prihodko,7-423-226-8386,9600,MO,ZYX
+Point,2,Tzar_Babay,Vladivostok,Alexander_Bookreev,-Unpublished-,300,MO
+Point,5,Monster's_World,Vladivostok,Igor_Kremen,7-423-225-8307,9600,V34,MO
+Point,7,Serg_Point,Vladivostok,Serj_Klinkov,7-423-225-0650,9600,MO,ZYX
+Point,8,SKY_OF_ANIMOSITY_GODS,Vladivostok,Sergey_Tchalov,7-423-222-1769,9600,MO,V32b,V42B
+Point,9,AlmaMater,Vladivostok,Max_Teplov,7-423-242-3900,9600,MO,V42B,V32B
+Point,11,NightCity_BBS,Vladivostok,Nick_Kharitonov,7-423-222-1339,9600,XA,V42,V32
+Point,12,Black_Star_BBS,Vladivostok,Steve_Khalilov,7-423-222-7008,9600,XA,V32B,V42B
+Point,13,The_Source_BBS,Vladivostok_Rossia,Stas_Sidorenko,7-423-222-6517,9600,MO,ZYX
+Point,14,Black_Cat,Vladivostok_Rossia,Pavel_Bogatsky,-Unpublished-,9600,MO,V42B
+Point,15,TMC_BBS,Vladivostok,Ivan_Vysotsky,7-423-232-1249,9600,XA,V34,U,TJW
+Point,16,Trash_Heap_BBS,Vladivostok,Sergey_Batcherikov,7-423-252-9398,9600,MO,XX,LO,V34,HST,V42B,VFC,V32T,U,TMU,X2C
+Point,17,TRshieches_House,Vladivostok,Alexey_Subote,-Unpublished-,9600,MO,ZYX
+Point,18,Cool_Brother,Vladivostok,Peter_Kurochkin,-Unpublished-,9600,MO,V32B
+Point,19,Abducter,Vladivostok,Sergey_Konteyev,7-423-221-6960,9600,MO,V32B,V42B
+Point,20,Flash,Vladivostok,Sergey_Koshkin,7-423-229-4682,9600,MO,V32B
+Point,21,My_Friend,Vladivostok,Roman_Padalko,-Unpublished-,9600,MO
+Point,22,The_Lich_BBS,Bolshoy_Kamen,Artuom_Romanko,7-423-354-1882,9600,V34,MO
+Point,24,Romulus,Vladivostok,Roman_Varenik,7-423-226-2862,9600,MO,V42B
+Point,26,Observer,Vladivostok,Kolik_Gusarov,7-423-227-1722,9600,MO,V32B,V42B
+Point,27,Frodo_BBS,Vladivostok,Roman_Markovtsev,7-423-226-1627,9600,V34,MO
+Point,28,Gas_Burns,Vladivostok,Alexis_Khalchenko,-Unpublished-,9600,ZYX,MO
+Point,29,Valley,Vladivostok,Dima_Shadura,7-423-252-8898,9600,MO,ZYX,
+Point,30,Edward,Vladivostok,Edward_Garmash,-Unpublished-,9600,MO,V32B,HST
+Point,31,VMS_Home,Vladivostok,Sergey_Konko,7-423-225-8981,9600,V42B,V32B,MO
+Point,32,The_Purgatory,Vladivostok,Serg_Leschenko,7-423-231-7801,9600,MO,V34
+Point,33,Lucky_Cat_Smile,Vladivostok,John_Ischenko,7-423-227-0401,9600,V34,MO
+Point,34,Home_Computer,Vladivostok,Nikolay_Kupera,7-423-242-0643,9600,MO,V34,V42B
+Point,35,Green_PC,Vladivostok,John_Pokhilko,7-423-246-0966,9600,ZYX,MO
+Point,36,Enigma,Vladivostok,Yury_Pechenkin,7-423-231-4924,9600,V34,VFC,MO
+Point,37,AlisA,Vladivostok,Alex_Yakshin,7-423-252-9198,9600,V32b,V42b,MO
+Point,38,TakeOff,Vladivostok,Tolik_Michailyn,8-4232-422196,9600,MO,V42B
+Point,39,My_Boss,Vladivostok,Yura_Vorobiov,-Unpublished-,9600,MO
+Point,40,DJ_friend,Vladivostok,Ivan_Nadein,-Unpublished-,9600,ZYX,MO
+Point,41,──────────,Vladivostok,Roman_Shekanenko,-Unpublished-,9600,V34,MO
+Point,42,Vladimir,Vladivostok,Vladimir_Mets,7-423-241-0840,9600,MO,V32B,V42B
+Point,43,Den_Home_Systems,Artem,Denis_Afonin,7-423-230-7280,9600,V34,MO
+Point,44,Budweiser_BBS,Vladivostok,Kiseljov_Alexander,7-423-2413090,9600,V32B,V42B
+Point,45,Wispa2,Vladivostok,Edward_Von_Bikhovets,-Unpublished-,9600,V34,MO
+Point,46,HH_Labs,Vladivostok,Nickolay_Viatckin,7-423-226-8863,9600,V34,MO
+Point,47,Sapporo_BBS,Vladivostok,Serafim_Perov,7-423-222-3350,9600,V42B
+Point,48,Scorpions_Land_BBS,Vladivostok,John_Golubov,7-423-233-2333,9600,V34
+Point,49,!!!,Vladivostok,Andrey_Kubishev,-Unpublished-,9600,MO,ZYX
+Point,50,Gaming_BBS,Vladivostok,Arseniy_Saranin,7-423-231-9075,9600,V34
+Point,51,Law4All,Vladivostok,Alex_Miron,-Unpublished-,9600,MO
+Point,52,OBITUARY,Vladivostok,Eugene_Udovichenko,-Unpublished-,9600,MO,V32B,V42B
+Point,53,Curb_Evil,Vladivostok,Roma_Hamitulin,7-423-227-0817,9600,V32B,MO
+Point,54,InfoAgency,Vladivostok,Alexander_Tkachenko,7-423-231-1768,9600,V34,MO
+Point,55,Aria_BBS,Vladivostok,Andrew_Azaneev,7-423-226-8096,9600,XA,V34
+Point,56,POWER_station,Vladivostok,Yan_Bokalder,7-423-241-0567,9600,MO,ZYX,V34
+Point,57,Peace_Station,Vladivostok,Maksim_Godun,7-423-241-3234,9600,MO,V32B,V42B
+Point,58,Dmitriy_Kaplunenko,Vladivostok,Dmitriy_Kaplunenko,7-423-222-4796,9600,MO,ZYX
+Point,59,Sveta,Vladivostok,Svetlana_Ilioukhina,7-423-242-7576,9600,V34,MO
+Point,60,Bear_Winny,Vladivostok,Sergey_Vinogradov,7-423-232-7529,9600,V32B,V42B
+Point,61,BAM_station,Vladivostok,Oleg_Kotov,-Unpublished-,9600,MO,V42B,V34
+Point,62,Serj,Vladivostok,Sergey_Dementyev,7-423-226-7987,9600,V32B,V42B,MO
+Point,64,DorMouse,Vladivostok,Denis_Bannikov,7-423-229-4626,9600,MO,ZYX
+Point,65,HackHouse,Vladivostok,Oleg_Torgashev,-Unpublished-,9600,MO,ZYX
+Point,67,Gruk_Station,Vladivostok,Andrey_Gruk,7-423-231-7956,9600,MO,ZYX,V34
+; ┌──────────────────────────────────────────────────────────────────────────┐
+; │ LSD Soft BBS     Sysop: Dmitry Simonchik (FIDOnet 2:5045/27; 2:5045/37)  │
+; │ Line 1: (423-2) 265-997 | 28800 ZyXEL Elite 2864  | 24h except mail time │
+; │ Line 2: (423-2) 423-454 | 28800 ZyXEL Omni  288S  | 24h except mail time │
+; │ Mail time: 12:30 - 13:30 (winter time) or 13:30 - 14:30 (summer time)    │
+; │            22:00 - 23:00               Vladivostok time (MSK+7)          │
+; └──────────────────────────────────────────────────────────────────────────┘
+Boss,2:5045/27
+Point,1,VDS,Vladivostok,Vadim_Spichak,7-423-242-1665,9600,MO,ZYX
+Point,3,Niko,Vladivostok,Vyacheslav_Kozhevnikov,7-423-251-1951,9600,MO,V32B,VFC
+Point,5,ImperatoR,Vladivostok,Evgeniy_Neustroev,-Unpublished-,9600,MO,ZYX
+Point,6,Elm_Street,Vladivostok,Anatoliy_Kluchevenko,-Unpublished-,9600,MO,ZYX
+Point,8,Barbarians_LAB,Vladivostok,Alexander_Iluishin,7-423-225-3959,9600,MO,V32B,VFC,V34
+Point,9,NVV,Vladivostok,Vladislav_Nosov,-Unpublished-,9600,MO,V32B,V42B,H14
+Point,10,LSD_Soft_Home,Vladivostok,Larisa_Simonchik,-Unpublished-,300,MO
+Point,11,Legalist,Vladivostok,Nikita_Shcherbina,-Unpublished-,9600,MO,V32B
+Point,12,NAVIGATOR,Lazo,Anton_Peshkin,-Unpublished-,9600,MO,V32B,V42B
+Point,13,Black_Cat,Vladivostok,Alexander_Todorenko,-Unpublished-,9600,MO,V32B,V42B
+Point,14,Ars,Arseniev_Russia,Vladimir_Matitsin,-Unpublished-,9600,MO,ZYX
+Point,15,Small_Paradise,Vladivostok,Arkasha_Pavlik,-Unpublished-,9600,MO,V32B,V42B
+Point,16,Sauron's_station,Vladivostok,Mihail_Chekalin,7-423-222-4158,9600,MO,V32B,V42B
+Point,17,Night_FighterII,Vladivostok,Maxim_Vologdin,7-423-222-7160,9600,MO,V42B
+Point,18,INFERNO,Vladivostok,Max_Kovalev,7-423-223-0168,9600,MO,LO,V42B,V32B,U,TOW
+Point,19,AKA-STATION,Vladivostok,Kirill_Trusov,7-423-230-0219,9600,MO,V32B,V42B
+Point,20,Land_of_Shadows,Vladivostok,Vladimir_Pyatin,7-423-242-2183,9600,XA,V32B,V42B,U,TXI
+Point,21,Maverick,Vladivostok,Glab_Tarasenko,7-423-242-5963,9600,XA,ZYX,U,TOV
+Point,22,FreeMan,Vladivostok,Alexey_Fedotenkov,7-423-231-4217,9600,MO,V32B,V42B
+Point,23,Masarach,Vladivostok,Sergey_Evseev,-Unpublished-,9600,MO,V32T,V42B
+Point,24,The_Cure,Vladivostok,Konstantin_Paterikin,-Unpublished-,9600,MO,V32B,V42B
+Point,25,TOK,Vladivostok,Igor_Bocharov,-Unpublished-,9600,MO,V32B,V42B
+Point,26,Virtual_Brain_BBS,Vladivostok,Denis_Smolin,7-423-252-9453,9600,V32B,V42B
+Point,27,LSD_Soft_III,Vladivosok,Dmitry_Simonchik,7-423-242-0576,9600,XA,V34,ZYX,U,TIU
+Point,28,V.S.I._BBS,Vladivostok,Andrey_Popov,7-423-222-2140,9600,XA,ZYX,V34
+Point,29,Die_Women,Vladivostok,Natalia_Barinova,-Unpublished-,300,MO,ZYX
+Point,30,Down_Town,Vladivostok,Ivan_Barinofff,7-423-242-4288,9600,XA,LO,ZYX,U,TMV
+Point,31,Raptor,Vladivostok,Alex_Fokin,-Unpublished-,9600,MO,ZYX
+Point,32,My_Home_Station,Vladivostok,Sergey_Rudyshin,-Unpublished-,9600,MO,V32B,V42B
+Point,33,Vigor's_LAB,Vladivostok,Viktor_Mikheyko,7-423-238-2029,9600,MO,V32B,V42B
+Point,34,THE_NEED_FOR_SPEED_II_BBS,Vladivostok,Sergey_Denisenko,7-423-223-2698,9600,V32B,V42B,MO
+Point,35,G.O.D._system,Vladivostok,Andrey_Skoptsov,7-423-221-7120,9600,MO,V32B,V42B
+Point,36,Night_Sun,Vladivostok,Dmitry_Michailenko,-Unpublished-,9600,MO,V32B,V42B
+Point,38,Lukich_&_CO,Vladivostok,Dmitry_Lukyanenko,7-423-238-1313,9600,MO
+Point,40,Temple_O'Light,Vladivostok,Igor_Krutyakov,7-423-226-8818,9600,V32B,V42B,U,TMV
+Point,41,NO_COMMENTS,Vladivostok,Roman_Popok,7-423-246-3993,9600,MO,V34,V42B
+Point,43,VF,Vladivostok,Alexey_Boreyko,-Unpublished-,9600,MO,V32B,V42B
+Point,44,LGK,Vladivostok,Nick_Voronko,-Unpublished-,9600,MO,V32B,V42B
+Point,100,LSD_Soft_Home,Vladivostok,Dmitry_Simonchik,-Unpublished-,9600,MO,ZYX
+;
+; ____________________________________________________________________________
+;
+; Pavel station BBS
+; ____________________________________________________________________________
+Boss,2:5045/28
+Point,1,Alex_LAND,Blagoveshensk,Alexey_Neronov,7-416-222-4758,9600,MNP,XA,V42B
+; ____________________________________________________________________________
+;
+; The Stealth Point
+; ____________________________________________________________________________
+Boss,2:5045/29
+Point,7,ArcadySite,Vladivostok,Arkady_Konevsky,-Unpublished-,9600,MO
+Point,8,Emerald,Vladivostok,Kostya_Balenko,-Unpublished-,9600,MO
+Point,10,Nick,Vladivostok,Nick_Sendetsky,-Unpublished-,9600,MO
+Point,11,Oleg,Vladivostok,Oleg_Chizhov,-Unpublished-,9600,MO
+Point,12,Vlad,Vladivostok,Vladimir_Podolsky,-Unpublished-,9600,MO
+Point,13,Qwerty_System,Vladivostok,Tolya_Korobkov,-Unpublished-,2400,MO
+;____________________________________________________________________________
+;
+; Indiana Jones BBS
+;____________________________________________________________________________
+Boss,2:5045/34
+Point,4,Infinity_Graphics,Vladivostok,Eugene_Hoostoopkeene,7-423-222-7515,9600,ZYX,MO
+Point,5,Daemon,Vladivostok,Dmitry_Kiselev,7-423-221-6961,9600,MO,V34,U,TOV
+Point,6,Accesser,Vladivostok,Alexx_Daniloff,7-423-246-4781,9600,MO,V34,U,TOV
+Point,7,Jungle,Vladivostok,Andrew_Tupkalo,-Unpublished-,9600,MO,V34,V42B
+Point,8,Sabotage,Vladivostok,Vlad_Moiseev,7-423-225-3329,9600,MO,V34,V42B
+Point,14,Crackers_World,Vladivostok,Sergey_Konko,-Unpublished-,9600,V42B,V32B,MO
+Point,16,Brown_Wolf,Vladivostok,Sergey_Poltorak,7-423-232-8347,9600,XA,MO,V42B
+Point,20,Cover,Vladivostok,Igor_Latyshev,-Unpublished-,9600,V34,MO
+Point,21,Photo,Vladivostok,Glab_Tarasenko,-Unpublished-,9600,V34,MO
+Point,22,Nataly,Vladivostok,Nataly_Kovalevskaya,-Unpublished-,9600,V34,MO
+Point,26,TuDum,Vladivostok,Alexei_Kudrevich,-Unpublished-,9600,V34,MO
+Point,30,Helga_Home,Vladivostok,Helga_Saitgareeva,7-423-249-6389,9600,V34,MO
+Point,45,Law_System,Vladivostok,Alex_Miron,-Unpublished-,9600,MO
+;-+--+--+-
+;  judge station
+;-+--+--+-
+Boss,2:5045/35
+Point,1,Wom_H_Station,Ussuriisk,Womchick_alexeyeff,-Unpublished-,300,MO
+Point,8,Goblin_station,Ussuriisk,Alexey_Shkuropatskiy,-Unpublished-,300,MO
+Point,13,VEGA-LAZER,Ussuriisk,Vladimir_Trotsenko,-Unpublished-,300,MO
+Point,14,Andy_Station,Ussuriisk,Andrey_Mikhalchenko,-Unpublished-,300,MO
+Point,16,Crazy_Joker,Ussuriisk,Timur_Bahmatoff,-Unpublished-,300,MO
+;____________________________________________________________________________
+;
+; I.T.S. BBS
+;____________________________________________________________________________
+Boss,2:5045/36
+Point,1,ITS_at_home,Vladivostok,Dmitry_Vasyura,-Unpublished-,300,MO
+Point,2,ITS_BBS_II_line,Vladivostok,Dmitry_Vasyura,-Unpublished-,9600,MO,ZYX
+Point,4,Appolon_station,Vladivostok,Dmitry_Akuloff,-Unpublished-,9600,MO,ZYX
+Point,7,Shtab,Vladivostok,MiK_Moiseev,-Unpublished-,9600,MO,ZYX
+Point,10,Sonic_Computers_Company,Vladivostok,Aleksander_Zuev,7-423-242-2776,9600,MO
+Point,23,Lena`s_Station,Vladivostok,Elena_Ragoulina,-Unpublished-,9600,XX,V32B,V42B,MO
+Point,60,Fireman,Vladivostok,Ruslan_Sidermann,7-423-222-7400,9600,XX,V32B,V42B,V34,VFC
+Point,61,Sakhalin,Vladivostok,Artur_Shevtsov,7-423-222-4357,9600,XX,V32B,V42B,V34
+; ┌──────────────────────────────────────────────────────────────────────────┐
+; │ LSD Soft BBS     Sysop: Dmitry Simonchik (FIDOnet 2:5045/27; 2:5045/37)  │
+; │ Line 1: (423-2) 265-997 | 28800 ZyXEL Elite 2864  | 24h except mail time │
+; │ Line 2: (423-2) 423-454 | 28800 ZyXEL Omni  288S  | 24h except mail time │
+; │ Mail time: 12:30 - 13:30 (winter time) or 13:30 - 14:30 (summer time)    │
+; │            22:00 - 23:00               Vladivostok time (MSK+7)          │
+; └──────────────────────────────────────────────────────────────────────────┘
+;
+; №╘╧ ╫╥┼═┼╬╬╧┼ ╨╥╔╙╘┴╬╔▌┼ ╨╧╔╬╘╧╫ ╒ ╦╧╘╧╥┘╚ ┬╧╙╙┘ ╫ ─┴╒╬┼.
+;
+Boss,2:5045/37
+Point,2,Criminal_Station,Vladivostok,Waksman_Maksim,7-423-222-8442,9600,MO,ZYX
+Point,7,MadMax,Vladivostok,Oleg_Zhandarmov,7-423-226-8771,9600,MO,V32B,V42B
+Point,8,Dirty_Whale,Vladivostok,Artem_Vasiliev,-Unpublished-,9600,MO,ZYX
+Point,10,Garret,Vladivostok,Vladimir_Kuleshov,-Unpublished-,9600,MO,ZYX
+Point,13,The_LAIR,Vladivostok,Michael_Kasyanenko,-Unpublished-,9600,MO,V34
+Point,15,Fenix_BBS,Vladivostok,Anton_Ziborov,7-423-252-9109,9600,XA,MO,V32B,V42B,U,TNV
+Point,17,THE_NEED_FOR_SPEED_BBS,Vladivostok,Roman_Katynkin,7-423-231-1450,9600,XA,V34
+Point,18,HellChild_BBS,Vladivostok,Alexey_Buturlin,7-423-227-6402,9600,XA,MO,ZYX,U,TNV
+Point,19,PowerStation,Vladivostok,Alexey_Bokov,7-423-225-7294,9600,MO,V32B,V42B,U,TQV
+Point,31,Home_Office,Slavyanka,Alexey_Zhidkov,7-231-43-792,9600,V34,ZYX
+Point,35,Tipsy_Devil,Vladivostok_Russia,Dmitry_Samoilenko,-Unpublished-,9600,MO,V34,H16
+Point,37,Garfield,Vladivostok,Oleg_Kupnevich,-Unpublished-,9600,MO,V32
+Point,38,ADiON_BBS,Vladivostok,Yura_Sviridov,7-423-226-1551,9600,XX,ZYX,U,TIV
+Point,54,OSA_Inc,Vladivostok,Alex_Osintsev,7-423-232-0284,9600,MO,V42B,V32B
+Point,55,Silvio_BBS,Vladivostok,Oleg_Kuchma,7-423-222-9778,9600,XA,ZYX,V34
+;
+;  Transit 2:5045/38@FidoNet
+; ____________________________________________________________________________
+Boss,2:5045/38
+Point,1,Transit-II,Vladivostok,Igor_Maximov,-Unpublished-,9600,ZYX,V34,XA
+Point,2,CH_BBS,Vladivostok,Boris_Chatkin,7-423-246-4579,9600,V42B,V32B,MO
+Point,3,MyStation,Vladivostok,Evgeny_Baklanov,-Unpublished-,9600,V42B,V32B,MO
+Point,4,Gennady_Station,Vladivostok,Gennady_Vasilyev,7-423-227-8577,9600,V42B,V32B,MO
+; ____________________________________________________________________________
+;
+;
+;
+;
+; ____________________________________________________________________________
+;
+; Parity Error BBS
+; ____________________________________________________________________________
+Boss,2:5045/40
+Point,1,FILIN,Vladivostok,Dmitry_Nalepa,7-4232-31-04-04,19200,MO,ZYX
+Point,3,SupriMex,Vladivostok,Ruslan_Kirichenko,7-423-231-8206,9600,MO
+Point,5,VCL,Vladivostok,Konstantin_V.Kulkoff,-Unpublished-,300,MO,LO
+Point,6,Paul,Vladivostok,Pavel_Shkurygin,7-423-226-5832,9600,MO
+Point,7,Mad_Max,Vladivostok,Oleg_Zhandarmov,7-423-225-7664,9600,MO,ZYX
+Point,8,Kolizey_BBS,Vladivostok,Alex_Golubkov,7-423-251-4178,9600,V42,XA
+Point,10,Boss,Vladivostok,Andrew_Shkatula,-Unpublished-,9600,MO
+Point,11,SoftLab,Vladivostok,Valerii_Kowalskii,7-423-226-9173,9600,ZYX,XA
+Point,12,SAV,Vladivostok,Vladimir_Savelev,-Unpublished-,9600,MO,V32B,V42B
+Point,13,The_LAIR,Vladivostok,Michael_Kasyanenko,-Unpublished-,9600,V32B,V42B,MO
+Point,14,KRAFTWERK_BBS,Vladivostok,Vova_Yakovlev,7-423-246-9190,2400,V42B
+Point,15,Matter,Vladivostok,Yuriy_Zinenko,-Unpublished-,9600,ZYX,MO
+Point,16,Oleg_Kirichenko,Vladivostok,Oleg_Kirichenko,7-423-225-3806,9600,V42,V42B,MO
+Point,18,Ajax_System,Vladivostok,Denis_Guzenko,7-423-226-6534,9600,MO
+Point,19,Bloody_Guy,Vladivostok,Pavel_Zakharchenko,7-423-229-4871,9600,V32B,V42B,MO
+Point,21,Katerina,Vladivostok,Katerina_Koveh,-Unpublished-,9600,MO,ZYX
+Point,22,Mors_Point,Dalnegorsk,Dmitry_Rudakov,-Unpublished-,2400,MO,MNP
+Point,23,TigerFox,Vladivostok,Miroslav_Kruglick,7-423-222-8394,9600,MO,ZYX
+Point,24,Devastator's_Zone,Vladivostok,Sergey_Isakov,-Unpublished-,9600,MO,V32B,V42B
+Point,26,Jeni,Vladivostok,Evgeny_Djura,-Unpublished-,300,MO
+Point,27,ASTRO_BBS,Vladivostok,Victor_Doronenko,7-423-226-0827,9600,XA,V34
+Point,33,Steel_Rat,Vladivostok,Oleg_Bidjev,-Unpublished-,9600,MO,V32B,V42B
+Point,37,Garfield,Vladivostok,Oleg_Kupnevich,-Unpublished-,9600,MO,V32B,V42B
+Point,44,Free_Star,Vladivostok,Alexander_Ovcharov,7-423-251-4178,9600,MO,ZYX
+Point,56,Onivaka,Vladivostok,Ilya_Yakovenko,7-423-230-0058,9600,V34,MO
+Point,88,Spell_Inc.,Vladivostok,Nick_Sendetsky,7-423-222-5354,9600,ZYX,MO
+Point,96,Ghost9192,Vladivostok,Dmitry_Primachenko,7-423-222-3383,9600,MO,ZYX
+Point,121,HapSys_Station,Vladivostok,Alexey_Zayats,7-423-226-8574,9600,MO,HST
+Point,444,Margo,Vladivostok,Anna_Saranchina,7-423-226-8863,9600,MO,ZYX
+;
+;  ***********************************************************************
+;  *                                                                     *
+;  *                           Sparky System                             *
+;  *                      Diamond Systems Company                        *
+;  *                                                                     *
+;  ***********************************************************************
+;  * ў╥┼═╤ ╥┴┬╧╘┘ ╙ 22:00 ─╧ 8:00                                        *
+;  * Ї┼╠┼╞╧╬: 22-55-92                                                   *
+;  * ч╧╠╧╙: ╙ 18:00 ─╧ 22:00                                             *
+;  *********************************************************************** 
+; Update: 19 Jan 1999
+;
+; UpDated Points: 
+; Deleted Points: 2,4,6-14,17-19,22,25,29,33,38,42,44,55,60,74,77,88,101,123
+;                 150,222,523,555,666,783,888,3940
+; Added Points: 15, 21, 255, 444, 725
+; Points: 16
+;
+Boss,2:5045/41
+Point,1,KIRMAIL,Vladivostok,Kirill_Zakharov,7-423-251-1172,9600,MO,V32B,V42B
+Point,3,Sun_Rule_Party,Vladivostok,Sergey_Golubev,7-423-232-5440,9600,XA,ZYX
+Point,5,Mother_Station,Vladivostok,Olga_Y.Sokolova,7-423-242-9672,9600,MO,ZYX
+Point,15,Scarlet_Station,Vladivostok,Sergey_Romaschenko,7-423-222-2114,9600,MO,V34
+Point,16,RW_Station,Vladivostok,Arseny_Slobodjuck,7-423-226-7052,9600,MO,ZYX
+Point,20,Horns&Hoofs,Vladivostok,Mikhail_Timchuk,-Unpublished-,9600,MO,V42B
+Point,21,Heavy_Station,Vladivostok,Gennady_Agapoff,-Unpublished-,2400,MO,V42B
+Point,47,Andy,Vladivostok,Andrew_Karan,7-423-226-4160,9600,V32B,V42B,XA
+Point,63,Dmitry_B,Vladivostok,Dmitry_Bolshakov,7-423-222-5082,9600,MO,ZYX
+Point,111,SEC,Vladivostok,Sergej_A.Pavlenko,7-423-227-8313,9600,MO,LO,ZYX
+Point,255,Shaman,Vladivostok,Alexander_Golubkov,-Unpublished-,300,MO
+Point,333,Nadezhda,Vladivostok,Nadya_Sokolova,7-423-242-9672,9600,MO,ZYX
+Point,444,CSS_Station,Vladivostok,Dmitry_Matrenin,-Unpublished-,9600,MO
+Point,651,Sinus_Company_Colbasa,Vladivostok,Igor_Sokolov,7-423-242-9672,9600,MO,ZYX
+Point,777,Diamond_Systems_Company,Vladivostok,Vladimir_Chistyakov,7-423-246-3588,9600,MO,ZYX,V34
+Point,911,OLGA_Station,Vladivostok,Olga_Sokolova,7-423-242-9672,9600,MO,ZYX
+; Point's Generator v0.56beta UNREG!  Please register !
+; ____________________________________________________________________________
+;
+; 	Sirius System.
+; ____________________________________________________________________________
+Boss,2:5045/42
+Point,2,Travel_System,Vladivostok,Djon_Dikarev,-Unpublished-,9600,MO,V34,V42b
+Point,3,DIGITAL_EXPERTS,Vladivostok,Viktor_Androsenko,-Unpublished-,9600,MO,V34,V42b
+Point,5,DEAL,Vladivostok,Alexey_Rozhkov,-Unpublished-,9600,MO,ZYX,Z19
+Point,7,BadVirus,Vladivostok,Toxa_Tydykov,-Unpublished-,9600,MO,ZYX
+Point,9,Anton_Station,Vladivostok,Anton_Eliseev,-Unpublished-,9600,MO,ZYX,Z19
+Point,10,John_Station,Vladivostok,John_Radionov,-Unpublished-,9600,MO,ZYX,Z19
+Point,12,Aram_System,Vladivostok,Aram_Suh,-Unpublished-,9600,MO,ZYX,Z19
+;─────────────────────────────────────────────────────────────────────
+;  =====   ==     ==   
+;  ==  ==  ==  -  ==    Phone: 7-423-226-2417
+;  =====    == = ==     Sysop: Alex Gerasimenko
+;  ==  ===   == ==      Flags: 9600,XW,V34,ZYX,U,TMv
+;─────────────────────────────────────────────────────────────────────
+Boss,2:5045/43
+Point,2,Next_Step,Vladivostok,Andrew_Gerasimenko,-Unpublished-,9600,MO,V34
+Point,5,AlexSH_Station,Vladivostok,Aleksey_Tingaev,7-423-231-3484,9600,MO,V32B,V42B
+Point,6,Swansong,Vladivostok,Oleg_Shestakov,7-423-227-0626,9600,V34
+Point,7,Amadeus,Vladivostok,Dmitriy_Nevojai,-Unpublished-,9600,MO,V34,XA
+Point,8,Lion,Vladivostok,Alexey_Novak,-Unpublished-,9600,MO,V32B,V42B
+Point,9,ASB,Vladivostok,Alexander_Bulgakov,-Unpublished-,9600,MO,V34
+Point,11,Cage,Vladivostok,Johny_Mukhanov,-Unpublished-,9600,MO,V32B,V42B
+Point,22,Stealth_Entry,Vladivostok,Sergey_Ivanov,7-423-226-5161,9600,V32B,V42B,U,TNU
+;╔═══───────────────────────═════════──────────────────────────────═══╗
+;
+;│   Promised Land, 25-55-10, TOP(00:00-01:00)                        │
+;│                                                  Edward Bikhovets  │
+;    All Things Are Difficult Before They Are Easy
+;╚═══─────────────────────═════════════────────────────────────────═══╝
+Boss,2:5045/45
+Point,1,Promised_Land,Vladivostok,Frol_Dobri,-Unpublished-,9600,V42B,V32B,MO
+Point,2,VMS_Home,Vladivostok,Sergey_Konko,-Unpublished-,9600,V42B,V32B,MO
+Point,3,Dimas_Divas,Vladivostok,Dmitri_Sadovchenko,-Unpublished-,9600,V34,MO
+Point,4,Vikulya,Artem,Victoria_Emelina,-Unpublished-,9600,V34,MO
+; ________________________________________________________________________
+;
+;                       Hell & Paradise System BBS
+;                         SysOp : Alexey Zayats
+;                              WorkTime :
+;                      20:00-08:00 (BBS), 24h (Mail)
+; ________________________________________________________________________
+Boss,2:5045/46
+Point,1,WERA_BBS,Vladivostok,Dmitry_Lobeev,7-423-242-4927,9600,MO,ZYX
+Point,4,VF,Vladivostok,Alexey_Boreyko,-Unpublished-,9600,MO,V32B,V42B,ZYX
+Point,5,Julia's_Earth,Vladivostok,Julia_Zograf,-Unpublished-,9600,MO,V32B,V42B
+Point,7,Gluk_Station_BBS,Vladivostok,Denis_Trofimov,7-423-241-6867,9600,V32B,V42B
+Point,8,Demiurg_II,Vladivostok,Sergey_Terentiev,7-423-227-9676,9600,MO,V42B,V32b
+Point,11,JuStICe_StatiON,Vladivostok,Kirill_Korolev,7-423-242-6200,9600,MO,HST
+Point,13,Evil_Station,Vladivostok,Vladimir_Riabokon,-Unpublished-,9600,MO,V32B,V42B
+Point,14,Steel_Rat_Station,Vladivostok,Oleg_Bidjev,-Unpublished-,9600,MO,V34
+Point,17,Serega,Vladivostok,Sergey_Polumordvinov,-Unpublished-,9600,MO,V34,V32B ,V42B
+Point,18,Dwurwes!,Vladivostok,Phil_Kolesnikov,7-423-226-6326,9600,MO,V32B,V42B
+Point,19,Unrealmen,Vladivostok,Kostya_Sakharov,7-423-226-7379,9600,MO,V34,V32
+Point,20,SeSP,Vladivostok,Sergei_Parfenov,-Unpublished-,9600,MO,V32B,V34
+Point,21,South_Garden,Vladivostok,Dmitriy_Kuleshov,7-423-243-0894,9600,MO,V42b,V32
+Point,23,Horsemanship,Vladivostok,Lesya_Rutenko,-unpublished-,9600,MO,V32B,V42B
+Point,25,Python_Station,Vladivostok,Pete_Velanskiy,-Unpublished-,9600,MO,V42B,MNP
+;
+;┌───────────────────────────────────────────────────┐
+;│ Art Variant BBS                                   │
+;└───────────────────────────────────────────────────┘
+Boss,2:5045/49
+Point,1,Home,Nakhodka,Dmitry_Dyachkov,-Unpublished-,9600,MO,XX,V34,V42B
+Point,3,Home,Nakhodka,Roman_Kozlov,-Unpublished-,9600,MO,V34,V42B
+Point,4,Home,Nakhodka,Alexander_Pankratov,-Unpublished-,9600,MO,V34,V42B
+Point,5,Thanderbolt,Nakhodka,Vitaly_Radokhleb,-Unpublished-,9600,XX,MO,V34,V42B
+Point,6,Crazy_Computers_Systems,Nakhodka,Artem_Martyniouk,-Unpublished-,9600,MO,XX,V34,V42B
+Point,7,CXVII_Labs,Nakhodka,Denis_Vubornenok,-Unpublished-,9600,MO,V34,V42B
+Point,8,Home,Nakhodka,Anton_Skickevitch,-Unpublished-,9600,XX,MO,V34,V42B
+Point,9,Home,Nakhodka,Evgeny_Nikeitcev,-Unpublished-,9600,MO,V34,V42B
+Point,10,Home_System,Nakhodka,Alexander_Kon,-Unpublished-,9600,MO,XX,V34,V42B
+Point,14,Andy,Nakhodka,Andrey_Mulyavkin,-Unpublished-,9600,MO,V34,V42B
+Point,16,Home,Nakhodka,Yuriy_Borodin,-Unpublished-,9600,MO,V34,V42B
+Point,17,Home_Station,Nakhodka,Irina_Kon,-Unpublished-,9600,MO,XX,V34,V42B
+Point,94,Rokotel,Nakhodka,Alexey_Abrosimov,-Unpublished-,9600,XX,MO,V34,V42B
+Point,100,Home_Station,Nakhodka,Andrew_Gridnev,-Unpublished-,9600,MO,V34,V42B
+Point,666,MakSim,Nakhodka,Maks_Krugly,-Unpublished-,9600,MO,XX,V34,V42B
+; ____________________________________________________________________________
+;
+; GAV Station
+; ____________________________________________________________________________
+Boss,2:5045/50
+Point,1,Delphin,Vladivostok,Oleg_Kirichenko,-Unpublished-,300,MO
+Point,2,Mother_Station,Vladivostok,Olga_Y.Sokolova,7-423-242-9672,9600,MO,ZYX
+Point,3,NOPast_station,Vladivostok,Artem_Konovalenko,-Unpublished-,9600,MO,V42B
+Point,4,KSG,Vladivostok,Serj_Kultenko,-Unpublished-,9600,MO,V32B,V42B
+Point,5,Second,Vladivostok,Anatoly_Semenov,-Unpublished-,9600,MO,V32B,V42B
+Point,7,Roman,Vladivostok,Roman_Lykov,-Unpublished-,300,MO
+Point,8,Tumbu_Yumbu,Vladivostok,Vitaly_Paramonoff,-Unpublished-,300,MO
+Point,9,Lazo_City,Lazo,Oleg_Korostylev,7-423-779-1321,9600,ZYX,MO
+Point,10,Green_Door,Vladivostok,Alexandra_Lebedinskaya,-Unpublished-,9600,MO,ZYX
+Point,11,Travel_System,Vladivostok,Djon_Dikarev,-Unpublished-,9600,MO,V34,V42b
+Point,12,Serj,Vladivostok,Serj_Legchenko,-Unpublished-,9600,MO,V32B,V42B
+Point,13,Mike_Pub,Vladivostok,Michael_Demichev,-Unpublished-,300,MO
+Point,14,Steel_Rat_Station,Vladivostok,Oleg_Bidjev,-Unpublished-,9600,MO,V34
+Point,15,Kot,Vladivostok,Konstantin_Kaplin,-Unpublished-,300,MO
+Point,17,Stealth_Entry,Vladivostok,Sergey_Ivanov,-Unpublished-,9600,MO,V32B,V42B
+Point,18,Babylon_BBS,Vladivostok,Aleksey_Owsiannikow,-Unpublished-,9600,XX,V32B,V42B
+Point,19,Undersea,Vladivostok,Dmitry_Derjavin,7-423-246-6013,9600,V32B,V34,MO,XA
+Point,20,Orchestre,Vladivostok,Alexey_Mikhailov,7-423-232-5764,9600,MO,V32B,V42B
+Point,22,Light_Station,Vladivostok,Svetlana_Laletina,7-423-226-7628,9600,MO,V32B,V42B
+Point,23,Maximka,Vladivostok,Max_Vladimirov,-Unpublished-,300,MO
+Point,25,Andy_Home,Vladivostok,Andrei_Trofimov,-Unpublished-,9600,MO,V32B,V42B
+Point,26,VVS,Vladivostok,Victor_Dubinets,-Unpublished-,14400,MO
+Point,31,Spawn_BBS,Vladivostok,Arkadiy_Krutov,7-423-232-5906,9600,MO
+Point,33,Jobes,Vladivostok,Victor_Makievsky,-Unpublished-,9600,MO,V34
+Point,35,Bee-BBS,Bolshoy_Kamen,Sergei_Kuksin,7-423-354-1113,9600,MO,V32B,V42B
+Point,36,The_cure,Vladivostok,Konstantin_Paterikin,-Unpublished-,300,MO
+Point,37,Transit,Vladivostok,Alena_Chuprina,-Unpublished-,9600,MO,V32B,V42B
+Point,40,Velsevul,Vladivostok,Andrey_Prokhorov,7-423-242-5646,9600,V34,MO
+Point,45,Irinka,Vladivostok,Irinka_Golovina,-Unpublished-,9600,MO,V34
+Point,50,GAV_Home_Station,Vladivostok,Alexei_Golovin,-Unpublished-,9600,MO,V34
+Point,51,KingStone,Chernigovka,Alexandr_Kaplunenko,7-423-519-5237,9600,MO,V32B,V42B
+Point,55,DJ,Vladivostok,Sergei_Eronin,-Unpublished-,9600,MO,V32B,V42B
+Point,59,Forest_station,Novopokrovka,Serg_Lydetsky,7-423-592-1892,9600,MO,V32B,V42B
+Point,66,Morskaya,Vladivostok,Svetlana_Ilukhina,-Unpublished-,300,MO
+Point,71,GIS,Yakovlevka,Alexander_Velikockiy,7-423-719-1710,9600,MO,V32B,V42B
+Point,77,True_Way,Vladivostok,Gennady_Kozodoy,-Unpublished-,9600,MO,V32B,V42B
+Point,79,Babilon_V_Station,Vladivostok,Alexey_Yashin,-Unpublished-,9600,XX,V42B,V32B
+Point,92,Mr_Popov,Vladivostok,Andrey_Popov,-Unpublished-,9600,MO,V32B,V42B
+Point,247,Strelec,Horol,Aleksei_Vasin,7-423-472-1602,9600,MO,V32B,V42B
+Point,333,Nadezhda,Vladivostok,Nadya_Sokolova,7-423-242-9672,9600,MO,ZYX
+Point,354,Shadow_Station,Novopokrovka,Evgeniy_Litvinov,-Unpublished-,9600,MO,V32B,V42B
+Point,444,Red_Wolf,Vladivostok,Alexander_Ovcharov,-Unpublished-,9600,MO
+Point,666,Freezer_BBS,Vladivostok,Konstantin_Beloborodov,7-423-232-7979,9600,MO,V32B,V42B
+Point,651,Sinus_Company_Colbasa,Vladivostok,Igor_Sokolov,7-423-242-9672,9600,MO,ZYX
+Point,777,PhilosophClub,Vladivostok,Denis_Durov,-Unpublished-,300,MO
+Point,911,OLGA_Station,Vladivostok,Olga_Sokolova,7-423-242-9672,9600,MO,ZYX
+;
+;A Last update -  01-06-98
+; KingStone
+; ____________________________________________________________________________
+Boss,2:5045/51
+Point,1,JonnHome,Chernigovka,Evgeniy_Sayenko,-Unpublished-,9600,MO,V32B,V42B
+Point,2,RosesHause,Chernigovka,Olga_Krisko,-Unpublished-,9600,MO,V32B,V42B
+Point,3,Forum,Chernigovka,Anatoliy_Garbuzar,7-423-519-5772,9600,MO,V32B,V42B
+Point,4,TDK,Chernigovka,Andrey_Kalin,7-423-519-5707,9600,MO,V32B,V42B
+Point,40,BuhWoman,Chernigovka,Tatyana_Kovalskaya,7-423-519-5440,9600,MO,V32B,V42B
+Point,51,LoveIs,Chernigovka,Svetlana_Rigenenkova,-Unpublished-,9600,MO,V32B,V42B
+Point,92,Mr_Popov,Sibirtsevo,Andrey_Popov,7-423-519-2435,9600,MO,V32B,V42B
+Point,94,AlexSystem,Dmitrievka,Alexandr_Krivoshey,7-423-519-4247,9600,MO,V32B,V42B
+Point,96,Pampas,Rettikhovka,Valeriy_Goluncheev,7-423-519-6282,9600,MO,V32B,V42B
+Point,111,Remore_Delphine_2,Vladivostok,Oleg_Kirichenko,-Unpublished-,9600,MO,V34,V42B
+Point,281,NHLClub,Chernigovka,Oleg_Kuznetsov,-Unpublished-,9600,MO,V32B,V42B
+Point,315,SV,Chernigovka,Vladimir_Serov,7-423-519-5189,9600,MO,V32B,V42B
+Point,333,WOLAND,Chernigovka,Alex_Philonenko,-Unpublished-,9600,MO,ZYX
+Point,342,Kot,Sibirtsevo,Konstantin_Jukov,-Unpublished-,9600,MO,V32B,V42B
+Point,555,DandyBoy,Chernigovka,Denis_Karpenok,7-423-519-5636,9600,MO,ZYX
+Point,666,Piramida,Sibirtsevo,Konstantin_Borzenko,-Unpublished-,9600,MO,V32B,V42B
+Point,777,Marina,Chernigovka,Marina_Vaschenko,-Unpublished-,9600,MO,V32B,V42B
+Point,888,ODISSEY,Sibirtsevo,Andrey_Simchenko,-Unpublished-,9600,MO,V32B,V42B
+Point,999,Pacific_Express,Perm,Alexander_A.Kuznetsov,-Unpublished-,9600,XA
+;
+; End of pointlist 2:5045/51
+;
+;┌──────────────────────────────────────────────────────────────────────────┐
+;│  AVICENNA BBS                                          2:5045/52@fidonet │
+;│  Time: 23:00-07:00                                 Phone: 7-423-231-6276 │
+;│                   SysOp: Dmitriy Nevozhai aka Amadeus                    │
+;└──────────────────────────────────────────────────────────────────────────┘
+Boss,2:5045/52
+Point,1,Lion,Vladivostok,Alexey_Novak,7-423-231-2939,9600,MO,V32B,V42B
+Point,2,XzibiT_Station,Vladivostok,Sergey_Udin,7-423-226-6125,9600,MO,V32B,V42B
+Point,3,VillaiN_BBS,Vladivostok,Taras_Ukish,7-423-221-9523,9600,XX,CM,V34,U,Z19
+Point,4,Graphix_Awesome,Vladivostok,Anton_Kartushin,7-423-231-3237,9600,MO,V32B,V42B
+Point,5,Dimon's_Station,Vladivostok,Dmitriy_Izvekov,7-423-246-1902,9600,MO,V32B,V42B
+Point,6,KiHO,Vladivostok,Max_Krasnikov,-Unpublished-,9600,MO,V42B,V32B
+Point,7,Den_Shark_BBS,Vladivostok,Denis_Sharko,-Unpublished-,9600,MO,V32B,V42B
+Point,8,Alien_Wanderer_World,Vladivostok,Denis_Pantukhin,7-423-251-5673,9600,XA,V42B,V32B,V34,VFC
+Point,9,Alena's_Station,Vladivostok,Alena_Shumatova,-Unpublished-,9600,V32B,V42B,MO
+Point,10,In_Trance,Vladivostok,Alexey_Fedorov,7-423-246-9529,9600,MO,V32B,V42B
+Point,11,Hidden_World_System,Vladivostok,Andrew_Kornilov,7-423-229-8188,9600,XX,V42B,V32B,V34,U,TFW
+Point,12,The_MrTS_BBS,Vladivostok,Anatolii_Krylovets,-Unpublished-,9600,XA,V32B,V42B,MO
+Point,13,Bich_Hall,Vladivostok,Nikolay_Dotsenko,7-423-246-0402,9600,MO,V32B,V42B
+Point,14,Cool_Station,Vladivostok,Artem_Anistratenko,7-423-252-8578,9600,V32B,V42B,MO
+Point,15,Theme_Hospital_BBS,Vladivostok,Slava_Petrov,7-423-246-6466,9600,MO,V32B,V42B
+Point,16,Vert_Station,Vladivostok,Mike_Plusnin,7-423-246-7331,9600,MO,V32B,V42B
+Point,17,Demiurg_Corp._BBS,Vladivostok,Danilo_Zarechnev,7-423-231-0231,9600,XA,V32B,V42B,U,TJW
+Point,18,Spring,Vladivostok,Vladimir_Serdyuk,7-423-232-3781,9600,V32B,V42B,MO
+Point,19,Fucking_Bill_BBS,Vladivostok,Vladimir_Sebelev,7-423-238-5156,9600,MO,V32B,V42B
+Point,20,Manowar_BBS,Vladivostok,Victor_Petrov,7-423-246-9957,9600,MO,V32B,V42B
+Point,21,Crazy_Int,Vladivostok,Alexander_Rikmanis,7-423-226-6345,9600,MO,V32B,V42B
+Point,22,Mad_John_Station,Vladivostok,Eugeny_Grekov,7-423-233-0038,9600,MO,V32B,V42B
+Point,23,KirLloid,Vladivostok,Kirill_Kryukov,7-423-231-1051,9600,V32B,V42B,MO
+Point,24,Helga's_Klub,Vladivostok,Anna_Filippova,-Unpublished-,9600,MO,V32B,V42B
+Point,25,The_OffSpring_BBS,Vladivostok,Danny_Filipenko,7-423-241-9353,9600,MO,V32B,V42B
+Point,27,HeaVen's_Gate_BBS,Vladivostok,Nick_Nicheporenko,7-423-231-6514,9600,MO,V32B,V42B
+Point,30,VGIK_Home_Station,Vladivostok,Rusya_Kapustin,7-423-226-3084,9600,MO,V32B,V42B
+Point,33,Masha's_Station,Vladivostok,Masha_Stepanova,7-423-233-0349,9600,MO,V32B,V42B
+Point,34,Nataly's_Place,Vladivostok,Natalia_Sirotkina,-Unpublished-,9600,MO,V32B,V42B
+Point,70,Amazing_Station,Vladivostok,Anna_Nevozhai,7-423-231-3945,9600,MO,V32B,V42B
+Point,83,Vika_Inside,Vladivostok,Victoria_Petrova,-Unpublished-,9600,MO,V32B,V42B
+Point,100,Amadeus,Vladivostok,Dmitriy_Nevozhai,-Unpublished-,9600,MO,V34,V32B,V42B
+;_____________________________________________________________________________
+;
+; HardROM system
+;_____________________________________________________________________________
+Boss,2:5045/54
+Point,2,Oleg_System,Vladivostok,Oleg_Lomonosov,7-423-223-0813,9600,MO,XA,V34,V42B
+Point,3,MyStation,Vladivostok,Evgeny_Baklanov,-Unpublished-,9600,V42B,V34,MO,XA
+Point,4,VOVAN,Vladivostok,Vladimir_Blagov,-Unpublished-,9600,MO,XA,V34,V42B
+Point,5,Free_Hands,Vladivostok,Valery_Bezruchko,-Unpublished-,9600,MO,XA,V34,V42B
+Point,7,KND_BBS,Vladivostok,Oleg_Chitayev,-Unpublished-,9600,MO,V34,V42B
+Point,8,Oluska,Vladivostok,Olga_Sleptsova,-Unpublished-,300,MO
+Point,77,Ran_&_Stimpy,Vladivostok,Sergey_Danilov,7-423-227-6310,9600,MO,XA,V34,V42B
+Point,99,REF,Vladivostok,Alex_Markov,-Unpublished-,300,MO
+;
+; ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+; ▒▒                                                                    ▒▒
+; ▒▒                            ZEUS BBS                                ▒▒
+; ▒▒                 SysOp - Dan Kovalchuk aka 2:5045/55.0              ▒▒
+; ▒▒                                                                    ▒▒
+; ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Boss,2:5045/55
+Point,1,Unrealmen,Vladivostok,Kostya_Sakharov,7-423-222-0559,9600,MO,V34
+Point,2,Die_Hard_BBS,Vladivostok,Sergey_Voronjko,7-423-252-8496,9600,V34,V32B,V42B
+Point,3,VHS_BBS,Vladivostok,Vladislav_Koolalev,7-423-251-7986,9600,V34,V32B,V42B
+Point,4,Corum's_Laboratory,Vladivostok,Vadim_Kiselev,7-423-226-0279,9600,MO,V34
+Point,6,Sex_Shop,Vladivostok,Alexander_Kovalev,7-423-251-9505,9600,MO
+Point,7,DDT,Vladivostok,Dmitrii_Telyuk,7-423-231-2182,9600,MO
+Point,8,IIIarky_Friend,Vladivostok,Roman_Padalko,-Unpublished-,9600,MO
+Point,45,Pechenushka,Vladivostok,Edward_Bykhovets,-Unpublished-,9600,MO
+;------------------------------------------------------------------------
+;| Sapporo (Alma Mater BBS)  7-423-222-3350  33600, USR                  |
+;|     Sysop: Max Teplov  (FIDOnet 2:5045/57)                            |
+;|        Work time: 24h                                                 |
+;-------------------------------------------------------------------------
+Boss,2:5045/57
+Point,1,MT_at_Home,Vladivostok,Max_Teplov,-Unpublished-,9600,MO,V34,V42B
+Point,3,DemonSystem,Vladivostok,Dmitry_Mukomel,7-423-241-2492,9600,V42B,V34B,MO
+Point,4,NoBBS,Vladivostok,Max_Guryashin,7-423-243-2737,9600,MO,V42B
+Point,5,Yura,Vladivostok,Yury_Pechenkin,-Unpublished-,9600,V42B,V34,MO
+Point,6,Sonic,Vladivostok,Mark_Storoshev,7-423-246-3346,9600,MO,V32B,V42B
+Point,7,Jungle,Vladivostok,Andrew_Tupkalo,7-423-225-8873,9600,V42B,V34,MO
+Point,8,High_Voltage,Vladivostok,Roman_Denisov,7-423-243-4106,9600,V42B,V32B,MO
+Point,9,Metallica,Vladivostok,Dmitri_Bokov,-Unpublished-,9600,XX,MO,v32B,V42B
+Point,10,FESMA-2000,Vladivostok,Vladimir_Iguminov,-Unpublished-,9600,MO,ZYX
+Point,11,Uncle_Sam's_Home,Vladivostok,Semen_Begunov,-Unpublished-,9600,MO
+Point,14,Korzh,Vladivostok,Dmitry_Korzh,7-423-241-7628,9600,MO,V32B,V42B
+Point,15,FESMA,Valdivostok,Alexandr_Strokach,7-423-229-262,9600,MO,V42B,V32B
+Point,18,KiNO,Vladivostok,Max_Krasnikov,-Unpublished-,9600,MO,V42B,V32B
+Point,20,Queen,Vladivostok,Pavel_Parfentiev,-Unpublished-,9600,MO,V34,v42B
+Point,22,PainKiller,Vladivostok,Kim_Vadim,7-423-252-7056,9600,XX,MO,V32b,V34
+Point,25,Bear_Winny,Vladivostok,Sergey_Vinogradov,7-423-232-7529,9600,V42B,V34,MO
+Point,28,Mad_To_City,Vladivostok,Sergei_Andrievsky,7-423-243-2281,9600,XX,MO,V32B,V34
+Point,32,The_Purgatory,Valdivostok,Serg_Leschenko,-Unpublished-,300,MO
+Point,33,Weather_Experience,Vladivostok,Sergey_Volodkin,7-423-226-2886,9600,MO
+Point,43,Pavel,Vladivostok,Pavel_Kuthenko,7-423-226-3650,9600,V42b,v34,MO
+Point,44,Dwurves,Vladivostok,Phil_Kolesnikov,7-423-226-6326,9600,V42B,V32B,MO
+Point,70,AlisA,Vladivostok,Andrey_Grossman,-Unpublished-,9600,XX,V42B,V32,MO
+Point,125,Icelord,Vladivostok,Kolbunov_Maksim,-Unpublished-,9600,V42B,V34,MO
+Point,646,Evildoer,Vladivostok,Samoylov_Mikhail,7-423-226-2714,9600,XX,MO,V34
+;
+;────────────────────────────────────────────────────────────────────────────
+; Low-Level
+;──────────────────────────────────────────
+; SysOp: Felix Herbeck (2:5045/61@FidoNet)
+; Work time: 20:00-9:00 (MSK+7) (All Days)
+;────────────────────────────────────────────────────────────────────────────
+Boss,2:5045/61
+Point,1,George_Station,Vladivostok,George_Tarasov,-Unpublished-,9600,MO,V34,V42b
+Point,2,Umans,Vladivostok,Vasiliy_Favoroff,-Unpublished-,9600,MO,V34,V42b
+Point,3,Staz_Station,Vladivostok,Stas_Kobelev,-Unpublished-,9600,MO,V34,V42b
+Point,4,Murena,Vladivostok,Igor_Morozov,-Unpublished-,9600,MO,V34,V42
+Point,5,Anubis,Vladivostok,Vladimir_Ivanov,7-423-246-5927,9600,XX,MO,V32b,V34 
+Point,11,Foolish_Station,Vladivostok,Eugene_Fomin,7-423-221-2718,9600,MO,V34,V42
+Point,14,Biological_station,Vladivostok,Yura_Herbeck,-Unpublished-,9600,MO,V42B
+Point,28,Kamchatka,Vladivostok,Sergey_Diakov,-Unpublished-,300,MO
+Point,33,Vault_13,Vladivostok,Paul_Babyak,-Unpublished-,300,MO
+Point,61,Felix_At_Home,Vladivostok,Felix_Herbeck,-Unpublished-,9600,MO,V42B
+Point,89,Magicanin,Vladivostok,Yuri_Epstein,-Unpublished-,300,MO
+;
+;*-----------[ ak ]-----------*
+; station :   the south garden
+; phone&wt: 7-423-243-0894 24H
+;*----------------------------*
+Boss,2:5045/62
+Point,1,ak,vladivostok,alexey_kuleshov,-unpublished-,300,MO
+Point,2,New_Vision_BBS,Vladivostok,Yaroslav_Khabarov,7-423-226-7356,9600,XX,V34,V42B,U,TNW
+Point,3,Bolt_Station,Vladivostok,Yury_Bolbot,-Unpublished-,9600,V42B,V32B,MO
+Point,5,New_age_station,Vladivostok,Ilya_Urikh,7-423-231-2071,9600,XX,V32,V42B,U,TNW
+Point,6,ESS1868,Vladivostok,Eugen_Gubarev,-Unpublished-,9600,V32B,V42B,MO
+Point,7,AAA_Cool_Station,Vladivostok,Alexandr_Antonov,-Unpublished-,9600,V34,V32B,V42B,MO
+Point,8,Peace_Station,Vladivostok,Maksim_Godun,7-423-241-3234,9600,HST,V32B,VFC,V34,MO,LO,XA,U,TMW
+Point,9,Roma_Station,Vladivostok,Roma_Seleznev,-Unpublished-,9600,XX,V34,V42B,V32B,MO
+Point,10,Pall-Mall_BBS,Vladivostok,Nikita_Neupokoev,-Unpublished-,9600,XX,V34,V42B,V32B,MO
+Point,11,Brain_Station,Vladivostok,Oleg_Alekseyev,-Unpublished-,9600,XX,V32B,V34,V42B,MO
+Point,12,Primorsky,Vladivostok,Alexei_Nazdratenko,-Unpublished-,9600,V32B,V42B,MO
+Point,15,Sad_Ripper,Vladivostok,Andrey_Tolkach,-Unpublished-,9600,V42B,V32B,MO
+Point,18,valera's_home,vladivostok,valera_chumichev,-unpublished-,9600,V42B,V32B,MO
+;
+;╔═══════════════════════╦═════════════════════╦════════════════════════════╗
+;│.   █                  ║ PHANTOM LORD System ║                      █    .│
+;│. ▀▀█▀▀                ╚═════════════════════╝                      █    .│
+;│.   █   Sysop: Alexei Zaiko Aka Phantom Lord (2:5045/66@FidoNet)  ▄▄█▄▄  .│
+;│.   █         Work time: 22:00-10:00 (MSK+7) (All Days)             █    .│
+;╚──────────────────────────────────────────────────────────────────────────╝
+Boss,2:5045/66
+Point,1,JAD,Vladivostok,Dmitry_Yakovets,-Unpublished-,9600,MO,V42B,V32B
+Point,2,AlmaMater,Vladivostok,Max_Teplov,7-423-242-3900,9600,MO,V42B,V32B
+Point,3,Drunya,Vladivostok,Andrey_Tkalin,7-423-231-1359,9600,MO,V32B,V42,V42B
+Point,5,PineCat,Vladivostok,Katerina_Barinova,7-423-233-2920,9600,MO,ZYX
+Point,6,GATE_OF_SIN_BBS,Vladivostok,Phantom_Lord,7-423-225-7270,9600,XA,V34,ZYX,U,TOW,Down
+Point,7,Katerina,Vladivostok,Katerina_Koveh,7-423-222-1278,9600,MO,ZYX
+Point,8,Necros,Vladivostok,Denis_Samorodov,-Unpublished-,9600,MO,V42B
+Point,9,Apparition,Vladivostok,Eugenia_Velichko,-Unpublished-,300,MO
+Point,10,Buzzz`s_BBS,Vladivostok,Ilya_Popov,7-423-241-2439,9600,V32B,V42B,MO
+Point,11,ValDis,Vladivostok,Vlad_Zybtsev,-Unpublished-,9600,MO,V32B,V42,V42B
+Point,12,Hunter,Vladivostok,Victor_Zimin,-Unpublished-,9600,MO,V34,ZYX
+Point,13,Phantom_Lord's_Dark_House,Vladivostok,Alexei_Zaiko,-Unpublished-,9600,MO,ZYX
+Point,14,Room_213,Vladivistok,Konstantin_Gamayunov,-Unpublished-,9600,MO,V32B,V42B
+Point,15,CAEZAR,Vladivostok,Danil_Rudiakov,7-423-221-4114,9600,MO,XX,V34,V42B,V32
+Point,16,Leshee,Vladivostok,Sergey_Karpuk,-Unpublished-,9600,MO,ZYX
+Point,17,Djudja,Vladivostok,Victor_Makievsky,-Unpublished-,9600,MO,ZYX
+Point,18,Haron,Vladivostok,Vladimir_Ermolenko,-Unpublished-,9600,MO,V34
+Point,19,LINK,Vladivostok,Alexey_Anofriev,-Unpublished-,9600,V32B,V42B,MO
+Point,21,The_South_Garden,Vladivostok,Alexey_Kuleshov,7-423-243-0894,9600,XX,LO,V32B,V42B,V34,U,TMX
+Point,22,IAPU_II,Vladivostok,Konstantin_Ignatovich,7-423-232-0510,9600,XX,MO,V32B,V42B
+Point,23,Div_Laboratory_BBS,Vladivostok,Den_Ivanov,7-423-226-8894,9600,XA,V32B,V34,V42B,U,TNV
+Point,24,Undertaker_BBS,Vladivostok,Dan_Kovalchuk,7-423-231-0764,9600,XA,V34,V42B,U,TNV
+Point,26,Alex,Vladivostok,Alexander_Zaytsev,-Unpublished-,9600,MO,ZYX
+Point,27,Spy_Station,Vladivostok,Sergey_Lazaretov,7-423-243-1031,9600,XX,V34,V42B,U,TOU
+Point,28,Reanimator_BBS,Vladivostok,Alexey_Krutskih,7-423-223-87-44,9600,XX,MO,V32B,V34,U,TlU
+Point,29,Torch_Mail_Station,Vladivostok,Alexey_Morozov,-Unpublished-,2400,MO
+Point,30,Trash_Heap_BBS,Vladivostok,Sergey_Batcherikov,7-423-252-9398,9600,MO,XX,LO,MN,V34,HST,V42B,VFC,V32T,U,TMU,X2C
+Point,31,Smolnyj,Vladivistok,Vyacheslav_Kontaev,7-423-241-1574,9600,XA,V34,V42b
+Point,32,Enchantment,Vladivostok,Eugenia_Steblina,-Unpublished-,2400,XA,MO
+Point,33,NightCity_II_BBS,Vladivostok,Evgeniy_Vasiliev,7-423-241-1511,9600,XA,V34,V42,V42b
+Point,36,Graphix_Awesome,Vladivostok,Anton_Kartushin,7-423-231-3237,9600,MO,V32B,V42B
+Point,37,Den_Shark_BBS,Vladivostok,Denis_Sharko,-Unpublished-,9600,MO,V32B,V42B
+Point,40,Covox,Vladivostok,Serge_Tarasoff,7-423-223-7296,9600,MO,V42B,V32B,VFC,V34
+Point,41,Corum's_Laboratory,Vladivostok,Vadim_Kiselev,7-423-226-0279,9600,MO,V34
+Point,43,Hot_Spaces_BBS,Vladivostok,Djohn_Ivanov,7-423-241-2544,9600,V32B,V42B,XA,U,TMV
+; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+;______________________________________________________________________________
+;                 ···∙∙∙ Tornado Support Station ∙∙∙···
+;      Phone: +7(4232)333187                        WorkTime: CM
+;------------------------------------------------------------------------------
+Boss,2:5045/71
+Point,1,DEN,Vladivostok,Denis_Fyodorov,7-423-233-0802,9600,XA,V32B,V42B
+Point,2,House_BBS,Vladivostok,Danil_Zoubritskiy,-Unpublished-,9600,XX,MO,V32B,V34
+Point,3,VaD_Group_BBS,Vladivostok,Vitaliy_Zaitcev,7-423-227-7726,9600,XX,V32,V32B,V42
+Point,5,SL-BBS,Vladivostok,Andrey_Trofimov,7-423-231-3028,9600,XA,MO,V32B
+Point,6,Sasha,Vladivostok,Sasha_Gorshkov,-Unpublished-,9600,MO,XX,V32,V32B,V42B
+Point,7,Rivendell,Vladivostok,Anton_Bedarev,7-423-252-8630,9600,MO,XX,V32B,V42B
+Point,8,Dizzy_BBS,Vladivostok,Denis_Los,7-423-240-9191,9600,XX,MO,V32B,V42B,V34
+Point,18,KiH0,Vladivostok,Max_Krasnikov,7-423-243-2574,9600,MO,XX,V32b,V42b
+;
+

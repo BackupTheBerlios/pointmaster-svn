@@ -1,0 +1,6 @@
+|?не работает /nocon почему-то, ессли наследуешь тпрограм, то не работает
+глюк с первым скриптом :\
+peredelat vse IOResult -> dosseror, chto bi on resultat v var result zanosil
+ a potom ee peredavat v getdoserror
+!!! сделать чтобы exec работал !!! а то морда портится
+в exceptions прописать русский язык и вообще везде

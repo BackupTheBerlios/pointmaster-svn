@@ -1,0 +1,220 @@
+; Name: NOTIFY.PMS
+; Description: Example script for notifing peoples about hatched pointlist :)
+; Author: Andrew Kornilov (2:5045/46.24, /52.11)
+; For use with PointMaster (c) Andrew Kornilov
+;
+; Опять же это только пример :) Можно уведомлять народ о захатченном поинтлисте
+; и заодно посылать им его аттачем (опционально) (кстати, здесь используются не-
+; которые переменные, заданные в hatch.pms, так что лучше его(notify.pms)
+; отдельно не запускать, а только после hatch.pms :)
+; Запyскается только тогда, когда yвидит флажок, созданный в скpипте hatch.pms-
+; %hatchedflag%, то есть pаботает с ним в связке. Пpосто пока не сделал
+; pазpешение на запyск из скpипта еще одного скpипта, поэтомy пpиходится
+; извpащаться :)
+;
+;==============================================================================
+#define NumberOfAddresses 2
+; общее количество адресов, которые уведомлять
+;
+#define Addr1 777:1998/1 Yes Andrew Kornilov
+#define Addr2 777:1998/1.999 No Andrew Kornilov
+; адреса и имена сисопов, которых надо уведомлять. Формат такой:
+;  Addr<num> <4D-address> <sendlist> <name>
+; где:
+; <num> - число от 1 до NumberOfAddresses
+; <address> - 4D-адрес назначения
+; <sendlist> - Посылать ли аттачем ему поинтлист или только уведомлять
+;              Значения: Yes|No
+; <name> - имя сисопа
+;
+#define SendAttr PLAH
+; Атpибуты письма для тех, кому посылается аpхив аттачем. (Private+Local+Attach+
+; Hold)
+;
+#define NotifyAttr PL
+; Атpибуты письма для тех, кому посылается только уведомление.
+;
+#define FilePath  c:\fido\mail\fileecho\ultranet\general
+#define FileName  pnt1998.zip
+; Путь (без слэша в конце) и имя архива с поинтлистом, котоpый бyдет выслан
+; аттачем тем, кому задано в описании.
+; Не прописывайте тут путь, который указан в hatch.pms, т.к. после хатчинга
+; файлэхопроцессор переместит архив в каталог соответствующей файлэхи, поэтому
+; указывайте тут путь к каталогу файлэхи
+;
+#define NotifiedFlag %scrpath%\notified.flg
+; Имя-файла флажка, который говорит, что мы уже уведомили, кого надо.
+;
+;==============================================================================
+If Exist("%hatchedflag%")
+  {
+   If ("%language%"="rus")
+     {
+      LogWriteLn("#Уведомляем о захатченном поинтлисте");
+     }
+    Else
+     {
+     LogWriteLn("#Notify about hatched pointlist");
+     }
+   EndIf;
+   If Exist("%notifiedflag%")
+       {
+         If ("%language%"="rus")
+            {
+              LogWriteLn("#Адресаты уже уведомлены");
+              Goto "Exit";
+            }
+           Else
+            {
+              LogWriteLn("#Recipients was already notified");
+              Goto "Exit";
+            }
+         EndIf;
+       }
+      Else
+       {
+       }
+   EndIf;
+   }
+ Else
+  {
+   If Exist("%notifiedflag%")
+    {
+     MoveFile("%notifiedflag%","NUL")
+    }
+   EndIf;
+   Goto "Exit";
+  }
+EndIf
+"Counter":="0";
+Loop1:
+If ("%counter%">"%numberofaddresses%")
+  {
+  Goto "predexit";
+  }
+ Else
+  {
+  If ("%counter%"="%numberofaddresses%")
+    {
+     Goto "predexit";
+    }
+  EndIf;
+  }
+EndIf;
+Inc("counter","");
+"Address":="%%Addr%counter%";
+If ("%address%@"="addr%counter%")
+  {
+   Goto "loop1";
+  }
+EndIf
+Pos(" ","%address%@","spacepos");
+If ("%spacepos%"<>"0")
+  {
+   Dec("spacepos","");
+   Copy("%address%@","destaddr","1","%spacepos%");
+   Inc("spacepos","");
+   Copy("%address%@","part_two","%spacepos%","255");
+   StringTrim("%part_two%","part_two");
+   Pos(" ","%part_two%","spacepos");
+   If ("%spacepos%"="0")
+      {
+       If ("%language%"="rus")
+         {
+          LogWriteLn("!Данные yведомляемого (%address%@) не содеpажат имя yведомляемого");
+         }
+        Else
+         {
+          LogWriteLn("!Notify record (%address%@) does not contain destination name");
+          Goto "Loop1";
+         }
+        EndIf;
+      }
+   EndIf;
+   Dec("spacepos","");
+   Copy("%part_two%","sendpointlist","1","%spacepos%");
+   Inc("spacepos","");
+   Copy("%part_two%","destname","%spacepos%","255");
+   LeftStringTrim("%destname%","destname");
+   If ("%sendpointlist%"="yes")
+      {
+       CreateMsg("%destaddr%","%masteraddress%","%destname%","%mastername%","%filepath%\%filename%","%sendattr%");
+      }
+     Else
+      {
+       CreateMsg("%destaddr%","%masteraddress%","%destname%","%mastername%","New pointlist notify","%notifyattr%");
+      }
+   EndIf
+   If ("%language%"="rus")
+      {
+       WriteToMsg("                    Привет, %destname% !");
+       WriteToMsg(" ");
+       WriteToMsg("Сегодня, %curdate%, был захатчен новый поинтлист сети %domain% - %filename%");
+      }
+     Else
+      {
+       WriteToMsg("                    Hello, %destname% !");
+       WriteToMsg(" ");
+       WriteToMsg("Today, %curdate%, was hatched the new pointlist of the net %domain% - %filename%");
+      }
+   EndIf;
+   If ("%sendpointlist%"="yes")
+      {
+       If ("%language%"="rus")
+         {
+          WriteToMsg("Аpхив послан вам аттачем с этим письмом");
+         }
+        Else
+         {
+          WriteToMsg("Archive was attached to this message");
+         }
+        EndIf;
+      }
+     Else
+      {
+       If ("%language%"="rus")
+         {
+          WriteToMsg("Это просто уведомление, сам архив вам не выслан");
+         }
+        Else
+         {
+          WriteToMsg("It's just the notify, archive wasn't attached");
+         }
+        EndIf;
+      }
+   EndIf
+   WriteToMsg(" ");
+   If ("%language%"="rus")
+      {
+       WriteToMsg("С наилучшими пожеланиями, %mastername% ");
+      }
+     Else
+      {
+       WriteToMsg("With best regards, %mastername% ");
+      }
+   EndIf;
+   WriteToMsg(" ");
+   WriteToMsg("--- %version%");
+   CloseMsg;
+   Goto "loop1";
+  }
+ Else
+  {
+   If ("%language%"="rus")
+    {
+     LogWriteLn("!Данные yведомляемого (%address%@) заданы не полностью");
+    }
+   Else
+    {
+     LogWriteLn("!Notify record (%address%@) is not complete");
+    Goto "Loop1";
+    }
+   EndIf
+  }
+EndIf;
+PredExit:
+AssignFile(Flag,"%notifiedflag%");
+WriteToFile(Flag,"NOTIFIED");
+CloseFile(Flag);
+Exit:
+

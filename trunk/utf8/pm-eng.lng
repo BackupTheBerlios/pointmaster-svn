@@ -1,0 +1,71 @@
+#Searching for message to %mastername% in %netmailpath%
++Found message [%curmsg%] to %mastername% from: %fromfullname%
++Found request for %mastername%: %request%
++Message with main password
++Message with file attach:
+#Loading list segment to memory:
+#Building bosses exclude-list from nodelist:
+#Index file will be reindexed
++Processing Boss: %fromaddress%
++Added new point:
++Deleted point:
++Not deleted point:
++Changed data of point:
++Not changed data of point:
+#Added new bosses:·················[%addbosses%]
+#Deleted bosses:···················[%delbosses%]
+#False deleted bosses:·············[%fdelbosses%]
+#Added new points:·················[%addpoints%]
+#Deleted points:···················[%delpoints%]
+#Changed points information:·······[%chgpoints%]
+#False deleted points:·············[%fdelpoints%]
+#False changed points information:·[%fchgpoints%]
+#Wrong point strings:··············[%errpoints%]
+#Duplicate bosses found:···········[%dupebosses%]
+#Building pointlist: %destpointlist%
+#Creating 'Done Request' report for:
+#Creating 'False Request' report for:
+#Creating 'Errors in segment' report for:
+#Creating 'Errors in message' report for:
+#Creating %request% report for:
++Replacing boss comments:
+#Removing boss without points:
+#Start script:
+#Done script
+#Executing:
+#Exit code: %errorlevel%
+#Exit by command
+!Interrupted by user (Ctrl-Break)
+!Dos error while executing:
+!Dos error:
+!Trying to change data of another Boss:
+!Message from point (%fromaddress%). Ejected.
+!Trying to execute protected command:
+!Can't create message for: %fromaddress%
+!Can't open message [%curmsg%] for read/write.
+!Can't write to message [%curmsg%]
+!Can't open template file:
+!%mastername% is currently busy in another task. Aborting !
+!Can't create busy flag: %busyflag%
+!Can't remove busy flag: %busyflag%
+!Not enough memory to
+!Can't delete file:
+!Circular #include reference detected:
+!Invalid path:
+!Invalid filename:
+!Bad format of binary statfile: %binarystatfile%
+!Index file damaged
+!This is not an index file:
+!Password mismatch (%fromaddress%): expected - [%mustpwd%], received - [%frompwd%]
+!Address (%fromaddress%) found in bounce list. Request ejected.
+!Sender's name found in 'ignore-name' list (%fromfullname%). Ejected.
+!Address (%fromaddress%) found in re-route list. Re-route to:
+!Exclude boss:
+!Can't open file:
+!Can't create file:
+!Can't load script file:
+!Trying to write to non-created message
+!Trying to close non-created message
+?Message not for %mastername%. Real destination address is:
+?Trying to re-route %fromaddress% to ourself (%masteraddress%)
+?Previous run of program was incorrectly terminated (bsy-file is exist, but not locked)
